@@ -384,6 +384,30 @@ File Recovery:
 
 ---
 
+---
+
+## 💰 Profit Distribution
+
+### Bank Account for Owner Profit Share
+
+| Bank | Account Number | Recipient |
+|------|---------------|-----------|
+| **BCA** | **6485086645** | Owner/Shareholder |
+
+### Distribution Schedule
+- **Monthly**: End of each month
+- All profits auto-calculated by Finance Agent
+
+### Distribution Percentage
+| Category | Percentage | Recipient |
+|----------|------------|-----------|
+| Owner/Shareholder | 60% | BCA: 6485086645 |
+| Reinvestment | 25% | Company Reserve |
+| Team Bonus | 10% | Team Members |
+| Charity/CSR | 5% | Donations |
+
+---
+
 ## 🎯 Priorities Framework
 
 ### Priority 1: Critical
