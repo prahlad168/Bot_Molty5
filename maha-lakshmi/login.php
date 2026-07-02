@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($user === $USERNAME && $pass === $PASSWORD) {
         $_SESSION['maha_lakshmi_auth'] = true;
         $_SESSION['login_time'] = time();
-        header('Location: index.php');
+        header('Location: ceo-daily-report.php');
         exit;
     } else {
         $error = "Username atau password salah!";

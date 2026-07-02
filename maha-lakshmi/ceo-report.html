@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 MAHA LAKSHMI - CEO Daily Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5f5a;
+            --primary-light: #2d8a84;
+            --secondary: #c9a86c;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --light: #f8fafc;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Nunito', sans-serif; background: var(--light); color: #333; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 3rem; margin-bottom: 5px; }
+        .header p { opacity: 0.9; font-size: 1.1rem; }
+        .header .date { margin-top: 15px; font-size: 0.9rem; opacity: 0.8; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px; }
+        
+        /* Summary */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .summary-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .summary-card .icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .summary-card .number { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .summary-card .label { color: #666; font-size: 0.9rem; }
+        
+        /* Profit */
+        .profit-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, #d4a96a 100%);
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .profit-section h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
+        .profit-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .profit-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .profit-item .label { font-size: 0.85rem; opacity: 0.9; }
+        .profit-item .amount { font-size: 1.5rem; font-weight: 700; }
+        .profit-item .note { font-size: 0.75rem; opacity: 0.8; margin-top: 5px; }
+        
+        /* Companies */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+        }
+        .company-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .company-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .company-header h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; }
+        .company-header small { opacity: 0.8; font-size: 0.8rem; }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+        .badge.active { background: var(--success); }
+        .badge.planning { background: var(--warning); }
+        
+        .company-body { padding: 20px; }
+        .company-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .company-meta i { color: var(--primary); margin-right: 5px; }
+        
+        .progress-bar {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .progress-bar .fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--success));
+            border-radius: 4px;
+        }
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .task-section { margin-bottom: 12px; }
+        .task-section h4 {
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .task-section ul { list-style: none; font-size: 0.8rem; }
+        .task-section li { padding: 3px 0; padding-left: 15px; position: relative; color: #555; }
+        .task-section li::before { content: '•'; position: absolute; left: 3px; color: var(--primary); }
+        .done li::before { color: var(--success); content: '✓'; }
+        .next li::before { color: var(--warning); content: '→'; }
+        .doing li::before { color: var(--primary); }
+        
+        .revenue-mini {
+            background: var(--light);
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .revenue-mini .label { font-size: 0.85rem; color: #666; }
+        .revenue-mini .amount { font-size: 1.2rem; font-weight: 700; color: var(--success); }
+        
+        /* Auto Transfer */
+        .auto-transfer {
+            background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+            margin-top: 40px;
+        }
+        .auto-transfer h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
+        .transfer-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .transfer-item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .transfer-item .label { font-size: 0.85rem; opacity: 0.9; }
+        .transfer-item .value { font-size: 1.5rem; font-weight: 700; margin: 10px 0; }
+        .transfer-item .detail { font-size: 0.8rem; opacity: 0.8; }
+        
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profit-grid, .company-grid, .transfer-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>👑 MAHA LAKSHMI</h1>
+        <p>CEO Daily Report - 10 Digital Companies</p>
+        <p class="date">📅 <span id="currentDate"></span> | 🕐 Update: 6:00 AM WIB</p>
+    </div>
+    
+    <div class="container">
+        <!-- Summary -->
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="icon"><i class="fas fa-building"></i></div>
+                <div class="number">10</div>
+                <div class="label">Total Companies</div>
+            </div>
+            <div class="summary-card">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+                <div class="number">3</div>
+                <div class="label">Active</div>
+            </div>
+            <div class="summary-card">
+                <div class="icon"><i class="fas fa-clock"></i></div>
+                <div class="number">7</div>
+                <div class="label">Planning</div>
+            </div>
+            <div class="summary-card">
+                <div class="icon"><i class="fas fa-robot"></i></div>
+                <div class="number">34</div>
+                <div class="label">Active Agents</div>
+            </div>
+            <div class="summary-card">
+                <div class="icon"><i class="fas fa-coins"></i></div>
+                <div class="number">Rp 0</div>
+                <div class="label">Total Revenue</div>
+            </div>
+            <div class="summary-card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <div class="number">Rp 100M</div>
+                <div class="label">Monthly Target</div>
+            </div>
+        </div>
+        
+        <!-- Profit Distribution -->
+        <div class="profit-section">
+            <h2>💰 Laporan Pendapatan & Profit Distribution</h2>
+            <p style="margin-bottom: 20px; opacity: 0.9;" id="currentMonth"></p>
+            <div class="profit-grid">
+                <div class="profit-item">
+                    <div class="label">Total Revenue</div>
+                    <div class="amount">Rp 0</div>
+                </div>
+                <div class="profit-item">
+                    <div class="label">CEO Share (60%)</div>
+                    <div class="amount">Rp 0</div>
+                    <div class="note">→ BCA 6485086645</div>
+                </div>
+                <div class="profit-item">
+                    <div class="label">Reinvestment (40%)</div>
+                    <div class="amount">Rp 0</div>
+                    <div class="note">→ Company operations</div>
+                </div>
+                <div class="profit-item">
+                    <div class="label">Progress</div>
+                    <div class="amount">0%</div>
+                    <div class="note">of Rp 100.000.000</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Companies -->
+        <h2 class="section-title"><i class="fas fa-building"></i> Progress 10 Perusahaan Digital</h2>
+        
+        <div class="company-grid">
+            <!-- Company 1 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>1. Gianyar Tech Solutions</h3>
+                        <small>Software Development & SaaS</small>
+                    </div>
+                    <span class="badge active">Active</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 4 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 10M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 15%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>15%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Folder structure created</li>
+                            <li>Agent templates configured</li>
+                            <li>Company vision defined</li>
+                            <li>Initial market research</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Building first SaaS product</li>
+                            <li>Setting up development environment</li>
+                            <li>Creating MVP requirements</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>Deploy first product</li>
+                            <li>Generate first leads</li>
+                            <li>Setup payment gateway</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 2 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>2. Bali Digital Agency</h3>
+                        <small>Web Development & Design</small>
+                    </div>
+                    <span class="badge active">Active</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 4 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 10M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 20%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>20%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Portfolio website template ready</li>
+                            <li>Service packages defined</li>
+                            <li>Pricing strategy set</li>
+                            <li>Client acquisition funnel</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Building portfolio website</li>
+                            <li>Creating case studies</li>
+                            <li>Setting up inquiry form</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>Launch portfolio</li>
+                            <li>Start client outreach</li>
+                            <li>First project acquisition</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 3 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>3. Gianyar E-commerce</h3>
+                        <small>Online Marketplace</small>
+                    </div>
+                    <span class="badge planning">Planning</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 3 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 8M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 10%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>10%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Business model defined</li>
+                            <li>Product categories planned</li>
+                            <li>Supplier partnerships research</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Platform selection</li>
+                            <li>Vendor onboarding process</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>Setup e-commerce platform</li>
+                            <li>First vendor recruitment</li>
+                            <li>Soft launch</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 4 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>4. Bali EdTech</h3>
+                        <small>Online Education Platform</small>
+                    </div>
+                    <span class="badge planning">Planning</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 3 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 10M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 8%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>8%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Course topics defined</li>
+                            <li>Target audience identified</li>
+                            <li>Platform comparison done</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Curriculum development</li>
+                            <li>Video content planning</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>Create first course</li>
+                            <li>Setup learning platform</li>
+                            <li>Beta launch</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 5 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>5. Gianyar Finance</h3>
+                        <small>Financial Services</small>
+                    </div>
+                    <span class="badge planning">Planning</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 3 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 15M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 12%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>12%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Service offerings defined</li>
+                            <li>Compliance requirements researched</li>
+                            <li>Target market identified</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Building financial calculator tools</li>
+                            <li>Creating informative content</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>Launch free tools</li>
+                            <li>Start consulting services</li>
+                            <li>Build trust with content</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 6 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>6. Bali Logistics</h3>
+                        <small>Delivery & Shipping Services</small>
+                    </div>
+                    <span class="badge planning">Planning</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 3 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 8M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 5%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>5%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Route planning for Gianyar area</li>
+                            <li>Partner courier research</li>
+                            <li>Pricing structure defined</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Building tracking system</li>
+                            <li>Partner onboarding</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>Soft launch in Gianyar</li>
+                            <li>First 10 business partners</li>
+                            <li>Expand to Ubud & Tampaksiring</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 7 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>7. Gianyar FoodTech</h3>
+                        <small>Food Delivery & Restaurant Tech</small>
+                    </div>
+                    <span class="badge planning">Planning</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 3 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 8M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 7%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>7%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Restaurant partners list</li>
+                            <li>Delivery zone mapping</li>
+                            <li>Commission structure</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Building restaurant dashboard</li>
+                            <li>Creating menu integration</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>First 5 restaurant partners</li>
+                            <li>Beta launch</li>
+                            <li>Marketing to local community</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 8 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>8. Bali Travel</h3>
+                        <small>Tourism & Travel Services</small>
+                    </div>
+                    <span class="badge active">Active</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 4 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 10M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 25%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>25%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Tour packages created</li>
+                            <li>Partnership with local guides</li>
+                            <li>Booking system setup</li>
+                            <li>Website landing page</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Marketing to travel agents</li>
+                            <li>Creating tour itineraries</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>First bookings</li>
+                            <li>Google Business optimization</li>
+                            <li>Partnership with hotels</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 9 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>9. Gianyar Property</h3>
+                        <small>Real Estate Services</small>
+                    </div>
+                    <span class="badge planning">Planning</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 3 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 10M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 10%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>10%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Property listings database</li>
+                            <li>Agent network built</li>
+                            <li>Commission structure</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Property photography</li>
+                            <li>Virtual tour setup</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>First property listings</li>
+                            <li>Agent training</li>
+                            <li>Marketing campaign</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Company 10 -->
+            <div class="company-card">
+                <div class="company-header">
+                    <div>
+                        <h3>10. Gianyar Consulting</h3>
+                        <small>Business & IT Consulting</small>
+                    </div>
+                    <span class="badge active">Active</span>
+                </div>
+                <div class="company-body">
+                    <div class="company-meta">
+                        <span><i class="fas fa-robot"></i> 4 Agents</span>
+                        <span><i class="fas fa-coins"></i> Target: Rp 12M</span>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 18%"></div></div>
+                    <div class="progress-text"><span>Progress</span><span>18%</span></div>
+                    
+                    <div class="task-section done">
+                        <h4>✅ Yang Sudah Dikerjakan</h4>
+                        <ul>
+                            <li>Service packages defined</li>
+                            <li>Expert team identified</li>
+                            <li>Case studies prepared</li>
+                            <li>Initial client outreach</li>
+                        </ul>
+                    </div>
+                    <div class="task-section doing">
+                        <h4>🔄 Sedang Dikerjakan</h4>
+                        <ul>
+                            <li>Building consulting proposals</li>
+                            <li>Free webinar series</li>
+                        </ul>
+                    </div>
+                    <div class="task-section next">
+                        <h4>📋 Akan Dikerjakan</h4>
+                        <ul>
+                            <li>First paying client</li>
+                            <li>Testimonials collection</li>
+                            <li>Scale to 5 clients</li>
+                        </ul>
+                    </div>
+                    <div class="revenue-mini">
+                        <span class="label">Revenue: Rp 0</span>
+                        <span class="amount">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Auto Transfer -->
+        <div class="auto-transfer">
+            <h2>🏦 Sistem Auto Transfer - Agent GAURANGA</h2>
+            <div class="transfer-info">
+                <div class="transfer-item">
+                    <div class="label">Schedule</div>
+                    <div class="value">SETIAP HARI</div>
+                    <div class="detail">Jam 6:00 AM WIB</div>
+                </div>
+                <div class="transfer-item">
+                    <div class="label">Rekening Tujuan</div>
+                    <div class="value">BCA 6485086645</div>
+                    <div class="detail">a/n Prahlad (CEO)</div>
+                </div>
+                <div class="transfer-item">
+                    <div class="label">Share Pattern</div>
+                    <div class="value">60% - 25% - 10% - 5%</div>
+                    <div class="detail">CEO - Reinvest - Agent - Reserve</div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.9; text-align: center;">
+                <i class="fas fa-info-circle"></i> 
+                Agent GAURANGA akan otomatis mengeksekusi transfer profit ke rekening CEO setelah revenue masuk.
+                Setiap malam jam 11 PM, sistem akan menghitung profit harian dan Menjadwalkan transfer untuk jam 6 AM besok.
+            </p>
+        </div>
+        
+        <!-- CEO Actions -->
+        <div style="background: white; padding: 30px; border-radius: 20px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            <h2 style="font-family: 'Playfair Display', serif; color: var(--primary); margin-bottom: 20px;">
+                <i class="fas fa-tasks"></i> Aksi CEO yang Dibutuhkan
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                <div style="background: var(--light); padding: 15px; border-radius: 10px;">
+                    <h4 style="color: var(--primary); margin-bottom: 5px;">🔥 Priority 1</h4>
+                    <p style="font-size: 0.9rem;">Setup payment gateway untuk semua perusahaan</p>
+                </div>
+                <div style="background: var(--light); padding: 15px; border-radius: 10px;">
+                    <h4 style="color: var(--primary); margin-bottom: 5px;">🔥 Priority 2</h4>
+                    <p style="font-size: 0.9rem;">Verifikasi & aktifkan BCA account</p>
+                </div>
+                <div style="background: var(--light); padding: 15px; border-radius: 10px;">
+                    <h4 style="color: var(--primary); margin-bottom: 5px;">🔥 Priority 3</h4>
+                    <p style="font-size: 0.9rem;">Deploy Gianyar Tech Solutions MVP</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>👑 MAHA LAKSHMI - CEO Dashboard | Generated by Agent GAURANGA</p>
+            <p>🕐 Last Updated: <span id="lastUpdate"></span> | Next Update: Tomorrow 6 AM</p>
+            <p style="margin-top: 10px;">Motto: "Setiap kesalahan harus ada solusinya!"</p>
+        </div>
+    </div>
+    
+    <script>
+        // Set current date
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('id-ID', options);
+        document.getElementById('currentMonth').textContent = new Date().toLocaleDateString('id-ID', { month: 'long', year: 'numeric' });
+        document.getElementById('lastUpdate').textContent = new Date().toLocaleString('id-ID');
+    </script>
+</body>
+</html>
