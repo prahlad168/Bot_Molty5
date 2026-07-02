@@ -1,5 +1,8 @@
 {
-  "last_updated": "2026-07-01T06:00:00+08:00",
+  "last_updated": "2026-07-02T06:00:00+08:00",
+  "generated_at": "2026-07-02T17:25:00+08:00",
+  "is_live": true,
+  "auto_refresh_seconds": 30,
   "companies": [
     {
       "id": 1,

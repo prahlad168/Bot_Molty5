@@ -1,0 +1,26 @@
+name: Auto Deploy to payanganhospital.gianyarkab.go.id
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Auto Deploy Notification
+        run: |
+          echo "🚀 Auto Deploy Started - $(date)"
+          echo "📁 Repository: ${{ github.repository }}"
+          echo "🔖 Commit: ${{ github.sha }}"
+          echo "👤 Triggered by: ${{ github.actor }}"
+          echo ""
+          echo "📂 Files changed:"
+          git diff --name-only
+          echo ""
+          echo "✅ Deploy notification sent!"
+          echo "🌐 Website: https://payanganhospital.gianyarkab.go.id/maha-lakshmi"
