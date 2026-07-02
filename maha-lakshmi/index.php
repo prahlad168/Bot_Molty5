@@ -272,6 +272,24 @@ $_SESSION['login_time'] = time();
             </div>
         </div>
 
+        <!-- CEO Report Link Banner -->
+        <div style="background: linear-gradient(135deg, #1a5f5a 0%, #2d8a84 100%); border-radius: 20px; padding: 30px; margin-bottom: 30px; text-align: center; color: white;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px;">
+                👑 CEO REPORT - DAILY PROGRESS
+            </h2>
+            <p style="opacity: 0.9; margin-bottom: 20px; font-size: 1.1rem;">
+                Laporan real-time progress 10 perusahaan digital
+            </p>
+            <a href="ceo-report.html" style="display: inline-block; background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); color: #0F0F23; padding: 15px 50px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3); transition: all 0.3s;">
+                <i class="fas fa-chart-line"></i> Lihat CEO Report
+            </a>
+            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 30px; font-size: 0.9rem; opacity: 0.9;">
+                <span><i class="fas fa-clock"></i> Update: Setiap jam 6 AM WIB</span>
+                <span><i class="fas fa-building"></i> 10 Perusahaan Active</span>
+                <span><i class="fas fa-coins"></i> Target: Rp 100M/bulan</span>
+            </div>
+        </div>
+
         <h2 class="section-title">Company Revenue Overview</h2>
         <div class="companies-grid">
             <div class="company-card">
