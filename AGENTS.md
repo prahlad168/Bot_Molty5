@@ -6,6 +6,49 @@ Repository ini berisi website RS Payangan Hospital dan konfigurasi automasi untu
 
 ---
 
+## 🏗️ Agent Architecture
+
+```
+User
+  │
+  ▼
+API (NestJS)
+  │
+  ▼
+Main Agent
+  │
+  ├── Planner
+  ├── Research
+  ├── Coding
+  ├── QA
+  ├── Memory
+  ├── Skill Builder
+  ├── Reflection
+  ├── Workflow Optimizer
+  └── Automation Manager
+  │
+  ▼
+Firestore
+  │
+  ├── Skills
+  ├── Knowledge
+  ├── Experiences
+  ├── Workflows
+  ├── Templates
+  ├── Projects
+  └── Logs
+  │
+  ▼
+Vector Database (Qdrant)
+  │
+  ▼
+Semantic Search / RAG
+```
+
+### 📂 Detail modul lihat di: `.agents/skills/agent-architecture.md`
+
+---
+
 ## 🏥 Project Info
 
 | Field | Value |
