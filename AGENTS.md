@@ -271,6 +271,165 @@ REPEAT 🔄
 
 ---
 
+## 🎯 PHASE 18 - MAHA AI COMMAND CENTER (MACC)
+
+### "NASA Mission Control" untuk Perusahaan Digital
+
+Sistem MAHA AI Command Center (MACC) adalah pusat kendali operasional yang digunakan CEO untuk memantau, mengarahkan, dan menyetujui aktivitas seluruh perusahaan dari satu dashboard.
+
+---
+
+### MACC PHILOSOPHY
+
+> **"CEO tidak membuka 20 aplikasi. CEO hanya membuka SATU dashboard."**
+
+```
+https://payanganhospital.gianyarkab.go.id/maha-command-center/
+```
+
+---
+
+### MACC ARCHITECTURE
+
+```
+                    ╔═══════════════════════════════════════╗
+                    ║              👑 CEO                   ║
+                    ╚═══════════════════════════════════════╝
+                                        │
+                                        ▼
+                    ╔═══════════════════════════════════════╗
+                    ║    MAHA AI COMMAND CENTER (MACC)      ║
+                    ╚═══════════════════════════════════════╝
+                                        │
+        ┌───────────────┬───────────────┬───────────────┐
+        │               │               │               │
+        ▼               ▼               ▼               ▼
+┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
+│  EXECUTIVE    │ │   COMPANY     │ │  DEPARTMENT   │ │   PROJECT     │
+│  DASHBOARD    │ │   DASHBOARD   │ │   DASHBOARD  │ │   DASHBOARD   │
+└───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘
+        │               │               │               │
+        ▼               ▼               ▼               ▼
+┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
+│  KNOWLEDGE    │ │     AI        │ │  AUTOMATION   │ │   SECURITY    │
+│  DASHBOARD    │ │   DASHBOARD   │ │   DASHBOARD   │ │   DASHBOARD   │
+└───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘
+```
+
+---
+
+### CEO HOME - Initial View
+
+| Metric | Icon | Description |
+|--------|------|-------------|
+| Today's Revenue | 💰 | Total revenue today |
+| Today's Profit | 📈 | Net profit today |
+| Wallet | 👛 | Current wallet balance |
+| Bank | 🏦 | Bank account balance (BCA 6485086645) |
+| Cashflow | 💵 | Cash in/out flow |
+| Pending Approval | ⏳ | Items awaiting CEO decision |
+| Critical Alert | 🚨 | Critical issues |
+| New Opportunity | 💡 | Business opportunities |
+
+---
+
+### MACC FEATURES
+
+#### 1. Command Bar
+```
+CEO cukup mengetik:
+"Create new AI Agent"
+"Show today's revenue"
+"Generate weekly report"
+"Analyze Bali Digital Agency"
+```
+
+#### 2. Global Search
+```
+Ketik "hospital" → langsung muncul:
+- SOP: Hospital SOP
+- Agent: Hospital AI Agent
+- Project: Hospital Management
+- Knowledge: Hospital Documentation
+```
+
+#### 3. Dashboards
+- **Executive Dashboard**: Revenue, Profit, Growth, KPIs
+- **Company Dashboard**: 10 SBUs overview
+- **Finance Dashboard**: Income, Expense, Distribution
+- **Sales Dashboard**: Leads, Pipeline, Win Rate
+- **Marketing Dashboard**: SEO, Social, Email
+- **AI Agent Dashboard**: 60 agents monitoring
+- **Automation Dashboard**: Workflow status
+- **Knowledge Dashboard**: SOP, Prompts, Docs
+
+#### 4. Approval Center
+Semua keputusan penting masuk ke sini:
+- Financial: Pengeluaran > Rp 500K
+- Product: Peluncuran produk baru
+- SOP: Perubahan SOP inti
+- Contract: Kontrak > Rp 5M
+
+#### 5. AI Assistant
+```
+CEO: "Apa prioritas hari ini?"
+
+AI: "Prioritas hari ini:
+1. Deploy Bali Travel website
+2. Setup 54 AI agents
+3. Mulai cold outreach"
+```
+
+---
+
+### MACC COMMAND LOOP
+
+```
+CEO → Command → AI Orchestrator → Department → Agent
+  ↑                                           ↓
+  └──────── QA ← Knowledge Update ← Dashboard ←┘
+```
+
+---
+
+### FILE STRUCTURE
+
+```
+maha-command-center/
+├── index.html                      # Main MACC Dashboard
+├── 00-MACC-SPECIFICATION.md       # Full specification
+├── 01-MACC-IMPLEMENTATION-GUIDE.md
+├── 02-CEO-REPORT-MACC.md
+├── dashboards/                     # Dashboard components
+├── api/
+│   └── data.php                  # Data API
+└── data/
+    └── config.json               # Configuration
+```
+
+---
+
+### DEPLOYMENT
+
+Access MACC at:
+```
+https://payanganhospital.gianyarkab.go.id/maha-command-center/
+```
+
+---
+
+### SUCCESS CRITERIA
+
+| Metric | Target | Current |
+|--------|--------|---------|
+| Companies Monitored | 10 | 10 |
+| AI Agents Tracked | 60 | 6 |
+| Automations Running | 60 | 6 |
+| Revenue Visibility | 100% | 0% |
+| CEO Time Saved | 5h/day | 0h |
+
+---
+
 **Document Version:** 2.0.0
 **Created:** 2026-07-03
 **Status:** 🚀 ACTIVE - ENTERPRISE AI
