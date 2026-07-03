@@ -639,6 +639,90 @@
                     ${companiesHTML}
                 </div>
                 
+                <!-- STRUKTUR PERUSAHAAN -->
+                <div style="background: white; border-radius: 12px; padding: 15px; margin-top: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.05);">
+                    <h2 class="section-title"><i class="fas fa-sitemap"></i> Struktur Organisasi GAURANGA HQ</h2>
+                    <div style="overflow-x: auto;">
+                        <div style="min-width: 800px;">
+                            <!-- Level 1: CEO -->
+                            <div style="text-align: center; margin-bottom: 20px;">
+                                <div style="background: linear-gradient(135deg, #c9a86c, #d4a96a); color: white; padding: 12px 24px; border-radius: 10px; display: inline-block;">
+                                    <strong>👑 GAURANGA CEO HQ</strong><br>
+                                    <small>Owner: Prahlad | Target: Rp 1B/bulan</small>
+                                </div>
+                            </div>
+                            
+                            <!-- Level 2: Divisions -->
+                            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; text-align: center;">
+                                    <strong>💰 SALES DIVISION</strong><br>
+                                    <small>Target: Rp 300M/bulan</small>
+                                </div>
+                                <div style="background: var(--info); color: white; padding: 10px 20px; border-radius: 8px; text-align: center;">
+                                    <strong>📢 MARKETING DIVISION</strong><br>
+                                    <small>Leads: 300/bulan</small>
+                                </div>
+                                <div style="background: var(--success); color: white; padding: 10px 20px; border-radius: 8px; text-align: center;">
+                                    <strong>🏭 OPERATIONS</strong><br>
+                                    <small>Delivery: 95%</small>
+                                </div>
+                                <div style="background: var(--warning); color: white; padding: 10px 20px; border-radius: 8px; text-align: center;">
+                                    <strong>💵 FINANCE</strong><br>
+                                    <small>Accuracy: 99.9%</small>
+                                </div>
+                            </div>
+                            
+                            <!-- Level 3: Companies -->
+                            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;">
+                                ${data.companies.map((c, i) => `
+                                    <div style="background: #f8fafc; border: 2px solid var(--primary); border-radius: 8px; padding: 10px; text-align: center;">
+                                        <strong style="font-size: 0.7rem; color: var(--primary);">${c.short}</strong><br>
+                                        <span style="font-size: 0.65rem;">${c.name.split(' ').slice(0,2).join(' ')}</span><br>
+                                        <span style="font-size: 0.6rem; color: ${c.progress > 20 ? 'var(--success)' : 'var(--warning)'};">
+                                            ${c.progress}% ${c.progress > 20 ? '⭐' : '⚠️'}
+                                        </span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            
+                            <!-- Revenue Breakdown -->
+                            <div style="margin-top: 20px; padding: 15px; background: #f0fdf4; border-radius: 8px;">
+                                <h4 style="color: var(--success); margin-bottom: 10px; font-size: 0.85rem;">
+                                    <i class="fas fa-coins"></i> Target Revenue Breakdown (per company: Rp 100M/bulan)
+                                </h4>
+                                <div style="display: flex; gap: 15px; flex-wrap: wrap; font-size: 0.7rem;">
+                                    <div><strong>SaaS:</strong> Rp 30M (30%)</div>
+                                    <div><strong>Services:</strong> Rp 25M (25%)</div>
+                                    <div><strong>Digital:</strong> Rp 20M (20%)</div>
+                                    <div><strong>Consulting:</strong> Rp 15M (15%)</div>
+                                    <div><strong>Affiliate:</strong> Rp 10M (10%)</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Quick Wins -->
+                            <div style="margin-top: 15px; padding: 15px; background: #fef3c7; border-radius: 8px;">
+                                <h4 style="color: var(--warning); margin-bottom: 10px; font-size: 0.85rem;">
+                                    <i class="fas fa-bolt"></i> PRIORITAS - Quick Wins untuk Revenue
+                                </h4>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; font-size: 0.7rem;">
+                                    <div style="background: white; padding: 8px; border-radius: 5px;">
+                                        <strong>⭐ 1. Bali Travel (25%)</strong><br>
+                                        <small>Sudah punya tour packages & guides</small>
+                                    </div>
+                                    <div style="background: white; padding: 8px; border-radius: 5px;">
+                                        <strong>⭐ 2. Gianyar Consulting (18%)</strong><br>
+                                        <small>Team & case studies siap</small>
+                                    </div>
+                                    <div style="background: white; padding: 8px; border-radius: 5px;">
+                                        <strong>⭐ 3. Bali Digital Agency (20%)</strong><br>
+                                        <small>Portfolio & services jelas</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="auto-transfer">
                     <h2>🏦 Sistem Auto Transfer - Agent GAURANGA</h2>
                     <div class="transfer-grid">
