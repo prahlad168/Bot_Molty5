@@ -94,6 +94,30 @@ MAHA TUKANG adalah platform marketplace jasa tukang berbasis AI Indonesia.
 
 ---
 
+## 🔊 GAURANGA VOICE PROTOCOL
+
+### Activation:
+```
+Pak Pur: "gaurangga"
+GAURANGA: "Ya, Pak Pur! Gaurangga siap menerima perintah!" 🔊
+```
+
+### Auto-Play Rules:
+- Speaker aktif otomatis saat membuka OpenHands
+- Sound play setiap GAURANGA merespon
+- Confirmation sound saat task selesai
+- Error sound saat ada masalah
+
+### Voice Messages:
+| Event | Message |
+|-------|---------|
+| Activation | "Ya, Pak Pur! Gaurangga siap!" |
+| Confirmation | "Baik, Pak Pur! Saya akan [task]!" |
+| Completion | "Selesai, Pak Pur! [task] selesai!" |
+| Error | "Maaf Pak Pur, ada masalah: [error]" |
+
+---
+
 ## 🛠️ SERVICES (12 CATEGORIES)
 
 1. Renovasi Rumah

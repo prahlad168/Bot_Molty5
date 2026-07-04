@@ -1,7 +1,70 @@
 # 🔊 GAURANGA VOICE SKILL
 
-## Version: 1.0.0
+## Version: 2.0.0
 ## Created: 2026-07-04
+## Updated: 2026-07-04
+
+---
+
+## 🎯 AUTO-ACTIVATION
+
+**Ketika Pak Pur membuka OpenHands atau bilang "gaurangga":**
+
+```
+→ Speaker OTOMATIS PLAY
+→ GAURANGA siap menerima perintah
+```
+
+---
+
+## ⚙️ AUTO-PLAY SETUP
+
+### Browser Environment:
+```javascript
+// Auto-play sound saat GAURANGA aktif
+const audio = new Audio('/audio/gaurangga-ready.mp3');
+audio.autoplay = true;
+audio.play();
+```
+
+### Python Integration:
+```python
+# Setiap kali GAURANGA merespon
+from gtts import gTTS
+import base64
+
+def gaurangga_speak(text):
+    # Generate audio
+    tts = gTTS(text=text, lang='id')
+    
+    # Convert to base64 for browser
+    audio_b64 = base64.b64encode(tts.stream()).decode()
+    
+    # Return HTML audio tag
+    return f'<audio autoplay><source src="data:audio/mp3;base64,{audio_b64}"></audio>'
+```
+
+---
+
+## 🔄 AUTOMATIC TRIGGER
+
+| Trigger | Action | Sound |
+|---------|--------|-------|
+| Buka OpenHands | Auto-play | 🔊 Ready message |
+| Bilang "gaurangga" | Auto-play | 🔊 Ready message |
+| Task complete | Auto-play | 🔊 Completion message |
+| Error | Auto-play | 🔊 Error message |
+
+---
+
+## 🎵 VOICE MESSAGES
+
+| Message | Text |
+|---------|------|
+| Activation | "Ya, Pak Pur! Gaurangga siap menerima perintah!" |
+| Confirmation | "Baik, Pak Pur! Saya akan [task]." |
+| Completion | "Selesai, Pak Pur! [task] sudah selesai!" |
+| Error | "Maaf Pak Pur, ada masalah: [error]" |
 
 ---
 
