@@ -1168,28 +1168,68 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- GAURANGA Voice Test Button -->
+    <!-- GAURANGA Voice Button - Always Active -->
     <div id="gaurangga-voice" style="position:fixed;bottom:100px;right:30px;z-index:999;">
-        <button onclick="testGaurangga()" style="width:60px;height:60px;background:#FF6B35;border:none;border-radius:50%;color:white;font-size:1.5rem;cursor:pointer;box-shadow:0 5px 25px rgba(255,107,53,0.4);">
+        <button id="voiceBtn" onclick="toggleVoice()" style="width:70px;height:70px;background:#25D366;border:none;border-radius:50%;color:white;font-size:2rem;cursor:pointer;box-shadow:0 5px 25px rgba(37,211,102,0.5);animation:pulse 2s infinite;">
             🔊
         </button>
+        <div id="voiceStatus" style="position:absolute;bottom:80px;right:0;background:#1a1a2e;color:white;padding:8px 15px;border-radius:20px;font-size:12px;white-space:nowrap;">
+            GAURANGA AKTIF 🔊
+        </div>
     </div>
 
     <script>
-        function testGaurangga() {
-            if ('speechSynthesis' in window) {
-                const msg = new SpeechSynthesisUtterance("Ya, Pak Pur! Gaurangga siap menerima perintah!");
+        let voiceEnabled = true;
+        let currentMessage = "Ya, Pak Pur! Gaurangga siap menerima perintah!";
+        
+        function speak(text) {
+            if (voiceEnabled && 'speechSynthesis' in window) {
+                // Stop any ongoing speech
+                speechSynthesis.cancel();
+                
+                const msg = new SpeechSynthesisUtterance(text);
                 msg.lang = 'id-ID';
                 msg.rate = 0.95;
+                msg.pitch = 1.1;
                 speechSynthesis.speak(msg);
-            } else {
-                alert("Browser tidak support. Gunakan Chrome!");
             }
         }
         
-        // Auto welcome on page load
+        function toggleVoice() {
+            voiceEnabled = !voiceEnabled;
+            const btn = document.getElementById('voiceBtn');
+            const status = document.getElementById('voiceStatus');
+            
+            if (voiceEnabled) {
+                btn.style.background = '#25D366';
+                btn.style.animation = 'pulse 2s infinite';
+                status.innerHTML = 'GAURANGA AKTIF 🔊';
+                speak("Gaurngga aktif! Silakan berikan perintah!");
+            } else {
+                btn.style.background = '#6B7280';
+                btn.style.animation = 'none';
+                status.innerHTML = 'GAURANGA SILENT 🤫';
+                speechSynthesis.cancel();
+            }
+        }
+        
+        // Speak when voice button clicked
+        function testGaurangga() {
+            if (voiceEnabled) {
+                speak(currentMessage);
+            }
+        }
+        
+        // Add click handler to voice button
+        document.getElementById('voiceBtn').addEventListener('dblclick', testGaurangga);
+        
+        // Auto speak on page load
         window.onload = function() {
-            setTimeout(testGaurangga, 2000);
+            setTimeout(() => {
+                if (voiceEnabled) {
+                    speak("Ya, Pak Pur! Gaurngga siap menerima perintah! Klik tombol speak untuk aktifkan suara!");
+                }
+            }, 2000);
         };
     </script>
 
