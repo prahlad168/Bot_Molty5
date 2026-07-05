@@ -1,0 +1,13 @@
+{
+  "name": "gaurangga-hub",
+  "version": 2,
+  "builds": [
+    {
+      "src": "gaurangga-hub/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {"src": "/gaurangga-hub/(.*)", "dest": "gaurangga-hub/$1"}
+  ]
+}
