@@ -191,6 +191,15 @@ Distribution Breakdown:
 | Education | 1,000 students | Bali EdTech |
 | E-Commerce | 100 vendors | Gianyar E-Commerce |
 
+### Global Leads Database Summary
+
+| Region | Leads Count | Total Value |
+|--------|-------------|-------------|
+| Indonesia | 10 | Rp 110,000,000 |
+| ASEAN (Singapore, Malaysia, Thailand) | 20 | Rp 275,000,000 |
+| Global (USA, Japan, Australia, UK, UAE) | 30 | Rp 815,000,000 |
+| **TOTAL** | **60** | **Rp 1,200,000,000** |
+
 ---
 
 ## 🤖 AI AGENT PERFORMANCE
