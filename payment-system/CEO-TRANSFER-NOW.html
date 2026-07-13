@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏦 CEO Transfer - Execute Now</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .transfer-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .amount-display {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #00c853, #00e676);
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .amount-label {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .amount-value {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        
+        .bank-details {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .bank-row:last-child {
+            border-bottom: none;
+        }
+        
+        .bank-label {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .bank-value {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .copy-btn {
+            background: #2196F3;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background: #1976D2;
+            transform: scale(1.05);
+        }
+        
+        .execute-btn {
+            width: 100%;
+            padding: 25px;
+            font-size: 1.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #f44336, #e91e63);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .status {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .status.pending {
+            background: rgba(255,193,7,0.2);
+            border: 2px solid #ffc107;
+        }
+        
+        .status.success {
+            background: rgba(76,175,80,0.2);
+            border: 2px solid #4caf50;
+        }
+        
+        .countdown {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffc107;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .qr-section {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            color: #333;
+        }
+        
+        .whatsapp-btn {
+            width: 100%;
+            padding: 20px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .fallback-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,0,0,0.1);
+            border: 2px dashed #f44336;
+            border-radius: 15px;
+        }
+        
+        .fallback-section h3 {
+            color: #f44336;
+            margin-bottom: 15px;
+        }
+        
+        .wallet-address {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            word-break: break-all;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏦 CEO TRANSFER</h1>
+            <p>13 Juli 2026 - 23:50 WIB</p>
+        </div>
+        
+        <div class="countdown" id="countdown">
+            ⏰ Loading...
+        </div>
+        
+        <div class="transfer-card">
+            <div class="amount-display">
+                <div class="amount-label">TOTAL REVENUE TODAY</div>
+                <div class="amount-value">Rp 1.000.000</div>
+            </div>
+            
+            <div class="bank-details">
+                <div class="bank-row">
+                    <span class="bank-label">CEO Share (60%)</span>
+                    <span class="bank-value">Rp 600.000</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Bank</span>
+                    <span class="bank-value">BCA (Bank Central Asia)</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Account Number</span>
+                    <span class="bank-value">
+                        6485086645
+                        <button class="copy-btn" onclick="copyAccount()">📋 Copy</button>
+                    </span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Account Name</span>
+                    <span class="bank-value">i Made Purna Ananda</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Reference</span>
+                    <span class="bank-value">CEO-TRANSFER-20260713-2350</span>
+                </div>
+            </div>
+            
+            <button class="execute-btn" onclick="markTransferred()">
+                ✅ TRANSFER COMPLETED
+            </button>
+            
+            <div class="status pending" id="status">
+                <h3>⏳ PENDING - AWAITING TRANSFER</h3>
+                <p>Transfer to BCA 6485086645 for Rp 600.000</p>
+            </div>
+        </div>
+        
+        <div class="qr-section">
+            <h3>📱 Quick Actions</h3>
+            <p>Open your banking app and transfer now!</p>
+            
+            <a href="https://wa.me/6281337558787?text=Transfer%20CEO%20selesai!%0A%0AReferensi:%20CEO-TRANSFER-20260713-2350%0AAmount:%20Rp%20600.000" class="whatsapp-btn">
+                📱 Confirm via WhatsApp
+            </a>
+        </div>
+        
+        <div class="fallback-section">
+            <h3>🔴 FALLBACK - If BCA Transfer Fails</h3>
+            <p><strong>Network:</strong> TRC-20</p>
+            <p><strong>Wallet Address:</strong></p>
+            <div class="wallet-address">
+                TNFs1SP2C8HxGSZkSH3hJamf8ukgtnW7U6
+                <button class="copy-btn" onclick="copyWallet()">📋 Copy</button>
+            </div>
+            <p><strong>Amount:</strong> ~38 USDT</p>
+            <p style="color: #f44336;"><strong>⚠️ Use only if BCA transfer fails</strong></p>
+        </div>
+        
+        <div class="status pending" style="margin-top: 30px;">
+            <h3>📊 Revenue Sources Today</h3>
+            <p>Bali Travel (WhatsApp): Rp 1.000.000</p>
+            <p style="margin-top: 10px;"><strong>Distribution:</strong></p>
+            <p>CEO (60%): Rp 600.000</p>
+            <p>Reinvestment (25%): Rp 250.000</p>
+            <p>Team Bonus (10%): Rp 100.000</p>
+            <p>CSR (5%): Rp 50.000</p>
+        </div>
+    </div>
+    
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const target = new Date();
+            target.setHours(23, 50, 0, 0);
+            
+            if (now > target) {
+                document.getElementById('countdown').innerHTML = '⏰ DEADLINE PASSED!';
+                return;
+            }
+            
+            const diff = target - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = 
+                `⏰ ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Copy functions
+        function copyAccount() {
+            navigator.clipboard.writeText('6485086645');
+            alert('Account number copied!');
+        }
+        
+        function copyWallet() {
+            navigator.clipboard.writeText('TNFs1SP2C8HxGSZkSH3hJamf8ukgtnW7U6');
+            alert('Wallet address copied!');
+        }
+        
+        // Mark as transferred
+        function markTransferred() {
+            const status = document.getElementById('status');
+            status.className = 'status success';
+            status.innerHTML = `
+                <h3>✅ TRANSFER COMPLETED!</h3>
+                <p>Reference: CEO-TRANSFER-20260713-2350</p>
+                <p>Amount: Rp 600.000</p>
+                <p>Bank: BCA 6485086645</p>
+            `;
+            
+            // Save to localStorage
+            localStorage.setItem('ceoTransfer', JSON.stringify({
+                reference: 'CEO-TRANSFER-20260713-2350',
+                amount: 600000,
+                timestamp: new Date().toISOString(),
+                status: 'completed'
+            }));
+            
+            alert('✅ Transfer marked as completed!');
+        }
+        
+        // Check if already transferred
+        const saved = localStorage.getItem('ceoTransfer');
+        if (saved) {
+            const data = JSON.parse(saved);
+            if (data.status === 'completed') {
+                const status = document.getElementById('status');
+                status.className = 'status success';
+                status.innerHTML = `
+                    <h3>✅ ALREADY TRANSFERRED!</h3>
+                    <p>Reference: ${data.reference}</p>
+                    <p>Amount: Rp ${data.amount.toLocaleString()}</p>
+                    <p>Time: ${new Date(data.timestamp).toLocaleString()}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
