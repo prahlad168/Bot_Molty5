@@ -1,0 +1,119 @@
+{
+  "ceo": {
+    "name": "i Made Purna Ananda",
+    "nickname": "Pak Pur",
+    "whatsapp": "081337558787",
+    "email": "gaurangga168@gmail.com"
+  },
+  "profit_distribution": {
+    "ceo_share_percentage": 60,
+    "reinvestment_percentage": 25,
+    "team_bonus_percentage": 10,
+    "charity_percentage": 5
+  },
+  "destination": {
+    "btc_wallet": "1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2",
+    "bank_account": {
+      "name": "BCA",
+      "account_number": "6485086645",
+      "account_name": "i Made Purna Ananda"
+    }
+  },
+  "schedule": {
+    "daily_report_time": "12:00",
+    "timezone": "Asia/Makassar",
+    "description": "WITA (UTC+8)"
+  },
+  "companies": [
+    {
+      "id": "sbu_01",
+      "name": "Payangan AI Solutions",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_02",
+      "name": "Gianyar Tech Solutions",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_03",
+      "name": "Bali Digital Agency",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_04",
+      "name": "Gianyar E-Commerce Hub",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_05",
+      "name": "Bali EdTech Center",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_06",
+      "name": "Gianyar Finance Tech",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_07",
+      "name": "Bali Logistics Network",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_08",
+      "name": "Gianyar Food Tech",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_09",
+      "name": "Bali Travel Platform",
+      "status": "active",
+      "monthly_target": 100000000
+    },
+    {
+      "id": "sbu_10",
+      "name": "Gianyar Property Tech",
+      "status": "active",
+      "monthly_target": 100000000
+    }
+  ],
+  "revenue_sources": [
+    {
+      "id": "saas",
+      "name": "SaaS Products",
+      "percentage": 30
+    },
+    {
+      "id": "freelance",
+      "name": "Freelance Services",
+      "percentage": 25
+    },
+    {
+      "id": "digital",
+      "name": "Digital Products",
+      "percentage": 20
+    },
+    {
+      "id": "consulting",
+      "name": "Consulting",
+      "percentage": 15
+    },
+    {
+      "id": "affiliate",
+      "name": "Affiliate Marketing",
+      "percentage": 10
+    }
+  ],
+  "btc_price_source": "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT",
+  "version": "1.0.0",
+  "last_updated": "2026-07-13"
+}

@@ -1,0 +1,109 @@
+{
+  "last_updated": "2026-07-13T01:36:00Z",
+  "month": "2026-07",
+  "currency": "IDR",
+  "btc_price_idr": 165000000,
+  "total_target_monthly": 1000000000,
+  "daily_revenue": [
+    {
+      "date": "2026-07-01",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-02",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-03",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-04",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-05",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "weekend"
+    },
+    {
+      "date": "2026-07-06",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "weekend"
+    },
+    {
+      "date": "2026-07-07",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-08",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-09",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-10",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-11",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "no_data"
+    },
+    {
+      "date": "2026-07-12",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "weekend"
+    },
+    {
+      "date": "2026-07-13",
+      "total": 0,
+      "by_company": {},
+      "by_source": {},
+      "status": "pending"
+    }
+  ],
+  "monthly_summary": {
+    "total_revenue": 0,
+    "target": 1000000000,
+    "progress_percentage": 0,
+    "remaining_days": 18,
+    "daily_average_needed": 55555556
+  },
+  "pending_transactions": [],
+  "notes": "Revenue tracker - to be updated daily by CEO Revenue Share Execution Agent"
+}
