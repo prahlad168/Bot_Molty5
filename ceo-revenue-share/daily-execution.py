@@ -203,17 +203,17 @@ class CEORevenueShareExecutor:
 | **BTC Price (IDR)** | Rp {btc_price:,} |
 | **CEO Share (BTC)** | {btc_equivalent:.8f} BTC |
 
-### 🎯 BTC Transfer Details
+### 🎯 BTC Transfer Details (PRIMARY)
 | Field | Value |
 |-------|-------|
+| **Platform** | {self.config['destination']['btc_platform']} |
 | **BTC Wallet** | `{self.config['destination']['btc_wallet']}` |
 | **Amount to Send** | {btc_equivalent:.8f} BTC |
 
-### 🏦 Alternative - Bank Transfer
-| Bank | Account Number | Account Name |
-|------|----------------|--------------|
-| BCA | {self.config['destination']['bank_account']['account_number']} | {self.config['destination']['bank_account']['account_name']} |
-| **Amount** | Rp {int(ceo_share):,} |
+### 🏦 Bank Transfer (DISABLED)
+| Bank | Status |
+|------|--------|
+| BCA 6485086645 | ❌ DIHAPUS - Tidak lagi digunakan |
 
 ---
 
@@ -264,7 +264,7 @@ class CEORevenueShareExecutor:
 - Laporan ini di-generate secara otomatis oleh **CEO Revenue Share Execution Agent**
 - Data diambil dari sistem tracking revenue MAHA LAKSHMI HOLDINGS
 - Profit distribution: 60% CEO, 25% Reinvestment, 10% Team Bonus, 5% Charity
-- BTC wallet dan Bank BCA siap menerima transfer
+- ⚠️ CEO 60% revenue ditransfer ke Bitcoin Tokocrypto (BCA DIHAPUS)
 
 ---
 
