@@ -1,0 +1,33 @@
+{
+  "company_wallet": {
+    "platform": "Tokocrypto",
+    "network": "Bitcoin",
+    "address": "3f2918fc0610877b66d4bCF7fAb740916VxQlbjqHHz1ejP8A9t9gYo2zXJ7H6Kj",
+    "wallet_type": "company",
+    "purpose": "Penerimaan revenue dari customer - TEMPAT UANG PERUSAHAAN MASUK",
+    "created": "2026-07-13",
+    "status": "ACTIVE"
+  },
+  "ceo_wallet": {
+    "platform": "Tokocrypto",
+    "network": "Bitcoin",
+    "address": "1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2",
+    "wallet_type": "ceo_personal",
+    "purpose": "Penerimaan 60% profit CEO",
+    "created": "2026-07-13",
+    "status": "ACTIVE"
+  },
+  "flow": {
+    "step_1": "Customer Bayar ke Company Wallet (Tokocrypto: 3f2918fc0610877b66d4bCF7fAb740916VxQlbjqHHz1ejP8A9t9gYo2zXJ7H6Kj)",
+    "step_2": "Company Terima BTC di wallet ini",
+    "step_3": "Hitung profit (Revenue - Expenses)",
+    "step_4": "Transfer 60% ke CEO Wallet (Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2)",
+    "step_5": "Update revenue tracker dengan transaction"
+  },
+  "security": {
+    "private_key": "DO NOT STORE HERE - USE ENVIRONMENT VARIABLE: COMPANY_WALLET_PRIVATE_KEY",
+    "warning": "⚠️ JANGAN COMMIT PRIVATE KEY KE GIT! SIMPAN DI ENVIRONMENT VARIABLE!"
+  },
+  "version": "1.0.0",
+  "last_updated": "2026-07-13"
+}

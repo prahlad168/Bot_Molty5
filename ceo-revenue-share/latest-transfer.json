@@ -1,0 +1,12 @@
+{
+  "calculated_at": "2026-07-13T06:43:55.620284",
+  "total_revenue": 1000000.0,
+  "ceo_percentage": 60,
+  "ceo_share_idr": 600000.0,
+  "ceo_share_btc": 0.000542740841248304,
+  "btc_price_usd": 67000,
+  "btc_price_idr": 1105500000,
+  "company_wallet": "3f2918fc0610877b66d4bCF7fAb740916VxQlbjqHHz1ejP8A9t9gYo2zXJ7H6Kj",
+  "ceo_wallet": "1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2",
+  "status": "READY"
+}

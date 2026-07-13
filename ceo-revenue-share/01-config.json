@@ -1,35 +1,30 @@
 {
   "version": "1.0.0",
   "created": "2026-07-13",
-  "last_updated": "2026-07-13T12:00:00+08:00",
-  
+  "last_updated": "2026-07-13",
   "ceo": {
     "name": "i Made Purna Ananda",
     "short_name": "Pak Pur",
     "whatsapp": "081337558787",
     "email": "gaurangga168@gmail.com"
   },
-  
   "payment": {
     "schedule": "0 12 * * *",
     "timezone": "Asia/Makassar",
     "timezone_display": "WITA (UTC+8)",
     "daily_time": "12:00 WITA"
   },
-  
   "distribution": {
     "ceo_share_percent": 60,
     "reinvest_percent": 25,
     "team_bonus_percent": 10,
     "csr_percent": 5
   },
-  
   "destination": {
     "type": "btc_wallet",
     "address": "1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2",
     "label": "CEO Personal BTC Wallet"
   },
-  
   "companies": [
     {
       "id": 1,
@@ -112,9 +107,7 @@
       "current_revenue": 0
     }
   ],
-  
   "total_target_monthly": 99000000,
-  
   "data_sources": [
     {
       "name": "Website Direct Sales",
@@ -147,16 +140,18 @@
       "type": "manual"
     }
   ],
-  
   "currencies": {
     "default": "IDR",
-    "supported": ["IDR", "USD", "EUR"],
+    "supported": [
+      "IDR",
+      "USD",
+      "EUR"
+    ],
     "exchange_rates": {
       "USD_TO_IDR": 16500,
       "EUR_TO_IDR": 18000
     }
   },
-  
   "automation": {
     "enabled": true,
     "schedule": "0 12 * * *",
@@ -164,16 +159,21 @@
     "send_notification": true,
     "update_dashboard": true
   },
-  
   "reports": {
     "daily_folder": "ceo-revenue-share/DAILY-REPORTS",
     "format": "markdown",
     "include_charts": false
   },
-  
   "audit": {
     "enabled": true,
     "log_file": "ceo-revenue-share/03-audit-log.json",
     "keep_days": 365
+  },
+  "company_wallet": {
+    "platform": "Tokocrypto",
+    "network": "Bitcoin",
+    "address": "3f2918fc0610877b66d4bCF7fAb740916VxQlbjqHHz1ejP8A9t9gYo2zXJ7H6Kj",
+    "type": "company",
+    "purpose": "Tempat revenue perusahaan masuk"
   }
 }
