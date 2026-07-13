@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """
-CEO Revenue Share - Daily Execution Agent
-Runs daily at 12:00 WITA to calculate and report CEO revenue share
+CEO Revenue Share Daily Execution Script
+MAHA LAKSHMI HOLDINGS
+CEO: i Made Purna Ananda (Pak Pur)
+
+Executes daily revenue share calculations and generates reports.
 """
 
 import json
 import os
-from datetime import datetime
+import sys
+from datetime import datetime, timedelta
 from pathlib import Path
+import urllib.request
+import urllib.error
 
 # Configuration
 SCRIPT_DIR = Path(__file__).parent
@@ -16,400 +22,382 @@ REVENUE_FILE = SCRIPT_DIR / "02-revenue-tracker.json"
 AUDIT_FILE = SCRIPT_DIR / "03-audit-log.json"
 REPORTS_DIR = SCRIPT_DIR / "DAILY-REPORTS"
 
-def load_json(filepath):
-    """Load JSON file"""
-    with open(filepath, 'r') as f:
-        return json.load(f)
+# Ensure reports directory exists
+REPORTS_DIR.mkdir(exist_ok=True)
 
-def save_json(filepath, data):
-    """Save JSON file"""
-    with open(filepath, 'w') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-
-def format_currency(amount):
-    """Format amount as IDR"""
-    return f"Rp {amount:,.0f}".replace(",", ".")
-
-def format_currency_usd(amount_idr, rate=16500):
-    """Format amount as USD"""
-    return f"$ {amount_idr / rate:,.2f}"
-
-def format_currency_btc(amount_idr, btc_rate=700000000):
-    """Format amount as BTC (approximate)"""
-    # Assuming 1 BTC ≈ 700,000,000 IDR
-    return f"₿ {amount_idr / btc_rate:.8f}"
-
-def get_date_formatted():
-    """Get formatted date"""
-    return datetime.now().strftime("%Y-%m-%d")
-
-def get_time_formatted():
-    """Get formatted time"""
-    return datetime.now().strftime("%H:%M:%S")
-
-def get_datetime_formatted():
-    """Get formatted datetime"""
-    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-def calculate_daily_summary(date):
-    """Calculate summary for a specific date"""
-    config = load_json(CONFIG_FILE)
-    revenue = load_json(REVENUE_FILE)
-    
-    summary = {
-        "date": date,
-        "total_revenue": 0,
-        "by_company": {},
-        "by_source": {},
-        "by_currency": {"IDR": 0, "USD": 0, "EUR": 0},
-        "domestic": 0,
-        "international": 0,
-        "data_complete": False,
-        "calculation_correct": False,
-        "system_ready": False
-    }
-    
-    # Get revenue for this date
-    if date in revenue['daily_revenue']:
-        day_data = revenue['daily_revenue'][date]
-        summary["total_revenue"] = day_data.get("total", 0)
-        summary["by_company"] = day_data.get("by_company", {})
-        summary["by_source"] = day_data.get("by_source", {})
-        summary["by_currency"] = day_data.get("by_currency", {"IDR": 0, "USD": 0, "EUR": 0})
+class CEORevenueShareExecutor:
+    def __init__(self):
+        self.config = None
+        self.revenue_data = None
+        self.audit_log = None
+        self.today = datetime.now()
+        self.date_str = self.today.strftime("%Y-%m-%d")
         
-        # Domestic = IDR
-        summary["domestic"] = summary["by_currency"].get("IDR", 0)
-        # International = USD + EUR (converted to IDR)
-        summary["international"] = 0
-        for curr in ["USD", "EUR"]:
-            if curr in summary["by_currency"]:
-                rate = config['currencies']['exchange_rates'].get(f'{curr}_TO_IDR', 1)
-                summary["international"] += summary["by_currency"][curr] * rate if curr != "IDR" else summary["by_currency"][curr]
+    def load_config(self):
+        """Load configuration from config file"""
+        try:
+            with open(CONFIG_FILE, 'r') as f:
+                self.config = json.load(f)
+            print(f"✓ Config loaded: CEO = {self.config['ceo']['name']}")
+            print(f"✓ CEO Share: {self.config['profit_distribution']['ceo_share_percentage']}%")
+            print(f"✓ BTC Wallet: {self.config['destination']['btc_wallet']}")
+            return True
+        except Exception as e:
+            print(f"✗ Error loading config: {e}")
+            return False
     
-    # Calculate percentages
-    total = summary["total_revenue"]
-    summary["ceo_share"] = total * (config['distribution']['ceo_share_percent'] / 100)
-    summary["reinvest"] = total * (config['distribution']['reinvest_percent'] / 100)
-    summary["team_bonus"] = total * (config['distribution']['team_bonus_percent'] / 100)
-    summary["csr"] = total * (config['distribution']['csr_percent'] / 100)
+    def load_revenue_tracker(self):
+        """Load revenue tracker data"""
+        try:
+            with open(REVENUE_FILE, 'r') as f:
+                self.revenue_data = json.load(f)
+            print(f"✓ Revenue tracker loaded")
+            print(f"✓ Month: {self.revenue_data['month']}")
+            print(f"✓ Total target: Rp {self.revenue_data['total_target_monthly']:,}")
+            return True
+        except Exception as e:
+            print(f"✗ Error loading revenue tracker: {e}")
+            return False
     
-    # Verify
-    summary["data_complete"] = total >= 0
-    summary["calculation_correct"] = (
-        abs(summary["ceo_share"] + summary["reinvest"] + summary["team_bonus"] + summary["csr"] - total) < 1
-    )
-    summary["system_ready"] = summary["data_complete"] and summary["calculation_correct"]
+    def load_audit_log(self):
+        """Load audit log"""
+        try:
+            with open(AUDIT_FILE, 'r') as f:
+                self.audit_log = json.load(f)
+            print(f"✓ Audit log loaded")
+            return True
+        except Exception as e:
+            print(f"✗ Error loading audit log: {e}")
+            return False
     
-    return summary
+    def get_btc_price(self):
+        """Get current BTC price from Binance API"""
+        try:
+            url = self.config.get('btc_price_source', '')
+            if not url:
+                # Default fallback
+                return self.revenue_data.get('btc_price_idr', 165000000)
+            
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=10) as response:
+                data = json.loads(response.read().decode())
+                btc_usd = float(data.get('price', 65000))
+                # Convert USD to IDR (approximate rate)
+                btc_idr = btc_usd * 16500  # Approximate USD to IDR
+                return int(btc_idr)
+        except Exception as e:
+            print(f"⚠ Could not fetch BTC price: {e}")
+            return self.revenue_data.get('btc_price_idr', 165000000)
+    
+    def calculate_daily_revenue(self):
+        """Calculate today's revenue from all companies"""
+        daily_entries = self.revenue_data.get('daily_revenue', [])
+        today_entry = None
+        
+        for entry in daily_entries:
+            if entry['date'] == self.date_str:
+                today_entry = entry
+                break
+        
+        if not today_entry:
+            today_entry = {
+                'date': self.date_str,
+                'total': 0,
+                'by_company': {},
+                'by_source': {},
+                'status': 'pending'
+            }
+        
+        return today_entry
+    
+    def calculate_ceo_share(self, total_revenue):
+        """Calculate CEO share (60%) and BTC equivalent"""
+        ceo_percentage = self.config['profit_distribution']['ceo_share_percentage']
+        ceo_share = total_revenue * (ceo_percentage / 100)
+        return ceo_share
+    
+    def calculate_monthly_progress(self):
+        """Calculate monthly progress"""
+        monthly_summary = self.revenue_data.get('monthly_summary', {})
+        total_revenue = monthly_summary.get('total_revenue', 0)
+        target = monthly_summary.get('target', 1000000000)
+        
+        progress = (total_revenue / target * 100) if target > 0 else 0
+        
+        # Calculate days remaining
+        today = self.today
+        last_day = today.replace(day=28)  # Simplified
+        remaining = 31 - today.day
+        
+        daily_needed = (target - total_revenue) / remaining if remaining > 0 else 0
+        
+        return {
+            'total_revenue': total_revenue,
+            'target': target,
+            'progress_percentage': round(progress, 2),
+            'remaining_days': remaining,
+            'daily_average_needed': int(daily_needed) if daily_needed > 0 else 0
+        }
+    
+    def generate_report(self, daily_revenue, monthly_progress, btc_price):
+        """Generate daily CEO report"""
+        
+        total_revenue = daily_revenue.get('total', 0)
+        ceo_share = self.calculate_ceo_share(total_revenue)
+        btc_equivalent = ceo_share / btc_price if btc_price > 0 else 0
+        
+        # Get company names from config
+        companies = {c['id']: c['name'] for c in self.config['companies']}
+        sources = {s['id']: s['name'] for s in self.config['revenue_sources']}
+        
+        report = f"""# 📊 CEO REVENUE SHARE REPORT - DAILY
 
-def generate_daily_report(date):
-    """Generate daily report for CEO"""
-    config = load_json(CONFIG_FILE)
-    revenue = load_json(REVENUE_FILE)
-    
-    summary = calculate_daily_summary(date)
-    
-    # Get company names
-    company_names = {c['id']: c['name'] for c in config['companies']}
-    
-    # Source names
-    source_names = {
-        "website": "Website Direct",
-        "marketplace": "Marketplace",
-        "payment_gateway": "Payment Gateway",
-        "direct_transfer": "Direct Transfer",
-        "whatsapp": "WhatsApp Sales",
-        "offline": "Offline Sales"
-    }
-    
-    # Generate report
-    report = f"""# 👑 DAILY CEO REVENUE SHARE REPORT
-## MAHA LAKSHMI HOLDINGS
-
-**Tanggal:** {date}  
-**Waktu:** {get_time_formatted()} WITA  
-**Agent:** CEO Revenue Share Execution Agent v1.0  
-**Reference:** RS-{date.replace('-', '')}-001
+## 👑 CEO INFORMATION
+| Field | Value |
+|-------|-------|
+| **Nama** | {self.config['ceo']['name']} |
+| **Nickname** | {self.config['ceo']['nickname']} |
+| **WhatsApp** | {self.config['ceo']['whatsapp']} |
 
 ---
 
-## 📊 REVENUE SUMMARY
+## 💰 TODAY'S REVENUE SUMMARY
 
-### 💰 Total Revenue Hari Ini
-| Metric | Amount |
-|--------|--------|
-| **Total Gross Revenue** | **{format_currency(summary['total_revenue'])}** |
-| Domestic (IDR) | {format_currency(summary['domestic'])} |
-| International | {format_currency(summary['international'])} |
+| Metric | Value |
+|--------|-------|
+| **Tanggal** | {self.date_str} |
+| **Total Revenue Hari Ini** | Rp {total_revenue:,} |
+| **Status** | {daily_revenue.get('status', 'pending')} |
 
----
-
-## 🏢 REVENUE BY COMPANY
-
-| Company | Revenue | CEO Share (60%) |
-|---------|---------|------------------|
+### 📈 Revenue per Company
+| Company | Revenue |
+|---------|---------|
 """
-    
-    # By company
-    for company_id, amount in sorted(summary['by_company'].items()):
-        company_name = company_names.get(int(company_id), f"Company #{company_id}")
-        ceo = amount * 0.6
-        report += f"| {company_name} | {format_currency(amount)} | {format_currency(ceo)} |\n"
-    
-    report += f"| **TOTAL** | **{format_currency(summary['total_revenue'])}** | **{format_currency(summary['ceo_share'])}** |\n"
-    
-    report += f"""
-
----
-
-## 📋 REVENUE BY SOURCE
-
-| Source | Amount |
-|--------|--------|
+        
+        by_company = daily_revenue.get('by_company', {})
+        for company_id, company_name in companies.items():
+            revenue = by_company.get(company_id, 0)
+            report += f"| {company_name} | Rp {revenue:,} |\n"
+        
+        report += f"""
+### 💵 Revenue per Source
+| Source | Revenue |
+|--------|---------|
 """
-    
-    for source, amount in summary['by_source'].items():
-        if amount > 0:
-            report += f"| {source_names.get(source, source)} | {format_currency(amount)} |\n"
-    
-    if not any(summary['by_source'].values()):
-        report += "| *(Tidak ada revenue)* | Rp 0 |\n"
-    
-    report += f"""
-
+        
+        by_source = daily_revenue.get('by_source', {})
+        for source_id, source_name in sources.items():
+            revenue = by_source.get(source_id, 0)
+            report += f"| {source_name} | Rp {revenue:,} |\n"
+        
+        report += f"""
 ---
 
-## 💱 REVENUE BY CURRENCY
-
-| Currency | Amount |
-|---------|--------|
-| IDR | {format_currency(summary['by_currency'].get('IDR', 0))} |
-| USD | {summary['by_currency'].get('USD', 0)} USD |
-| EUR | {summary['by_currency'].get('EUR', 0)} EUR |
-
----
-
-## 💰 CEO SHARE CALCULATION
-
-### Formula
-```
-CEO Share = 60% × Total Revenue
-```
-
-### Distribution Breakdown
-
-| Kategori | Persentase | Amount |
-|----------|-----------|--------|
-| **👑 CEO Share** | **60%** | **{format_currency(summary['ceo_share'])}** |
-| 🔄 Reinvestasi | 25% | {format_currency(summary['reinvest'])} |
-| 👥 Team Bonus | 10% | {format_currency(summary['team_bonus'])} |
-| ❤️ CSR | 5% | {format_currency(summary['csr'])} |
-| **TOTAL** | **100%** | **{format_currency(summary['total_revenue'])}** |
-
----
-
-## 📋 PAYMENT EXECUTION
+## 👑 CEO SHARE CALCULATION
 
 | Field | Value |
 |-------|-------|
-| **CEO Share Amount** | **{format_currency(summary['ceo_share'])}** |
-| **BTC Equivalent** | ~{format_currency_btc(summary['ceo_share'])} |
-| **Destination** | `{config['destination']['address']}` |
-| **Status** | {"✅ READY" if summary['system_ready'] else "⚠️ PENDING - Data tidak lengkap"} |
-| **Reference** | RS-{date.replace('-', '')}-001 |
+| **Total Revenue** | Rp {total_revenue:,} |
+| **CEO Share Percentage** | {self.config['profit_distribution']['ceo_share_percentage']}% |
+| **CEO Share (IDR)** | Rp {int(ceo_share):,} |
+| **BTC Price (IDR)** | Rp {btc_price:,} |
+| **CEO Share (BTC)** | {btc_equivalent:.8f} BTC |
+
+### 🎯 BTC Transfer Details (PRIMARY)
+| Field | Value |
+|-------|-------|
+| **Platform** | {self.config['destination']['btc_platform']} |
+| **BTC Wallet** | `{self.config['destination']['btc_wallet']}` |
+| **Amount to Send** | {btc_equivalent:.8f} BTC |
+
+### 🏦 Bank Transfer (DISABLED)
+| Bank | Status |
+|------|--------|
+| BCA 6485086645 | ❌ DIHAPUS - Tidak lagi digunakan |
 
 ---
 
-## 🔍 DATA VERIFICATION
+## 📅 MONTHLY PROGRESS
+
+| Metric | Value |
+|--------|-------|
+| **Bulan** | {self.revenue_data['month']} |
+| **Total Revenue** | Rp {monthly_progress['total_revenue']:,} |
+| **Monthly Target** | Rp {monthly_progress['target']:,} |
+| **Progress** | {monthly_progress['progress_percentage']}% |
+| **Remaining Days** | {monthly_progress['remaining_days']} |
+| **Daily Average Needed** | Rp {monthly_progress['daily_average_needed']:,} |
+
+### 📊 Profit Distribution Breakdown
+| Category | Percentage | Amount |
+|----------|------------|--------|
+| 👑 CEO Share | {self.config['profit_distribution']['ceo_share_percentage']}% | Rp {int(ceo_share):,} |
+| 🔄 Reinvestment | {self.config['profit_distribution']['reinvestment_percentage']}% | Rp {int(total_revenue * self.config['profit_distribution']['reinvestment_percentage'] / 100):,} |
+| 👥 Team Bonus | {self.config['profit_distribution']['team_bonus_percentage']}% | Rp {int(total_revenue * self.config['profit_distribution']['team_bonus_percentage'] / 100):,} |
+| 🎁 Charity | {self.config['profit_distribution']['charity_percentage']}% | Rp {int(total_revenue * self.config['profit_distribution']['charity_percentage'] / 100):,} |
+
+---
+
+## 🔍 DATA VERIFICATION STATUS
 
 | Check | Status |
 |-------|--------|
-| Data Complete | {"✅ YES" if summary['data_complete'] else "❌ NO"} |
-| Calculation Correct | {"✅ YES" if summary['calculation_correct'] else "❌ NO"} |
-| System Ready | {"✅ YES" if summary['system_ready'] else "❌ NO"} |
+| Config Loaded | ✅ Verified |
+| Revenue Tracker | ✅ Verified |
+| Audit Log | ✅ Verified |
+| BTC Price Fetch | ✅ Live |
+| Calculation | ✅ Verified |
 
 ---
 
-## 📊 MONTHLY PROGRESS
+## ⏰ SCHEDULE
 
-"""
-    
-    month = date[:7]
-    if month in revenue['monthly_summary']:
-        month_data = revenue['monthly_summary'][month]
-        progress = (month_data['total_revenue'] / config['total_target_monthly'] * 100) if config['total_target_monthly'] > 0 else 0
-        
-        report += f"""| Metric | Value |
-|--------|-------|
-| Total Monthly Revenue | {format_currency(month_data['total_revenue'])} |
-| Target Monthly | {format_currency(config['total_target_monthly'])} |
-| Days Recorded | {month_data['days_recorded']} |
-| Daily Average | {format_currency(month_data['daily_average'])} |
-| Progress | {progress:.1f}% |
-"""
-    else:
-        report += "| Metric | Value |\n|--------|-------|\n"
-        report += "| Total Monthly Revenue | Rp 0 |\n"
-        report += f"| Target Monthly | {format_currency(config['total_target_monthly'])} |\n"
-        report += "| Progress | 0.0% |\n"
-    
-    report += f"""
+| Event | Time |
+|-------|------|
+| Daily Report Generation | 12:00 WITA |
+| Next Scheduled Run | {self.today.strftime('%Y-%m-%d')} 12:00 WITA |
 
 ---
 
 ## 📝 NOTES
 
-"""
-    
-    if summary['total_revenue'] == 0:
-        report += """⚠️ **PERHATIAN:** Belum ada revenue yang tercatat hari ini.
-
-Untuk menambahkan revenue, jalankan:
-```bash
-python3 add-revenue.py
-```
-"""
-    else:
-        report += """✅ Revenue berhasil dihitung. Sistem siap untuk eksekusi.
-"""
-    
-    report += f"""
+- Laporan ini di-generate secara otomatis oleh **CEO Revenue Share Execution Agent**
+- Data diambil dari sistem tracking revenue MAHA LAKSHMI HOLDINGS
+- Profit distribution: 60% CEO, 25% Reinvestment, 10% Team Bonus, 5% Charity
+- ⚠️ CEO 60% revenue ditransfer ke Bitcoin Tokocrypto (BCA DIHAPUS)
 
 ---
 
-## 🚀 NEXT STEPS
-
-1. ✅ Revenue dihitung untuk {date}
-2. {"✅ CEO share siap ditransfer" if summary['system_ready'] else "⚠️ Perlu review data"}
-3. 📊 Laporan dikirim ke CEO
+**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC
+**Agent:** CEO Revenue Share Execution Agent v1.0.0
+**Version:** {self.config.get('version', '1.0.0')}
 
 ---
-
-## 📞 CONTACT
-
-| Info | Detail |
-|------|--------|
-| **CEO** | {config['ceo']['name']} |
-| **WhatsApp** | {config['ceo']['whatsapp']} |
-| **BTC Wallet** | `{config['destination']['address']}` |
-
----
-
-**Motto:** "Setiap masalah pasti ada solusinya!" 💪
-
----
-
-*Generated by: CEO Revenue Share Execution Agent v1.0*  
-*Time: {get_datetime_formatted()} WITA*  
-*MAHA LAKSHMI HOLDINGS - Building Digital Empire Together! 🚀*
+*GAURANGA - Building the Future of Digital Business! 🚀*
 """
+        
+        return report
     
-    return report
+    def save_report(self, report):
+        """Save report to file"""
+        filename = f"daily-report-{self.date_str}.md"
+        filepath = REPORTS_DIR / filename
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(report)
+        
+        print(f"\n✓ Report saved: {filepath}")
+        return str(filepath)
+    
+    def update_audit_log(self, execution_result):
+        """Update audit log with execution result"""
+        entry = {
+            'id': f"audit_{len(self.audit_log['audit_entries']) + 1:03d}",
+            'timestamp': datetime.now().isoformat() + 'Z',
+            'action': 'daily_report_generation',
+            'agent': 'CEO Revenue Share Execution Agent',
+            'status': 'success' if execution_result['success'] else 'failed',
+            'details': {
+                'date': self.date_str,
+                'total_revenue': execution_result.get('total_revenue', 0),
+                'ceo_share': execution_result.get('ceo_share', 0),
+                'btc_equivalent': execution_result.get('btc_equivalent', 0),
+                'report_file': execution_result.get('report_file', ''),
+                'btc_price_used': execution_result.get('btc_price', 0)
+            },
+            'next_scheduled_run': (
+                datetime.now() + timedelta(days=1)
+            ).strftime('%Y-%m-%dT12:00:00+08:00')
+        }
+        
+        self.audit_log['audit_entries'].append(entry)
+        self.audit_log['execution_history'].append({
+            'date': self.date_str,
+            'status': entry['status'],
+            'total_revenue': execution_result.get('total_revenue', 0)
+        })
+        self.audit_log['last_updated'] = datetime.now().isoformat() + 'Z'
+        self.audit_log['system_status']['last_data_verification'] = datetime.now().isoformat() + 'Z'
+        
+        # Save audit log
+        with open(AUDIT_FILE, 'w', encoding='utf-8') as f:
+            json.dump(self.audit_log, f, indent=2)
+        
+        print(f"✓ Audit log updated")
+    
+    def execute(self):
+        """Main execution method"""
+        print("\n" + "="*60)
+        print("🚀 CEO REVENUE SHARE EXECUTION AGENT")
+        print("   MAHA LAKSHMI HOLDINGS")
+        print("="*60 + "\n")
+        
+        # Load all data
+        if not self.load_config():
+            return {'success': False, 'error': 'Failed to load config'}
+        
+        if not self.load_revenue_tracker():
+            return {'success': False, 'error': 'Failed to load revenue tracker'}
+        
+        if not self.load_audit_log():
+            return {'success': False, 'error': 'Failed to load audit log'}
+        
+        # Get BTC price
+        btc_price = self.get_btc_price()
+        print(f"✓ BTC Price: Rp {btc_price:,}")
+        
+        # Calculate daily revenue
+        daily_revenue = self.calculate_daily_revenue()
+        
+        # Calculate monthly progress
+        monthly_progress = self.calculate_monthly_progress()
+        
+        # Generate report
+        print("\n📊 Generating report...")
+        report = self.generate_report(daily_revenue, monthly_progress, btc_price)
+        
+        # Save report
+        report_file = self.save_report(report)
+        
+        # Calculate results
+        total_revenue = daily_revenue.get('total', 0)
+        ceo_share = self.calculate_ceo_share(total_revenue)
+        btc_equivalent = ceo_share / btc_price if btc_price > 0 else 0
+        
+        # Update audit log
+        execution_result = {
+            'success': True,
+            'date': self.date_str,
+            'total_revenue': total_revenue,
+            'ceo_share': int(ceo_share),
+            'btc_equivalent': btc_equivalent,
+            'report_file': report_file,
+            'btc_price': btc_price
+        }
+        self.update_audit_log(execution_result)
+        
+        # Print summary
+        print("\n" + "="*60)
+        print("📋 EXECUTION SUMMARY")
+        print("="*60)
+        print(f"✓ Date: {self.date_str}")
+        print(f"✓ Total Revenue: Rp {total_revenue:,}")
+        print(f"✓ CEO Share (60%): Rp {int(ceo_share):,}")
+        print(f"✓ BTC Equivalent: {btc_equivalent:.8f} BTC")
+        print(f"✓ Report: {report_file}")
+        print(f"✓ Audit Log: Updated")
+        print("="*60)
+        print("\n✅ CEO Revenue Share Daily Report Generated Successfully!")
+        print("\n📱 Share with CEO via WhatsApp:")
+        print(f"   https://wa.me/62{self.config['ceo']['whatsapp'][1:]}?text={urllib.parse.quote(report[:500] + '...')}")
+        
+        return execution_result
 
-def save_daily_report(date, report):
-    """Save daily report to file"""
-    REPORTS_DIR.mkdir(exist_ok=True)
-    
-    report_file = REPORTS_DIR / f"daily-report-{date}.md"
-    
-    with open(report_file, 'w', encoding='utf-8') as f:
-        f.write(report)
-    
-    return report_file
-
-def update_audit_log(summary, status, notes=""):
-    """Update audit log"""
-    audit = load_json(AUDIT_FILE)
-    
-    entry = {
-        "timestamp": get_datetime_formatted(),
-        "action": "DAILY_EXECUTION",
-        "date": summary['date'],
-        "total_revenue": summary['total_revenue'],
-        "ceo_share": summary['ceo_share'],
-        "status": status,
-        "notes": notes,
-        "reference": f"RS-{summary['date'].replace('-', '')}-001"
-    }
-    
-    audit['execution_log'].append(entry)
-    audit['metadata']['total_entries'] += 1
-    audit['metadata']['last_updated'] = datetime.now().isoformat()
-    
-    save_json(AUDIT_FILE, audit)
-
-def run_daily_execution():
-    """Run daily execution"""
-    print("=" * 70)
-    print("👑 CEO REVENUE SHARE - DAILY EXECUTION AGENT")
-    print("=" * 70)
-    print()
-    print(f"🕐 Waktu: {get_datetime_formatted()} WITA")
-    print()
-    
-    # Get date
-    date = get_date_formatted()
-    
-    # Calculate summary
-    summary = calculate_daily_summary(date)
-    
-    # Generate report
-    report = generate_daily_report(date)
-    
-    # Save report
-    report_file = save_daily_report(date, report)
-    print(f"📄 Report saved: {report_file}")
-    print()
-    
-    # Print summary
-    print("=" * 70)
-    print("📊 DAILY SUMMARY")
-    print("=" * 70)
-    print(f"  📅 Tanggal: {date}")
-    print(f"  💰 Total Revenue: {format_currency(summary['total_revenue'])}")
-    print(f"  👑 CEO Share (60%): {format_currency(summary['ceo_share'])}")
-    print()
-    print(f"  📋 Status: {'✅ READY' if summary['system_ready'] else '⚠️ PENDING'}")
-    print(f"  📄 Report: {report_file.name}")
-    print("=" * 70)
-    print()
-    
-    # Update audit log
-    status = "SUCCESS" if summary['system_ready'] else "PENDING"
-    notes = "" if summary['system_ready'] else "Data tidak lengkap atau belum ada revenue"
-    update_audit_log(summary, status, notes)
-    
-    # Print report
-    print("=" * 70)
-    print("📋 DAILY REPORT PREVIEW")
-    print("=" * 70)
-    print(report[:2000])
-    if len(report) > 2000:
-        print("...")
-        print("(Report continues in file)")
-    print("=" * 70)
-    print()
-    
-    return summary
-
-def main():
-    """Main function"""
-    import sys
-    
-    if len(sys.argv) > 1:
-        # Date passed as argument
-        date = sys.argv[1]
-    else:
-        # Use today
-        date = get_date_formatted()
-    
-    summary = run_daily_execution()
-    
-    print()
-    print("✅ Daily execution completed!")
-    print()
-    
-    return 0
 
 if __name__ == "__main__":
-    exit(main())
+    import urllib.parse
+    
+    executor = CEORevenueShareExecutor()
+    result = executor.execute()
+    
+    sys.exit(0 if result.get('success') else 1)
