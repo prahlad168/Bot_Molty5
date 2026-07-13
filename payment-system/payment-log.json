@@ -1,6 +1,46 @@
 {
   "transfers": [
     {
+      "reference": "CEO-TRANSFER-20260713-2350",
+      "timestamp": "2026-07-13T23:50:00+07:00",
+      "date": "2026-07-13",
+      "gross_revenue": 1000000,
+      "ceo_share_percent": 60,
+      "amount_gross": 600000,
+      "amount_net": 600000,
+      "fee": 0,
+      "method": "bca_transfer",
+      "destination": {
+        "bank": "BCA",
+        "bank_code": "BCA",
+        "account_number": "6485086645",
+        "account_name": "i Made Purna Ananda"
+      },
+      "status": "instructions_generated",
+      "notes": "Daily CEO transfer - 60% of Rp 1.000.000 revenue from Bali Travel WhatsApp Sales",
+      "revenue_sources": {
+        "whatsapp": 1000000,
+        "website": 0,
+        "payment_gateway": 0,
+        "direct_transfer": 0,
+        "offline": 0
+      },
+      "instructions": {
+        "action": "TRANSFER SEKARANG!",
+        "bank": "BCA",
+        "account": "6485086645",
+        "name": "i Made Purna Ananda",
+        "amount": 600000,
+        "note": "CEO-TRANSFER-20260713-2350"
+      },
+      "fallback": {
+        "method": "USDT TRC-20",
+        "wallet": "TNFs1SP2C8HxGSZkSH3hJamf8ukgtnW7U6",
+        "amount_usdt": 38,
+        "note": "Use only if BCA transfer fails"
+      }
+    },
+    {
       "reference": "CEO-20260713114714",
       "timestamp": "2026-07-13T11:47:14.668566",
       "amount_gross": 600000,
@@ -22,5 +62,11 @@
       }
     }
   ],
-  "total_sent": 0
+  "total_sent": 0,
+  "pending_transfer": {
+    "reference": "CEO-TRANSFER-20260713-2350",
+    "amount": 600000,
+    "status": "READY_TO_EXECUTE",
+    "deadline": "2026-07-13 23:50 WIB"
+  }
 }
