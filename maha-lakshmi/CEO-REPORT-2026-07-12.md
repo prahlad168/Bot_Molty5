@@ -548,7 +548,7 @@ Jika plan ini di-follow dengan konsisten:
 |------|--------|
 | **CEO** | i Made Purna Ananda (Pak Pur) |
 | **WhatsApp** | 081337558787 |
-| **Bank** | BCA 6485086645 |
+| **Bank** | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | **Email** | gaurangga168@gmail.com |
 | **GitHub** | prahlad168/MAHA-LAKSHMI-CORP |
 

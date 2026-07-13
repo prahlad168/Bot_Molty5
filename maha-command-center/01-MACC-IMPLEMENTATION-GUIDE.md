@@ -34,7 +34,7 @@ Saat CEO login, mereka langsung melihat:
 | Today's Revenue | 💰 | Total revenue today |
 | Today's Profit | 📈 | Net profit after distribution |
 | Wallet | 👛 | Digital wallet balance |
-| Bank | 🏦 | BCA 6485086645 |
+| Bank | 🏦 | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Cashflow | 💵 | Money in/out |
 | Pending Approval | ⏳ | Items awaiting CEO decision |
 | Critical Alert | 🚨 | Issues needing immediate attention |
@@ -96,7 +96,7 @@ Seperti ChatGPT untuk perusahaan:
 - Income streams
 - Expense tracking
 - Profit distribution
-- Bank transfers (BCA 6485086645)
+- Bank transfers (Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2)
 - Auto-transfer schedule
 - Tax preparation
 

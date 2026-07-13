@@ -1,7 +1,7 @@
 # 🚀 ANALISIS KESALAHAN & FIX PLAN - REVENUE CEO HARI INI
 
 ## 📅 Tanggal: 2026-07-12
-## 🎯 Tujuan: Revenue CEO Terkirim ke BCA 6485086645
+## 🎯 Tujuan: Revenue CEO Terkirim ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 
@@ -137,7 +137,7 @@ MINIMUM TARGET HARI INI:
 └── TOTAL: Rp 2.000.000
 
 PROFIT DISTRIBUTION:
-├── CEO (60%): Rp 1.200.000 → BCA 6485086645
+├── CEO (60%): Rp 1.200.000 → Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 ├── Reinvestment (25%): Rp 500.000
 ├── Team Bonus (10%): Rp 200.000
 └── CSR (5%): Rp 100.000
@@ -154,7 +154,7 @@ Amount: 60% dari revenue
 INSTRUKSI:
 1. Terima payment dari customer
 2. Hitung 60% untuk CEO
-3. Transfer ke BCA 6485086645
+3. Transfer ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 4. Screenshot bukti transfer
 5. Kirim WhatsApp ke CEO
 ```
@@ -176,7 +176,7 @@ INSTRUKSI:
 ⏰ 13:00 - Close deal #2 (Gianyar Tech)
 ⏰ 14:00 - Invoice & Payment collection
 ⏰ 15:00 - Calculate profit distribution
-⏰ 16:00 - TRANSFER TO BCA 6485086645
+⏰ 16:00 - TRANSFER TO Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 ⏰ 17:00 - CELEBRATE! 🎉
 ```
 
@@ -201,7 +201,7 @@ INSTRUKSI:
 - [ ] Kirim invoice ke 2 clients
 - [ ] Terima payment (transfer/QRIS)
 - [ ] Calculate 60% for CEO
-- [ ] Transfer ke BCA 6485086645
+- [ ] Transfer ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 - [ ] Screenshot bukti transfer
 
 ### Documentation (1 jam)
@@ -236,7 +236,7 @@ INSTRUKSI:
 ║  📊 Total Revenue Target: Rp 2.000.000                           ║
 ║                                                                    ║
 ║  💵 CEO SHARE (60%): Rp 1.200.000                                ║
-║     → Transfer ke: BCA 6485086645                                ║
+║     → Transfer ke: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2                                ║
 ║                                                                    ║
 ║  💵 Reinvestment (25%): Rp 500.000                                ║
 ║  💵 Team Bonus (10%): Rp 200.000                                  ║
@@ -304,7 +304,7 @@ git push origin main
 2. ✅ Kirim WhatsApp ke 10 leads
 3. ✅ Telepon follow-up
 4. ✅ Close minimum 1 deal
-5. ✅ Transfer 60% ke BCA 6485086645
+5. ✅ Transfer 60% ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ### MOTTO:
 **"TIADA KATA TERLAMBAT! HARI INI KITA JUAL! HARI INI KITA TRANSFER!"**

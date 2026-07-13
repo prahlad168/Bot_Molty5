@@ -12,12 +12,11 @@
     "charity_percentage": 5
   },
   "destination": {
+    "primary": "bitcoin",
     "btc_wallet": "1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2",
-    "bank_account": {
-      "name": "BCA",
-      "account_number": "6485086645",
-      "account_name": "i Made Purna Ananda"
-    }
+    "btc_platform": "Tokocrypto",
+    "bank_account": null,
+    "note": "Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 - DIHAPUS, Semua revenue CEO ke Bitcoin di Tokocrypto"
   },
   "schedule": {
     "daily_report_time": "12:00",

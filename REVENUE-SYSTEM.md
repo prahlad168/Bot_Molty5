@@ -2,7 +2,7 @@
 
 ## 📅 System Created: $(date '+%Y-%m-%d %H:%M:%S')
 ## 👑 Owner: i Made Purna Ananda
-## 🏦 Bank: BCA 6485086645
+## 🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 ## 🎯 Target: Rp 1.000.000.000/bulan
 
 ---
@@ -39,7 +39,7 @@
 
 | Category | % | Destination |
 |----------|---|-----------|
-| **Owner (Pak Pur)** | 60% | BCA 6485086645 |
+| **Owner (Pak Pur)** | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Company Reserve |
 | Team Bonus | 10% | Team Members |
 | Charity/CSR | 5% | Donasi |

@@ -4,7 +4,7 @@
 **Version:** 2.0.0
 **Updated:** 2026-07-03
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 
@@ -483,7 +483,7 @@ https://payanganhospital.gianyarkab.go.id/maha-command-center/
 | Today's Revenue | 💰 | Total revenue today |
 | Today's Profit | 📈 | Net profit today |
 | Wallet | 👛 | Current wallet balance |
-| Bank | 🏦 | Bank account balance (BCA 6485086645) |
+| Bank | 🏦 | Bank account balance (Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2) |
 | Cashflow | 💵 | Cash in/out flow |
 | Pending Approval | ⏳ | Items awaiting CEO decision |
 | Critical Alert | 🚨 | Critical issues |
@@ -600,7 +600,7 @@ https://payanganhospital.gianyarkab.go.id/maha-command-center/
 **Version:** 2.0.0
 **Updated:** 2026-07-03
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 
@@ -741,7 +741,7 @@ SEMUA SBU BERBAGI KNOWLEDGE CENTER:
 
 | Category | % | Destination |
 |----------|---|-------------|
-| Owner Share | 60% | BCA 6485086645 |
+| Owner Share | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Company Reserve |
 | Team Bonus | 10% | Team Members |
 | Charity | 5% | CSR Account |
@@ -798,7 +798,7 @@ Access at: `maha-lakshmi/index.html` or `maha-lakshmi/ceo-dashboard.html`
 - Top Clients
 - Pipeline
 - KPIs
-- Transfer to BCA 6485086645
+- Transfer to Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 

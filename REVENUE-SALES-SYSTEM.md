@@ -1,9 +1,9 @@
 # 💰 REVENUE SALES SYSTEM - MAHA LAKSHMI HOLDINGS
-## Target: Revenue CEO ke BCA 6485086645 - HARI INI!
+## Target: Revenue CEO ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 - HARI INI!
 
 **Tanggal:** 12 Juli 2026
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **WhatsApp:** 081337558787
 
 ---
@@ -18,7 +18,7 @@
 ### Target Hari Ini:
 - ✅ Minimum 1 deal closed
 - ✅ Minimum Rp 500.000 revenue
-- ✅ 60% transfer ke BCA 6485086645
+- ✅ 60% transfer ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 
@@ -258,7 +258,7 @@ Gianyar Tech Solutions
 ╠════════════════════════════════════════════════════════════════════╣
 ║                                                                    ║
 ║  PAYMENT METHOD:                                                  ║
-║  🏦 BCA: 6485086645 (i Made Purna Ananda)                       ║
+║  🪙 Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2                       ║
 ║  📱 QRIS: Scan QRIS                                             ║
 ║                                                                    ║
 ║  Due Date: 14 Juli 2026                                          ║
@@ -318,7 +318,7 @@ Gianyar Tech Solutions
 ║                                                                    ║
 ║  ┌──────────────────────────────────────────────────────────┐  ║
 ║  │ CEO SHARE (60%):        Rp 1.200.000                   │  ║
-║  │    → TRANSFER KE: BCA 6485086645                       │  ║
+║  │    → TRANSFER KE: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2                       │  ║
 ║  │                                                      │  ║
 ║  │ Reinvestment (25%):     Rp 500.000                    │  ║
 ║  │ Team Bonus (10%):       Rp 200.000                    │  ║
@@ -357,7 +357,7 @@ Gianyar Tech Solutions
 - [ ] Kirim invoice ke Deal #2
 - [ ] Terima payment
 - [ ] Hitung profit distribution
-- [ ] **TRANSFER 60% KE BCA 6485086645**
+- [ ] **TRANSFER 60% KE Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2**
 - [ ] Screenshot bukti transfer
 - [ ] Kirim WhatsApp ke CEO
 
@@ -389,7 +389,7 @@ Gianyar Tech Solutions
 |------|--------|
 | **CEO** | i Made Purna Ananda |
 | **WhatsApp** | 081337558787 |
-| **Bank** | BCA 6485086645 |
+| **Bank** | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | **Email** | gaurangga168@gmail.com |
 
 ---

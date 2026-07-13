@@ -125,6 +125,6 @@ Transfer to BCA: Rp 1.200.000
 **By:** GAURANGA AI Agent v100
 **CEO:** i Made Purna Ananda
 **WhatsApp:** 081337558787
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 **MOTTO:** "HARI INI KITA JUAL!"

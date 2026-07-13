@@ -302,7 +302,7 @@ echo "║  🎯 TARGET:            Rp 1.000.000.000/month                       
 echo "║  💵 CURRENT:           Rp 0/month                                              ║"
 echo "║  📈 PROGRESS:          ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0%                          ║"
 echo "║                                                                                              ║"
-echo "║  ⚠️ CEO PERSONAL:      BCA 6485086645 → Profit ONLY                            ║"
+echo "║  ⚠️ CEO PERSONAL:      Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 → Profit ONLY                            ║"
 echo "║  ⚠️ CEO WhatsApp:      081337558787 → Reports ONLY                              ║"
 echo "║  ⚠️ Business:         NEED SETUP                                              ║"
 echo "║                                                                                              ║"

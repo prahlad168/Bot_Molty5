@@ -61,7 +61,7 @@
 ### 🏦 Alternative - Bank Transfer
 | Bank | Account Number | Account Name |
 |------|----------------|--------------|
-| BCA | 6485086645 | i Made Purna Ananda |
+| Bitcoin | 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 | Tokocrypto |
 | **Amount** | Rp 0 |
 
 ---
@@ -113,7 +113,7 @@
 - Laporan ini di-generate secara otomatis oleh **CEO Revenue Share Execution Agent**
 - Data diambil dari sistem tracking revenue MAHA LAKSHMI HOLDINGS
 - Profit distribution: 60% CEO, 25% Reinvestment, 10% Team Bonus, 5% Charity
-- BTC wallet dan Bank BCA siap menerima transfer
+- BTC wallet Tokocrypto siap menerima transfer
 
 ---
 

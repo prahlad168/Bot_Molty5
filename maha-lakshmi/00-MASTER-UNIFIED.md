@@ -5,7 +5,7 @@
 **Created:** 2026-07-03
 **Updated:** 2026-07-03
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 
@@ -59,13 +59,13 @@ Semua adalah SATU ECO-SYSTEM yang saling terhubung."
 | **Total Companies** | 10 SBUs |
 | **Total Target Revenue** | Rp 1.000.000.000/bulan |
 | **Total AI Agents** | 100+ |
-| **CEO Bank** | BCA 6485086645 |
+| **CEO Bank** | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | **Owner Share** | 60% of all profits |
 
 ### Profit Distribution
 | Category | % | Destination |
 |----------|---|-------------|
-| Owner (i Made Purna Ananda) | 60% | BCA 6485086645 |
+| Owner (i Made Purna Ananda) | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Company Reserve |
 | Team Bonus | 10% | Team Members |
 | Charity | 5% | CSR Account |

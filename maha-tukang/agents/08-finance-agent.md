@@ -38,7 +38,7 @@
 ## 📊 PROFIT DISTRIBUTION
 | Category | Percentage | Recipient |
 |----------|------------|-----------|
-| Pak Pur (Owner) | 60% | BCA 6485086645 |
+| Pak Pur (Owner) | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Company Reserve |
 | Team Bonus | 10% | Team Members |
 | CSR | 5% | Donations |

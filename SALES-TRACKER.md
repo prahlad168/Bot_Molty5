@@ -240,4 +240,4 @@ CONTACTED → QUALIFIED → PROPOSAL → NEGOTIATION → CLOSED WON
 **Last Updated:** 2026-07-12 02:45 WIB
 **Next Update:** Daily at 18:00 WIB
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2

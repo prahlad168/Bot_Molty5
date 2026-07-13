@@ -4,7 +4,7 @@
 **Version:** 100.0.0
 **Date:** 2026-07-12
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **WhatsApp:** 081337558787
 **Target:** 💰 REVENUE TODAY! 💰
 
@@ -415,7 +415,7 @@ Bayar langsung ke:
 | 10:00 | - | Demo | Pending | Rp 0 |
 | 14:00 | - | CLOSE! | PENDING! | PENDING! |
 | 16:00 | - | PAYMENT! | PENDING! | PENDING! |
-| 17:00 | - | TRANSFER! | BCA 6485086645 | Rp 1.8M! |
+| 17:00 | - | TRANSFER! | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 | Rp 1.8M! |
 
 ---
 
@@ -468,7 +468,7 @@ ELSE:
 
 ### 17:00 - TRANSFER TO BCA!
 - [ ] TOTAL: Rp X
-- [ ] CEO SHARE (60%): Rp X → BCA 6485086645
+- [ ] CEO SHARE (60%): Rp X → Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 - [ ] TRANSFER CONFIRMED!
 
 ---
@@ -497,7 +497,7 @@ ELSE:
 
 **CEO:** i Made Purna Ananda
 **WhatsApp:** 081337558787
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 **MOTTO:** "TIADA KATA TERLAMBAT! HARI INI KITA JUAL!"
 

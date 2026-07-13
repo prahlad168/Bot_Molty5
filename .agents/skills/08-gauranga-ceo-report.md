@@ -116,7 +116,7 @@ Bulan 6: Rp 85.000.000 → Rp 100.000.000 ✅
 **Motto:** "Setiap kesalahan harus ada solusinya!"
 
 - GAURANGA aktif improve setiap hari
-- Profit 60% ke BCA 6485086645
+- Profit 60% ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 - Target: Rp 100.000.000/bulan dalam 6 bulan
 
 ---

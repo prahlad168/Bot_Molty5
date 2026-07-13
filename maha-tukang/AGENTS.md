@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0
 **CEO:** i Made Purna Ananda (Pak Pur)
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **WhatsApp:** 081337558787
 
 ---

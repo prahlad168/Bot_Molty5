@@ -3,7 +3,7 @@
 # ============================================================
 # GAURANGA - COMPLETE 100% DEPLOY & REVENUE SETUP
 # Owner: i Made Purna Ananda
-# Bank: BCA 6485086645
+# Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 # ============================================================
 
 echo "███████████████████████████████████████████████████████████████████████"
@@ -14,7 +14,7 @@ echo "████████████████████████�
 
 echo ""
 echo "👑 Owner: i Made Purna Ananda"
-echo "🏦 Bank: BCA 6485086645"
+echo "🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo "🎯 Target: Rp 1.000.000.000/bulan"
 echo "⏰ Started: $(date '+%Y-%m-%d %H:%M:%S')"
 echo ""
@@ -61,7 +61,7 @@ cat > REVENUE-SYSTEM.md << 'EOF'
 
 ## 📅 System Created: $(date '+%Y-%m-%d %H:%M:%S')
 ## 👑 Owner: i Made Purna Ananda
-## 🏦 Bank: BCA 6485086645
+## 🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 ## 🎯 Target: Rp 1.000.000.000/bulan
 
 ---
@@ -98,7 +98,7 @@ cat > REVENUE-SYSTEM.md << 'EOF'
 
 | Category | % | Destination |
 |----------|---|-----------|
-| **Owner (Pak Pur)** | 60% | BCA 6485086645 |
+| **Owner (Pak Pur)** | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Company Reserve |
 | Team Bonus | 10% | Team Members |
 | Charity/CSR | 5% | Donasi |
@@ -466,7 +466,7 @@ cat > index-100percent.html << 'HTMLEOF'
         
         <div class="footer">
             <p>👑 CEO: i Made Purna Ananda</p>
-            <p>🏦 Bank: BCA 6485086645</p>
+            <p>🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2</p>
             <p>💪 Motto: "Setiap masalah pasti ada solusinya!"</p>
             <p style="margin-top: 20px;">
                 <strong>🌐 GitHub: <a href="https://github.com/prahlad168/MAHA-LAKSHMI-CORP" style="color: #667eea;">github.com/prahlad168/MAHA-LAKSHMI-CORP</a></strong>
@@ -671,7 +671,7 @@ git commit -m "🎯🎯🎯 COMPLETE 100% - ALL SYSTEMS DEPLOYED & REVENUE READY
 💰 REVENUE TARGET:
 - Target: Rp 1.000.000.000/bulan
 - Owner Share (60%): Rp 600.000.000/bulan
-- Bank: BCA 6485086645
+- Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 🏢 10 COMPANIES READY FOR REVENUE:
 1. Payangan AI Solutions - AI Automation
@@ -716,7 +716,7 @@ echo ""
 echo "💰 REVENUE TARGET:"
 echo "   Target: Rp 1.000.000.000/bulan"
 echo "   Owner Share: Rp 600.000.000/bulan (60%)"
-echo "   Bank: BCA 6485086645"
+echo "   Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo ""
 echo "🌐 GitHub: https://github.com/prahlad168/MAHA-LAKSHMI-CORP"
 echo ""

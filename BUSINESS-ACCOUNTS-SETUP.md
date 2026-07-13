@@ -13,7 +13,7 @@
 ```
 ╔════════════════════════════════════════════════════════════════════════╗
 ║                                                                    ║
-║  🔴 CEO PERSONAL (081337558787 & BCA 6485086645):               ║
+║  🔴 CEO PERSONAL (081337558787 & Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2):               ║
 ║     - BUKAN untuk bisnis ❌                                      ║
 ║     - HANYA untuk terima laporan & profit share ✅               ║
 ║                                                                    ║
@@ -29,7 +29,7 @@
 
 ## 📋 STEP 1: BUSINESS BANK ACCOUNT (CRITICAL)
 
-### ⚠️ JANGAN gunakan BCA 6485086645 untuk bisnis!
+### ⚠️ JANGAN gunakan Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 untuk bisnis!
 
 ### Yang Perlu Dibuat:
 

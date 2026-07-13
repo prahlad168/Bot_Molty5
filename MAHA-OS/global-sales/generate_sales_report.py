@@ -249,7 +249,7 @@ def generate_report():
             "generated_at": datetime.now().isoformat() + "+07:00",
             "company": "MAHA LAKSHMI",
             "ceo": "Pak Pur",
-            "bank": "BCA 6485086645"
+            "bank": "Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
         },
         "summary": {
             "total_sales": total_sales,

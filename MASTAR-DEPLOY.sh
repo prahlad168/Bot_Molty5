@@ -40,12 +40,12 @@ ALL SALES TRIGGERS:
 ✅ WhatsApp messages ready
 ✅ Leads database ready
 ✅ Payment gateway ready
-✅ BCA 6485086645 synced
+✅ Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 synced
 
 TARGET: Rp 10 MILYAR!
 
 CEO: i Made Purna Ananda
-Bank: BCA 6485086645
+Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 WhatsApp: 081337558787
 
 HARI INI KITA JUAL!
@@ -120,7 +120,7 @@ echo "      Deals to Close: 100"
 echo "      Revenue Target: Rp 10 Miliar"
 echo ""
 echo "   💵 PROFIT DISTRIBUTION:"
-echo "      CEO Share (60%): Rp 6 Miliar → BCA 6485086645"
+echo "      CEO Share (60%): Rp 6 Miliar → Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo "      Reinvest (25%): Rp 2.5 Miliar"
 echo "      Team Bonus (10%): Rp 1 Miliar"
 echo "      CSR (5%): Rp 500 Juta"
@@ -180,7 +180,7 @@ echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo "   💰 CEO: i Made Purna Ananda"
-echo "   🏦 Bank: BCA 6485086645"
+echo "   🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo "   📱 WhatsApp: 081337558787"
 echo "   🌐 GitHub: prahlad168/MAHA-LAKSHMI-CORP"
 echo ""

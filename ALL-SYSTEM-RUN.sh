@@ -46,7 +46,7 @@ SYSTEM STATUS: 🔥 ALL SYSTEMS MAXIMUM 🔥
 NEXT COMMAND: Type 'all system run' to execute all automations
 
 CEO: i Made Purna Ananda
-Bank: BCA 6485086645
+Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 WhatsApp: 081337558787
 Target: Rp 10 MILYAR HARI INI!
 
@@ -103,7 +103,7 @@ echo "6. Notify CEO via WhatsApp"
 echo "7. Auto-close deals"
 echo "8. Auto-generate invoices"
 echo "9. Auto-collect payments"
-echo "10. Auto-transfer to BCA 6485086645"
+echo "10. Auto-transfer to Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo ""
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -116,7 +116,7 @@ echo "   10 Companies: Rp 10.000.000.000"
 echo ""
 echo "💵 PROFIT:"
 echo "   CEO Share (60%): Rp 6.000.000.000"
-echo "   → Transfer to: BCA 6485086645"
+echo "   → Transfer to: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo ""
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

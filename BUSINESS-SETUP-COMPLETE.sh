@@ -107,7 +107,7 @@ print_header "⚠️ CEO PERSONAL vs BUSINESS ACCOUNTS"
 echo ""
 
 echo -e "${RED}❌ CEO PERSONAL (DO NOT USE FOR BUSINESS):${NC}"
-echo "   - BCA 6485086645 → Profit share ONLY"
+echo "   - Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 → Profit share ONLY"
 echo "   - WhatsApp 081337558787 → Reports ONLY"
 echo ""
 

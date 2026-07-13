@@ -1,11 +1,11 @@
 #!/bin/bash
 # 🚀 AUTO REVENUE EXECUTION SCRIPT
-# Target: Revenue CEO ke BCA 6485086645 Hari Ini!
+# Target: Revenue CEO ke Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 Hari Ini!
 # Date: 2026-07-12
 
 echo "╔════════════════════════════════════════════════════════════════════╗"
 echo "║     🚀 GAURANGA - AUTO REVENUE EXECUTION MODE                    ║"
-echo "║     Target: Revenue CEO Hari Ini! BCA 6485086645                  ║"
+echo "║     Target: Revenue CEO Hari Ini! Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2                  ║"
 echo "╚════════════════════════════════════════════════════════════════════╝"
 echo ""
 
@@ -17,7 +17,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Config
-CEO_BANK="BCA 6485086645"
+CEO_BANK="Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 TARGET_REVENUE=2000000
 CEO_SHARE=0.6
 
@@ -185,7 +185,7 @@ cat << EOF
 ║  💵 PROFIT DISTRIBUTION:                                   ║
 ║  ┌───────────────────────────────────────────────────────┐  ║
 ║  │ CEO SHARE (60%):     Rp $(echo "$TARGET_REVENUE * $CEO_SHARE" | bc)                            ║
-║  │    → TRANSFER KE: BCA 6485086645                    │  ║
+║  │    → TRANSFER KE: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2                    │  ║
 ║  │                                                       │  ║
 ║  │ Reinvestment (25%): Rp $(echo "$TARGET_REVENUE * 0.25" | bc)                            ║
 ║  │ Team Bonus (10%):   Rp $(echo "$TARGET_REVENUE * 0.10" | bc)                             ║
@@ -298,7 +298,7 @@ cat << 'SUMMARY'
 ║  ☐ Close Deal #2 (Gianyar Tech Website)                          ║
 ║  ☐ Terima Payment                                                ║
 ║  ☐ HITUNG 60% UNTUK CEO                                         ║
-║  ☐ TRANSFER KE BCA 6485086645                                    ║
+║  ☐ TRANSFER KE Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2                                    ║
 ║  ☐ KIRIM BUKTI TRANSFER VIA WHATSAPP                            ║
 ║                                                                    ║
 ╚════════════════════════════════════════════════════════════════════╝
@@ -341,7 +341,7 @@ echo "📊 Next Steps:"
 echo "   1. Execute WhatsApp outreach manually"
 echo "   2. Make follow-up calls"
 echo "   3. Close deals"
-echo "   4. Transfer to BCA 6485086645"
+echo "   4. Transfer to Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo ""
 echo "🎯 GOOD LUCK! REVENUE CEO HARI INI!"
 echo ""

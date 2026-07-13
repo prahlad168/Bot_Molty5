@@ -4,7 +4,7 @@
 **Version:** 1.0.0
 **Created:** 2026-07-03
 **Owner:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 
@@ -290,7 +290,7 @@ PER SBU (@ Rp 100.000.000):
 
 | Kategori      | Persen | Jumlah      | Tujuan              |
 |---------------|--------|-------------|---------------------|
-| Owner Share   | 60%    | Rp 60.000.000 | BCA 6485086645   |
+| Owner Share   | 60%    | Rp 60.000.000 | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2   |
 | Reinvestasi   | 25%    | Rp 25.000.000 | Company Reserve   |
 | Team Bonus    | 10%    | Rp 10.000.000 | Team Members      |
 | Charity       | 5%     | Rp 5.000.000  | CSR Account       |

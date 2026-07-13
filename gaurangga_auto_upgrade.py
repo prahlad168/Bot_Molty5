@@ -4,7 +4,7 @@ GAURANGA - Auto Upgrade Skills System
 All agents work, auto-upgrade skills, save & deploy all
 
 CEO: i Made Purna Ananda
-Bank: BCA 6485086645
+Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 Target: Rp 1.000.000.000/bulan
 """
 
@@ -16,7 +16,7 @@ from typing import List, Dict, Any
 # ==================== CONFIGURATION ====================
 CONFIG = {
     'owner': 'i Made Purna Ananda',
-    'bank': 'BCA 6485086645',
+    'bank': 'Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2',
     'company': 'MAHA LAKSHMI HOLDINGS',
     'target_revenue': 100_000_000,  # Rp 100jt per company
     'total_companies': 10

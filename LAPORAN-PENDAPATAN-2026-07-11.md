@@ -3,7 +3,7 @@
 
 **Tanggal:** 11 Juli 2026  
 **Untuk:** Pak Pur (CEO - i Made Purna Ananda)  
-**Bank:** BCA 6485086645  
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2  
 **Agent:** GAURANGA AI  
 
 ---
@@ -106,7 +106,7 @@
 
 | Kategori | Persentase | Penerima | Amount (dari Rp 100M) |
 |----------|------------|----------|----------------------|
-| **Owner (Pak Pur)** | 60% | BCA 6485086645 | Rp 60.000.000 |
+| **Owner (Pak Pur)** | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 | Rp 60.000.000 |
 | **Reinvestment** | 25% | Company Reserve | Rp 25.000.000 |
 | **Team Bonus** | 10% | Team Members | Rp 10.000.000 |
 | **Charity/CSR** | 5% | Donasi | Rp 5.000.000 |

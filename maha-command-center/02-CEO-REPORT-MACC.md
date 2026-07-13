@@ -41,7 +41,7 @@ Gap: -100%
 ### Profit Distribution (When Revenue > 0)
 | Category | Percentage | Bank Account |
 |----------|------------|--------------|
-| CEO Share | 60% | BCA 6485086645 |
+| CEO Share | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Company Reserve |
 | AI Agents | 10% | Agent Operations |
 | Reserve | 5% | Emergency Fund |
@@ -356,7 +356,7 @@ https://payanganhospital.gianyarkab.go.id/maha-command-center/
 ### Distribution (When Revenue > 0)
 | Category | Percentage | Destination |
 |----------|------------|-------------|
-| CEO | 60% | BCA 6485086645 |
+| CEO | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvest | 25% | Company Reserve |
 | Agent | 10% | Agent Operations |
 | Reserve | 5% | Emergency |
@@ -419,7 +419,7 @@ https://payanganhospital.gianyarkab.go.id/maha-command-center/
 | Role | Contact | Purpose |
 |------|---------|---------|
 | CEO | i Made Purna Ananda | Strategic decisions |
-| Bank | BCA 6485086645 | Financial transfers |
+| Bank | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 | Financial transfers |
 | Tech | OpenHands Agent | Technical support |
 
 ---

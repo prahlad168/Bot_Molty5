@@ -6,7 +6,7 @@
 **Report Date:** 2026-07-04
 **CEO:** i Made Purna Ananda (Pak Pur)
 **Generated:** 2026-07-04 23:00 WIB
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **Report ID:** CEO-DR-2026-07-04
 **Email:** ceo@mahalakshmi.id
 
@@ -70,7 +70,7 @@
 Total Monthly Revenue Target = Rp 1,000,000,000
 
 Distribution Breakdown:
-├── CEO Pak Pur (60%)     → BCA 6485086645
+├── CEO Pak Pur (60%)     → Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 ├── Reinvestment (25%)    → Company Reserve
 ├── Team Bonus (10%)      → Team Members
 └── Charity/CSR (5%)      → CSR Account
@@ -80,7 +80,7 @@ Distribution Breakdown:
 
 | Category | Percentage | Amount | Transfer To | Status |
 |----------|------------|--------|-------------|--------|
-| **CEO Pak Pur** | 60% | **Rp 0** | BCA 6485086645 | Pending |
+| **CEO Pak Pur** | 60% | **Rp 0** | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 | Pending |
 | Reinvestment | 25% | Rp 0 | Company Reserve | Pending |
 | Team Bonus | 10% | Rp 0 | Team Members | Pending |
 | Charity | 5% | Rp 0 | CSR Account | Pending |
@@ -89,7 +89,7 @@ Distribution Breakdown:
 
 | Category | Percentage | Amount | Destination |
 |----------|------------|--------|-------------|
-| **CEO Pak Pur** | **60%** | **Rp 600,000,000** | BCA 6485086645 |
+| **CEO Pak Pur** | **60%** | **Rp 600,000,000** | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Rp 250,000,000 | Company Reserve |
 | Team Bonus | 10% | Rp 100,000,000 | Team Members |
 | Charity | 5% | Rp 50,000,000 | CSR Account |
@@ -362,7 +362,7 @@ Name: i Made Purna Ananda
 
 ### Profit Distribution
 ```
-CEO Pak Pur:      60% → BCA 6485086645
+CEO Pak Pur:      60% → Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 Reinvestment:     25% → Company Reserve
 Team Bonus:       10% → Team Members
 Charity/CSR:       5% → CSR Account

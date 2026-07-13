@@ -40,7 +40,7 @@
 
 | Category | Amount | Transfer To |
 |----------|--------|-------------|
-| Owner Share (60%) | Rp 60.000.000 | BCA 6485086645 |
+| Owner Share (60%) | Rp 60.000.000 | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment (25%) | Rp 25.000.000 | Company Account |
 | Team Bonus (10%) | Rp 10.000.000 | Team Members |
 | Charity (5%) | Rp 5.000.000 | CSR Account |

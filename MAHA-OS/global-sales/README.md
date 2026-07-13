@@ -269,5 +269,5 @@ MAHA-OS/global-sales/
 
 **Created:** 2026-07-04
 **CEO:** Pak Pur
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **Target:** Rp 1 Milyar/bulan

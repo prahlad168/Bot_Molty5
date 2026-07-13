@@ -3,7 +3,7 @@
 
 **Date:** 2026-07-12
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **Target:** Rp 10 Miliar/bulan
 
 ---

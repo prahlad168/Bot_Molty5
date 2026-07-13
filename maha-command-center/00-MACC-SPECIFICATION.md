@@ -4,7 +4,7 @@
 **Version:** 1.0.0
 **Created:** 2026-07-03
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 
@@ -353,7 +353,7 @@ Results:
 
 ### Auto-Transfer Configuration:
 - **Schedule:** Daily 6 AM WIB
-- **Bank:** BCA 6485086645
+- **Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 - **Distribution:** 60% CEO, 25% Reinvest, 10% Agent, 5% Reserve
 
 ---

@@ -14,7 +14,7 @@
 ║                   IMPORTANT CLARIFICATION                           ║
 ╠════════════════════════════════════════════════════════════════════════╣
 ║                                                                    ║
-║  🔴 CEO PERSONAL (BCA 6485086645):                                ║
+║  🔴 CEO PERSONAL (Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2):                                ║
 ║     - Untuk CEO terima 60% PROFIT SHARE saja                      ║
 ║     - BUKAN untuk terima payment dari customer                   ║
 ║                                                                    ║
@@ -212,7 +212,7 @@ CUSTOMER PAYS → BUSINESS ACCOUNT → CALCULATE PROFIT
                    Owner (60%)      Reinvest (25%)     Team (10%)
                         │                                    │
                         ▼                                    ▼
-              BCA 6485086645                          Team Bonus
+              Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2                          Team Bonus
              (CEO Personal)
                                            │
                                            ▼
@@ -233,7 +233,7 @@ When payment received:
 
 1. Customer pays to BUSINESS ACCOUNT
 2. Calculate profit distribution
-3. Transfer 60% to CEO PERSONAL BCA 6485086645
+3. Transfer 60% to CEO PERSONAL Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 4. Transfer 10% to Team Bonus account
 5. Transfer 5% to CSR account
 6. Keep 25% for Reinvestment
@@ -330,7 +330,7 @@ When payment received:
 ### Profit Commands:
 ```
 /profit calculate → Calculate profit distribution
-/profit transfer → Transfer to CEO personal BCA
+/profit transfer → Transfer to CEO Bitcoin Tokocrypto
 ```
 
 ### Report Commands:

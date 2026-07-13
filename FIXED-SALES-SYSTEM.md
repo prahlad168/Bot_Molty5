@@ -366,7 +366,7 @@ START: WhatsApp 10 leads SEKARANG!
 
 **Status:** ✅ FIXED & READY TO SELL!
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **WhatsApp:** 081337558787
 
 **MOTTO:** "SELL FIRST, SYSTEM LATER!"

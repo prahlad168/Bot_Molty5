@@ -100,7 +100,7 @@ Corporate Finance
 ├── Tax Documentation
 │   └── Tax compliance (PPN 11%, PPh)
 ├── Profit Distribution
-│   ├── Owner Share: 60% → BCA 6485086645
+│   ├── Owner Share: 60% → Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 │   ├── Reinvestment: 25% → Company Reserve
 │   ├── Team Bonus: 10% → Team Members
 │   └── Charity: 5% → CSR
@@ -600,7 +600,7 @@ Kemampuan seluruh holding meningkat
 
 | Category | Percentage | Destination |
 |----------|------------|-------------|
-| Owner Share | 60% | BCA 6485086645 |
+| Owner Share | 60% | Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 |
 | Reinvestment | 25% | Company Reserve |
 | Team Bonus | 10% | Team Members |
 | Charity | 5% | CSR Account |
@@ -720,4 +720,4 @@ https://github.com/prahlad168/Bot_Molty5
 **Version:** 1.0.0
 **Status:** 🚀 ACTIVE DEVELOPMENT
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2

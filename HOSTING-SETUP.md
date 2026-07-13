@@ -221,7 +221,7 @@ tail -f /var/log/php-mail.log
 - **CEO:** Prahlad
 - **Email:** ceo@mahalakshmi.id
 - **WhatsApp:** 081337558787
-- **Bank:** BCA 6485086645
+- **Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 ---
 

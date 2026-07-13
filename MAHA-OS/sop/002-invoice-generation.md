@@ -126,7 +126,7 @@ No | Description | Qty | Unit Price | Amount
 =================================================================
 
 Payment Terms: 14 days
-Payment Method: Transfer BCA 6485086645
+Payment Method: Transfer Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 
 Notes:
 - Payment confirmation: [Email/WhatsApp]

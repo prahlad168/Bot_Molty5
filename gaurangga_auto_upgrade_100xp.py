@@ -4,7 +4,7 @@ GAURANGA - Auto Upgrade Skills to 100 XP
 All agents work until ALL skills reach 100 XP
 
 CEO: i Made Purna Ananda
-Bank: BCA 6485086645
+Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 """
 
 import json
@@ -15,7 +15,7 @@ from datetime import datetime
 # ==================== CONFIGURATION ====================
 CONFIG = {
     'owner': 'i Made Purna Ananda',
-    'bank': 'BCA 6485086645',
+    'bank': 'Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2',
     'target_xp': 100,
     'min_improvement': 5,
     'max_improvement': 20

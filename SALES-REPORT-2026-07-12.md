@@ -3,7 +3,7 @@
 
 **Tanggal:** 12 Juli 2026  
 **Untuk:** Pak Pur (CEO - i Made Purna Ananda)  
-**Bank:** BCA 6485086645  
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2  
 **Agent:** GAURANGA AI  
 **Waktu Laporan:** 12:30 WIB
 
@@ -326,7 +326,7 @@ Boleh diskusi kebutuhan digital bisnis Anda?
 ║  └─────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                           ║
 ║  💰 BANK INFO:                                                           ║
-║  BCA 6485086645 - i Made Purna Ananda                                    ║
+║  Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 - i Made Purna Ananda                                    ║
 ║                                                                           ║
 ╚═══════════════════════════════════════════════════════════════════════════╝
 ```

@@ -86,7 +86,7 @@ Skills:
 ✅ Expense Categorizer
 ✅ Tax Calculator (11% PPN)
 ✅ Profit Distribution Auto
-✅ Bank Sync (BCA 6485086645)
+✅ Bank Sync (Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2)
 
 Commands:
 - /invoice [client] [amount]
@@ -222,7 +222,7 @@ PAYMENT RECEIVED 💰
 REVENUE TRACKED
     ↓
 PROFIT DISTRIBUTED
-    └── 60% → BCA 6485086645
+    └── 60% → Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
     └── 25% → Reinvest
     └── 10% → Team Bonus
     └── 5%  → CSR
@@ -336,5 +336,5 @@ Domain: gianyarkab.go.id
 **Version:** 2.0.0
 **Updated:** 2026-07-12
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+**Bank:** Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 **WhatsApp:** 081337558787

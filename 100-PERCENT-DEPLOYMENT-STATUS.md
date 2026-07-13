@@ -14,7 +14,7 @@
 ║                   IMPORTANT CLARIFICATION                           ║
 ╠════════════════════════════════════════════════════════════════════════╣
 ║                                                                    ║
-║  🔴 CEO PERSONAL BCA 6485086645:                                ║
+║  🔴 CEO PERSONAL Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2:                                ║
 ║     - Untuk CEO terima 60% PROFIT SHARE saja                   ║
 ║     - BUKAN untuk terima payment dari customer                 ║
 ║                                                                    ║
@@ -106,7 +106,7 @@
 | 4 | Payment Gateway | Online payment | ❌ NEED |
 
 ### ❌ JANGAN gunakan untuk bisnis:
-- BCA 6485086645 → Hanya untuk CEO terima profit
+- Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2 → Hanya untuk CEO terima profit
 - 081337558787 → Hanya untuk CEO terima laporan
 
 ### ✅ Yang perlu dibuat:

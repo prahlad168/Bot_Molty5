@@ -34,7 +34,7 @@ All 60 agents upgraded to LEVEL 100!
 Target: REVENUE TODAY!
 
 CEO: i Made Purna Ananda
-Bank: BCA 6485086645
+Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 WhatsApp: 081337558787
 
 Co-authored-by: openhands <openhands@all-hands.dev>"
@@ -69,7 +69,7 @@ echo "4. TARGET TODAY:"
 echo "   → 10 leads contacted"
 echo "   → 3 deals closed"
 echo "   → Rp 3.000.000 revenue"
-echo "   → Rp 1.800.000 to BCA 6485086645"
+echo "   → Rp 1.800.000 to Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo ""
 echo "============================================"
 echo "🔥 LET'S SELL TODAY! 🔥"

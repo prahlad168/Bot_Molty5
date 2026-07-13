@@ -3,7 +3,7 @@
 # ============================================================
 # GAURANGA - DEPLOY ALL & START ALL SYSTEMS
 # Owner: i Made Purna Ananda
-# Bank: BCA 6485086645
+# Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 # Target: Rp 1.000.000.000/bulan
 # ============================================================
 
@@ -12,7 +12,7 @@ echo "🚀 GAURANGA - DEPLOY ALL & START ALL SYSTEMS"
 echo "============================================================"
 echo ""
 echo "👑 Owner: i Made Purna Ananda"
-echo "🏦 Bank: BCA 6485086645"
+echo "🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2"
 echo "🎯 Target: Rp 1.000.000.000/bulan"
 echo "⏰ Started: $(date '+%Y-%m-%d %H:%M:%S')"
 echo ""
@@ -42,7 +42,7 @@ git commit -m "🚀 FULL DEPLOY - All Systems Active & Running
 - Revenue Report System
 
 👑 Owner: i Made Purna Ananda
-🏦 Bank: BCA 6485086645
+🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 🎯 Target: Rp 1.000.000.000/bulan
 
 Co-authored-by: GAURANGA AI <gaurangga168@gmail.com>"
@@ -148,7 +148,7 @@ cat > DEPLOYMENT-SUMMARY.md << 'EOF'
 ## 📅 Deployment Date: $(date '+%Y-%m-%d %H:%M:%S')
 
 ## 👑 Owner: i Made Purna Ananda
-## 🏦 Bank: BCA 6485086645
+## 🏦 Bank: Bitcoin Tokocrypto: 1H3FZkKsX6jgTuqA23fduLVtxL7MrtgWe2
 ## 🎯 Target: Rp 1.000.000.000/bulan
 
 ---
