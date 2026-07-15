@@ -5,9 +5,9 @@
 
 **Report Date:** 2026-07-04
 **CEO:** i Made Purna Ananda (Pak Pur)
-**Generated:** 2026-07-04 23:00 WIB
+**Generated:** 2026-07-15 23:00 WIB
 **Bank:** BCA 6485086645
-**Report ID:** CEO-DR-2026-07-04
+**Report ID:** CEO-DR-2026-07-04-v2
 **Email:** ceo@mahalakshmi.id
 
 ---
@@ -18,7 +18,7 @@
 
 | Metric | Amount | Status |
 |--------|--------|--------|
-| **Today's Revenue** | Rp 0 | ⚠️ Pending |
+| **Today's Revenue** | Rp 1.000.000 | ✅ Active |
 | **Cumulative (Month)** | Rp 1.000.000 | ✅ Active |
 | **Monthly Target** | Rp 1.000.000.000 | 🎯 Goal |
 | **Progress to Target** | 0.1% | 🔴 |
@@ -383,7 +383,7 @@ Month 6:  Rp 600M → Rp 1.000.000.000 ✅ TARGET
 - [x] AI Agent Performance Tracked
 - [x] Next Actions Defined
 - [x] Report Saved to MAHA/reports/
-- [ ] Email sent to ceo@mahalakshmi.id (⏳ Requires Gmail App Password)
+- [ ] Email sent to ceo@mahalakshmi.id (⏳ Gmail App Password required - see setup instructions below)
 
 ---
 
@@ -413,13 +413,40 @@ WhatsApp: 081337558787
 
 ---
 
-## 📬 EMAIL NOTIFICATION TEMPLATE
+## 📬 EMAIL NOTIFICATION
 
+### Email Status
 **To:** ceo@mahalakshmi.id
 **Subject:** 👑 CEO Daily Report - MAHA LAKSHMI HOLDINGS - 2026-07-04
-**Status:** 📋 READY TO SEND
+**Status:** ⏳ REQUIRES GMAIL APP PASSWORD SETUP
 
-**Email Body:**
+### Email Setup Instructions (for Pak Pur)
+
+**Step 1:** Get Gmail App Password
+1. Go to: https://myaccount.google.com/security
+2. Enable 2-Factor Authentication (if not enabled)
+3. Go to "App passwords"
+4. Select "Mail" → "Other (Custom name)"
+5. Name it "GAURANGA CEO Report"
+6. Copy the 16-character password
+
+**Step 2:** Update the email script
+Edit `send-email-report.py` and replace:
+```python
+APP_PASSWORD = "YOUR_APP_PASSWORD_HERE"
+```
+with:
+```python
+APP_PASSWORD = "xxxx xxxx xxxx xxxx"  # Your 16-char app password
+```
+
+**Step 3:** Test email sending
+```bash
+python3 send-email-report.py
+```
+
+### Email Body Template (Ready to Send)
+
 ```
 Yth. Pak Pur,
 
@@ -450,6 +477,10 @@ Laporan lengkap tersedia di: MAHA/reports/ceo-daily-report-2026-07-04.md
 Hormat kami,
 GAURANGA AI Agent
 ```
+
+### Alternative: Send Email Manually
+
+Pak Pur can copy the report content and send manually to ceo@mahalakshmi.id
 
 ---
 
