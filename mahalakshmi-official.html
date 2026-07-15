@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHA LAKSHMI HOLDINGS - Platform Bisnis Digital Indonesia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --gold: #ffd700;
+            --white: #ffffff;
+            --light: #f8f9fa;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-gold: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 80%, rgba(233, 69, 96, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 40%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-10%, -10%) rotate(0deg); }
+            50% { transform: translate(-15%, -15%) rotate(5deg); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 5% 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 1200px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(233, 69, 96, 0.2);
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .highlight {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--primary);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-gold);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.2);
+            color: var(--accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--secondary);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image .main-img {
+            width: 100%;
+            border-radius: 20px;
+            background: var(--gradient-1);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .about-feature .check {
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+        }
+
+        /* Companies Section */
+        .companies {
+            background: var(--primary);
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .company-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .company-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .company-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-gold);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .company-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-card p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .company-card .status {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.3rem 1rem;
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Revenue Section */
+        .revenue {
+            background: var(--secondary);
+        }
+
+        .revenue-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .revenue-target {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--gold);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .revenue-target h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .revenue-target .amount {
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .revenue-target .period {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .revenue-breakdown {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .revenue-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .revenue-item .icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .revenue-item .info {
+            flex: 1;
+        }
+
+        .revenue-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .revenue-item .amount {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* AI Agents Section */
+        .agents {
+            background: var(--primary);
+        }
+
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .agent-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .agent-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .agent-card .avatar {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .agent-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .agent-card .role {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .agent-card p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            background: var(--secondary);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: calc(50% - 3rem);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .date {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.2) 0%, rgba(102, 126, 234, 0.2) 100%);
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-box .bank-info {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cta-box .bank-info h4 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box .bank-info p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            padding: 4rem 5% 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .companies-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .revenue-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .agents-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .companies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: row;
+                padding-left: 50px;
+            }
+
+            .timeline-item::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .agents-grid,
+            .companies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <div class="logo-icon">👑</div>
+            <span class="logo-text">MAHA LAKSHMI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#companies">Bisnis</a></li>
+            <li><a href="#revenue">Revenue</a></li>
+            <li><a href="#agents">AI Agents</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                <span>Platform Bisnis Digital Indonesia</span>
+            </div>
+            <h1>
+                Membangun Masa Depan<br>
+                <span class="highlight">Bisnis Digital Indonesia</span>
+            </h1>
+            <p>
+                MAHA LAKSHMI HOLDINGS adalah perusahaan holding yang mengelola 10 unit bisnis digital 
+                dengan target revenue Rp 1.000.000.000 per bulan, didukung oleh 60+ AI Agents 
+                yang beroperasi 24/7.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    🚀 Mulai Berinvestasi
+                </a>
+                <a href="#companies" class="btn btn-secondary">
+                    📊 Lihat Portofolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-icon">🏢</div>
+            <div class="stat-number">10</div>
+            <div class="stat-label">Unit Bisnis Digital</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🤖</div>
+            <div class="stat-number">60+</div>
+            <div class="stat-label">AI Agents Aktif</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-number">Rp 1M</div>
+            <div class="stat-label">Target Revenue/Bulan</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Tim & Partner</div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="main-img">👑</div>
+            </div>
+            <div class="about-content">
+                <div class="section-tag">Tentang Kami</div>
+                <h2>Perusahaan Holding untuk Era Digital</h2>
+                <p>
+                    MAHA LAKSHMI HOLDINGS didirikan dengan visi menjadi perusahaan holding 
+                    digital terbesar di Indonesia. Kami menggabungkan kekuatan 10 unit 
+                    bisnis strategis dengan teknologi AI mutakhir.
+                </p>
+                <p>
+                    Dengan pendekatan inovatif dan sistem otomatisasi canggih, kami mampu 
+                    memberikan hasil maksimal dengan efisiensi tinggi. Setiap unit bisnis 
+                    dikelola oleh tim profesional dan AI Agents yang bekerja sinergis.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <span class="check">✓</span>
+                        <span>10 SBU Terintegrasi</span>
+                    </div>
+                    <div class="about-feature">
+                        <span class="check">✓</span>
+                        <span>60+ AI Agents</span>
+                    </div>
+                    <div class="about-feature">
+                        <span class="check">✓</span>
+                        <span>Revenue Target Rp 1M/bulan</span>
+                    </div>
+                    <div class="about-feature">
+                        <span class="check">✓</span>
+                        <span>Operasi 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="companies" id="companies">
+        <div class="section-header">
+            <div class="section-tag">Portofolio Bisnis</div>
+            <h2 class="section-title">10 Unit Bisnis Strategis</h2>
+            <p class="section-desc">
+                Setiap unit bisnis memiliki fokus industri spesifik dengan model bisnis 
+                yang terproven dan potensi pertumbuhan tinggi.
+            </p>
+        </div>
+        <div class="companies-grid">
+            <div class="company-card">
+                <div class="company-icon">🏥</div>
+                <h3>Payangan AI Solutions</h3>
+                <p>Healthcare SaaS</p>
+                <span class="status">✓ Aktif</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">💻</div>
+                <h3>Gianyar Tech Solutions</h3>
+                <p>Software House</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">📢</div>
+                <h3>Bali Digital Agency</h3>
+                <p>Digital Marketing</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">🛒</div>
+                <h3>Gianyar E-Commerce</h3>
+                <p>Marketplace</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">🎓</div>
+                <h3>Bali EdTech Center</h3>
+                <p>Education Tech</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">💳</div>
+                <h3>Gianyar Finance Tech</h3>
+                <p>Fintech</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">🚚</div>
+                <h3>Bali Logistics Network</h3>
+                <p>Logistics</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">🍜</div>
+                <h3>Gianyar Food Tech</h3>
+                <p>Food Delivery</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">✈️</div>
+                <h3>Bali Travel Platform</h3>
+                <p>Travel & Tourism</p>
+                <span class="status">✓ Siap</span>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">🏠</div>
+                <h3>Gianyar Property Tech</h3>
+                <p>Real Estate</p>
+                <span class="status">✓ Siap</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Section -->
+    <section class="revenue" id="revenue">
+        <div class="section-header">
+            <div class="section-tag">Target Revenue</div>
+            <h2 class="section-title">Model Pendapatan</h2>
+            <p class="section-desc">
+                Dengan strategi diversifikasi, kami menargetkan revenue Rp 1.000.000.000 
+                per bulan dari berbagai sumber pendapatan.
+            </p>
+        </div>
+        <div class="revenue-grid">
+            <div class="revenue-target">
+                <h3>🎯 TARGET BULANAN</h3>
+                <div class="amount">Rp 1 Milyar</div>
+                <div class="period">Per Bulan</div>
+            </div>
+            <div class="revenue-breakdown">
+                <div class="revenue-item">
+                    <div class="icon">📦</div>
+                    <div class="info">
+                        <h4>SaaS Products</h4>
+                        <p>10 produk software dengan MRR</p>
+                        <span class="amount">Rp 300.000.000</span>
+                    </div>
+                </div>
+                <div class="revenue-item">
+                    <div class="icon">🛠️</div>
+                    <div class="info">
+                        <h4>Freelance Services</h4>
+                        <p>Web dev, app dev, consulting</p>
+                        <span class="amount">Rp 250.000.000</span>
+                    </div>
+                </div>
+                <div class="revenue-item">
+                    <div class="icon">📚</div>
+                    <div class="info">
+                        <h4>Digital Products</h4>
+                        <p>E-course, templates, presets</p>
+                        <span class="amount">Rp 200.000.000</span>
+                    </div>
+                </div>
+                <div class="revenue-item">
+                    <div class="icon">🤝</div>
+                    <div class="info">
+                        <h4>Affiliate & Consulting</h4>
+                        <p>Partnership & konsultasi</p>
+                        <span class="amount">Rp 250.000.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Agents Section -->
+    <section class="agents" id="agents">
+        <div class="section-header">
+            <div class="section-tag">Teknologi</div>
+            <h2 class="section-title">AI Agents System</h2>
+            <p class="section-desc">
+                Setiap unit bisnis didukung oleh 6 AI Agents专业化 yang bekerja 
+                24/7 untuk memaksimalkan produktivitas dan hasil.
+            </p>
+        </div>
+        <div class="agents-grid">
+            <div class="agent-card">
+                <div class="avatar">💰</div>
+                <h3>Sales Agent</h3>
+                <div class="role">Lead Generation & Conversion</div>
+                <p>Mencari prospek, follow up, negoisasi, dan closing deal secara otomatis.</p>
+            </div>
+            <div class="agent-card">
+                <div class="avatar">📢</div>
+                <h3>Marketing Agent</h3>
+                <div class="role">Content & Campaign</div>
+                <p>Membuat konten, optimize SEO, dan jalankan kampanye marketing.</p>
+            </div>
+            <div class="agent-card">
+                <div class="avatar">🤖</div>
+                <h3>Automation Agent</h3>
+                <div class="role">Workflow & Process</div>
+                <p>Otomatisasi workflow bisnis dari hulu ke hilir.</p>
+            </div>
+            <div class="agent-card">
+                <div class="avatar">💵</div>
+                <h3>Finance Agent</h3>
+                <div class="role">Accounting & Reporting</div>
+                <p>kelola keuangan, invoice, dan laporan finansial otomatis.</p>
+            </div>
+            <div class="agent-card">
+                <div class="avatar">🎧</div>
+                <h3>Customer Service</h3>
+                <div class="role">Support & Success</div>
+                <p>Respon cepat 24/7 untuk customer support dan success.</p>
+            </div>
+            <div class="agent-card">
+                <div class="avatar">📊</div>
+                <h3>Report Agent</h3>
+                <div class="role">Analytics & Insight</div>
+                <p>Generate laporan dan insight untuk pengambilan keputusan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="roadmap">
+        <div class="section-header">
+            <div class="section-tag">Roadmap</div>
+            <h2 class="section-title">Rencana Pengembangan</h2>
+            <p class="section-desc">
+                Timeline pengembangan perusahaan dari fase awal hingga mencapai target.
+            </p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Fase 1: Foundation</h3>
+                    <div class="date">Bulan 1-2</div>
+                    <p>
+                        Setup 10 SBU, konfigurasi AI Agents, dan launch unit bisnis pertama. 
+                        Target revenue: Rp 50.000.000/bulan.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Fase 2: Growth</h3>
+                    <div class="date">Bulan 3-4</div>
+                    <p>
+                        Scaling semua unit bisnis, expand team, dan optimize conversion. 
+                        Target revenue: Rp 250.000.000/bulan.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Fase 3: Expansion</h3>
+                    <div class="date">Bulan 5-6</div>
+                    <p>
+                        Go nationwide, launch produk baru, dan strategic partnership. 
+                        Target revenue: Rp 500.000.000/bulan.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Fase 4: Market Leader</h3>
+                    <div class="date">Bulan 7-12</div>
+                    <p>
+                        Menjadi market leader di setiap industri, expand ke regional, 
+                        dan target revenue Rp 1.000.000.000/bulan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <h2>Siap Berkolaborasi?</h2>
+        <p>
+            Bergabunglah dengan kami dalam membangun ekosistem bisnis digital 
+            Indonesia yang kuat dan berkelanjutan.
+        </p>
+        <div class="cta-box">
+            <h3>👑 MAHA LAKSHMI HOLDINGS</h3>
+            <p>CEO: i Made Purna Ananda</p>
+            <div class="bank-info">
+                <h4>💳 Transfer ke:</h4>
+                <p>BCA 6485086645</p>
+                <p>a/n i Made Purna Ananda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="footer-logo-icon">👑</div>
+                <span class="logo-text">MAHA LAKSHMI</span>
+            </div>
+            <div class="footer-links">
+                <a href="#about">Tentang</a>
+                <a href="#companies">Bisnis</a>
+                <a href="#revenue">Revenue</a>
+                <a href="#agents">AI Agents</a>
+                <a href="#contact">Kontak</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MAHA LAKSHMI HOLDINGS. All Rights Reserved.</p>
+                <p>Platform Bisnis Digital Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-card, .company-card, .agent-card, .timeline-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Counter animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(26, 26, 46, 0.98)';
+            } else {
+                nav.style.background = 'rgba(26, 26, 46, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
