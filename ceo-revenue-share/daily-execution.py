@@ -214,8 +214,8 @@ CEO Share = 60% × Total Revenue
 |-------|-------|
 | **CEO Share Amount** | **{format_currency(summary['ceo_share'])}** |
 | **BTC Equivalent** | ~{format_currency_btc(summary['ceo_share'])} |
-| **Destination** | BCA: {config['destination']['primary']['account']} ({config['destination']['primary']['bank']}) |
-| **Fallback** | USDT: {config['destination']['fallback']['usdt_address']} ({config['destination']['fallback']['network']}) |
+| **Destination (Primary)** | BCA: {config['destination']['primary']['bank']} - {config['destination']['primary']['account']} |
+| **Destination (Fallback)** | {config['destination']['fallback']['network']}: {config['destination']['fallback']['usdt_address']} |
 | **Status** | {"✅ READY" if summary['system_ready'] else "⚠️ PENDING - Data tidak lengkap"} |
 | **Reference** | RS-{date.replace('-', '')}-001 |
 
@@ -292,8 +292,8 @@ python3 add-revenue.py
 |------|--------|
 | **CEO** | {config['ceo']['name']} |
 | **WhatsApp** | {config['ceo']['whatsapp']} |
-| **BCA Account** | {config['destination']['primary']['account']} |
-| **USDT Fallback** | {config['destination']['fallback']['usdt_address']} |
+| **Primary Account** | {config['destination']['primary']['bank']} {config['destination']['primary']['account']} |
+| **Fallback Wallet** | {config['destination']['fallback']['usdt_address']} |
 
 ---
 
