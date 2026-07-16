@@ -15,8 +15,8 @@ from datetime import datetime
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 SENDER_EMAIL = "gaurangga168@gmail.com"
-# PASTE YOUR APP PASSWORD HERE
-APP_PASSWORD = "YOUR_APP_PASSWORD_HERE"
+# App Password - Get from https://myaccount.google.com/security (App passwords)
+APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "YOUR_APP_PASSWORD_HERE")
 RECIPIENT_EMAIL = "ceo@mahalakshmi.id"
 
 def send_ceo_daily_report():
@@ -236,11 +236,28 @@ def send_simple_alert(subject, message):
         return False
 
 if __name__ == "__main__":
+    import sys
+    
     print("📧 GAURANGA CEO Daily Revenue Report Sender")
     print("=" * 50)
     print("👑 MAHA LAKSHMI HOLDINGS")
-    print("📅 Date: 2026-07-04")
+    print("📅 Date: 2026-07-16")
     print("=" * 50)
+    
+    # Check if APP_PASSWORD is configured
+    if APP_PASSWORD == "YOUR_APP_PASSWORD_HERE":
+        print("\n⚠️  GMAIL APP PASSWORD NOT CONFIGURED")
+        print("=" * 50)
+        print("To send emails, please:")
+        print("1. Get Gmail App Password from:")
+        print("   https://myaccount.google.com/security")
+        print("2. Set environment variable:")
+        print("   export GMAIL_APP_PASSWORD='your_16_char_password'")
+        print("3. Run this script again")
+        print("\n📄 Report saved to:")
+        print("   MAHA/reports/ceo-daily-report-2026-07-16.md")
+        print("\n📧 Email body prepared - ready to send manually if needed")
+        sys.exit(0)
     
     # Send CEO daily report
     success = send_ceo_daily_report()
