@@ -18,11 +18,20 @@
   },
   
   "distribution": {
-    "ceo_share_percent": 60,
-    "reinvest_percent": 25,
-    "team_bonus_percent": 10,
-    "csr_percent": 5
+    "ceo_share_percent": 80,
+    "reinvest_percent": 20,
+    "team_bonus_percent": 0,
+    "csr_percent": 0
   },
+  "override_history": [
+    {
+      "timestamp": "2026-07-17T02:16:11.329181Z",
+      "action": "CEO_SHARE_OVERRIDE",
+      "previous_ceo_share": 60,
+      "new_ceo_share": 80,
+      "reason": "MGOS-Enterprise ledger consolidation - 80% CEO split for Rp 417,900,145 revenue"
+    }
+  ],
   
   "destination": {
     "type": "bank_transfer",

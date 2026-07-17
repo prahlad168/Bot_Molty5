@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "created": "2026-07-13",
-    "last_updated": "2026-07-16T00:42:18.734635",
-    "total_entries": 10
+    "last_updated": "2026-07-17T02:16:11.329181Z",
+    "total_entries": 11
   },
   "entries": [
     {
@@ -121,6 +121,24 @@
         "entries_processed": 1
       },
       "sync_node": "ALPHA_GAURANGGA"
+    },
+    {
+      "timestamp": "2026-07-17T02:16:11.329181Z",
+      "action": "MGOS_ENTERPRISE_LEDGER_CONSOLIDATION",
+      "event": "MGOS_ENTERPRISE_LEDGER_CONSOLIDATION",
+      "status": "SUCCESS",
+      "description": "Manually bridged MGOS-Enterprise digital sales data to the main branch. Re-calibrated payout engine to 80% CEO Share via Tokocrypto API pipeline.",
+      "source": "MAHAAIOS_PRODUCTION_CONFIRMED",
+      "details": {
+        "enterprise_dataset": "MGOS-Enterprise",
+        "total_amount": 417900145,
+        "currency": "IDR",
+        "ceo_share_percent": 80,
+        "ceo_payout_target": 334320116,
+        "pipeline": "Tokocrypto API",
+        "bridge_version": "2.0.0"
+      },
+      "reference": "MGOS-LEDGER-20260717-001"
     }
   ],
   "errors": [],

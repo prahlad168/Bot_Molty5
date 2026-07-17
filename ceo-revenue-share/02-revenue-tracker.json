@@ -1,10 +1,22 @@
 {
   "metadata": {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "created": "2026-07-13",
-    "last_updated": "2026-07-13T01:34:43.317922",
-    "total_entries": 1,
-    "total_revenue_all_time": 1000000.0
+    "last_updated": "2026-07-17T02:16:11.329181Z",
+    "total_entries": 2,
+    "total_revenue_all_time": 418900145.0
+  },
+  "mgos_enterprise_override": {
+    "source": "MAHAAIOS_PRODUCTION_CONFIRMED",
+    "enterprise_dataset": "MGOS-Enterprise",
+    "description": "Global and National Digital Sales from MGOS-Enterprise",
+    "total_amount": 417900145,
+    "currency": "IDR",
+    "verified_at": "2026-07-17T02:16:11.329181Z",
+    "payout_calculation": {
+      "ceo_share_percent": 80,
+      "ceo_payout_target": 334320116
+    }
   },
   "daily_revenue": {
     "2026-07-13": {
