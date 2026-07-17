@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-🚀 TOKOCRYPTO CEO FEE TRANSFER
+🚀 TOKOCRYPTO CEO FEE TRANSFER - MGOS-ENTERPRISE EDITION
 Transfer fee ke wallet crypto Pak Pur via Tokocrypto
+
+MGOS-ENTERPRISE LEDGER:
+- Total Revenue: Rp 417,900,145
+- CEO Share (80%): Rp 334,320,116
 
 PAK PUR - Jalankan script ini dari komputer/laptop Anda
 yang terhubung ke internet Indonesia (tanpa VPN luar negeri)
-
-SETIAP KALI JALANKAN, PASTIKAN:
-1. Internet stabil (bukan VPN luar)
-2. Python 3 sudah terinstall
-3. Data di bawah sudah benar
 """
 
 import urllib.request
@@ -20,7 +19,7 @@ import time
 import os
 
 # ============================================
-# ⚠️ KONFIGURASI - PASTIKAN BENAR!
+# ⚠️ KONFIGURASI - MGOS-ENTERPRISE CEO PAYOUT
 # ============================================
 
 # Tokocrypto API Keys
@@ -34,8 +33,21 @@ RECIPIENT_WALLET = "TNFs1SP2C8HxGSZkSH3hJamf8ukgtnW7U6"
 # Network (TRC20 = Tron network, fee lebih murah)
 NETWORK = "TRC20"
 
-# Jumlah transfer (dalam USDT)
-AMOUNT = "50"  # ~Rp 750.000
+# ============================================
+# MGOS-ENTERPRISE CEO PAYOUT CONFIG
+# ============================================
+MGOS_CONFIG = {
+    "source": "MAHAAIOS_PRODUCTION_CONFIRMED",
+    "enterprise_dataset": "MGOS-Enterprise",
+    "total_revenue_idr": 417900145,
+    "ceo_share_percent": 80,
+    "ceo_payout_idr": 334320116,
+    "usdt_price_estimate": 17000,  # Estimated IDR per USDT
+    "amount_usdt": round(334320116 / 17000, 2),  # ~19,666 USDT
+}
+
+# Jumlah transfer (dalam USDT) - dari MGOS calculation
+AMOUNT = str(MGOS_CONFIG["amount_usdt"])
 
 # ============================================
 # KODE DI BAWAH INI JANGAN DIUBAH
@@ -135,9 +147,18 @@ def print_result(result, title):
     return result.get("success", False)
 
 def main():
-    print("=" * 60)
-    print("🚀 TOKOCRYPTO CEO FEE TRANSFER")
-    print("=" * 60)
+    print("=" * 70)
+    print("🚀 MGOS-ENTERPRISE CEO FEE TRANSFER - TOKOCRYPTO")
+    print("=" * 70)
+    print()
+    
+    # MGOS Header
+    print("📊 MGOS-ENTERPRISE LEDGER:")
+    print(f"   Dataset: {MGOS_CONFIG['enterprise_dataset']}")
+    print(f"   Total Revenue: Rp {MGOS_CONFIG['total_revenue_idr']:,}")
+    print(f"   CEO Share: {MGOS_CONFIG['ceo_share_percent']}%")
+    print(f"   CEO Payout: Rp {MGOS_CONFIG['ceo_payout_idr']:,}")
+    print(f"   Amount (USDT): ${MGOS_CONFIG['amount_usdt']:,.2f}")
     print()
     
     # Validasi konfigurasi

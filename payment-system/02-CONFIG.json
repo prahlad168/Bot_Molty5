@@ -32,10 +32,16 @@
   },
   
   "distribution": {
-    "ceo_share_percent": 60,
-    "reinvest_percent": 25,
-    "team_bonus_percent": 10,
-    "csr_percent": 5
+    "ceo_share_percent": 80,
+    "reinvest_percent": 20,
+    "team_bonus_percent": 0,
+    "csr_percent": 0
+  },
+  "mgos_enterprise": {
+    "source": "MAHAAIOS_PRODUCTION_CONFIRMED",
+    "total_revenue_idr": 417900145,
+    "ceo_payout_idr": 334320116,
+    "ceo_payout_usdt_estimate": 19666.0
   },
   
   "status": {

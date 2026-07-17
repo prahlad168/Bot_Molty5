@@ -139,6 +139,28 @@
         "bridge_version": "2.0.0"
       },
       "reference": "MGOS-LEDGER-20260717-001"
+    },
+    {
+      "timestamp": "2026-07-17T02:20:00.000000Z",
+      "action": "CEO_PAYOUT_EXECUTION_ATTEMPT",
+      "event": "CEO_PAYOUT_EXECUTION_ATTEMPT",
+      "status": "FAILED_API_UNAVAILABLE",
+      "description": "Attempted to execute MGOS CEO payout via Tokocrypto API",
+      "details": {
+        "total_revenue": 417900145,
+        "ceo_share_percent": 80,
+        "ceo_payout_idr": 334320116,
+        "usdt_amount": 19665.89,
+        "wallet_address": "TNFs1SP2C8HxGSZkSH3hJamf8ukgtnW7U6",
+        "network": "TRC20",
+        "error": "HTTP 451 - API unavailable",
+        "likely_causes": [
+          "API keys invalid or expired",
+          "Region restriction (451 Unavailable For Legal Reasons)",
+          "VPN active with non-Indonesian server"
+        ]
+      },
+      "reference": "MGOS-PAYOUT-20260717-001"
     }
   ],
   "errors": [],
@@ -168,6 +190,18 @@
       "destination": "BCA 6485086645",
       "status": "PENDING_EXECUTION",
       "notes": "BCA transfer - self transfer to CEO account"
+    },
+    {
+      "timestamp": "2026-07-17T02:20:00.000000Z",
+      "action": "CEO_USDT_PAYOUT_PENDING",
+      "date": "2026-07-17",
+      "reference": "MGOS-PAYOUT-USDT-20260717",
+      "amount_idr": 334320116,
+      "amount_usdt": 19665.89,
+      "destination": "TNFs1SP2C8HxGSZkSH3hJamf8ukgtnW7U6 (TRC20)",
+      "status": "PENDING_MANUAL",
+      "source": "MGOS-ENTERPRISE",
+      "notes": "CEO payout from MGOS-Enterprise. Manual execution required - Tokocrypto API unavailable."
     }
   ]
 }
