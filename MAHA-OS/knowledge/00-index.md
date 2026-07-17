@@ -1,8 +1,17 @@
 # 🧠 KNOWLEDGE BASE INDEX
 ## MAHA LAKSHMI HOLDINGS
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Created:** 2026-07-03
+**Updated:** 2026-07-17
+
+---
+
+## 🚨 IMPORTANT - SEMUA LAPORAN DI SINI!
+
+### 👑 [AIOS CONSOLIDATED REPORT - Semua Penjualan](AIOS-CONSOLIDATED-REPORT.md)
+
+> **⚠️ BOOKMARK FILE INI!** Setiap kali Pak Pur minta "laporan", buka `AIOS-CONSOLIDATED-REPORT.md` untuk melihat semua penjualan produk digital.
 
 ---
 
@@ -22,6 +31,18 @@
 | 10 | Property | Real Estate Tech | 📝 0 |
 | 11 | Prompt Engineering | AI Prompts, Templates | 📝 0 |
 | 12 | Case Studies | Success & Failure Stories | 📝 0 |
+
+---
+
+## 💰 REVENUE LINKS
+
+| Report | Description | File |
+|--------|-------------|------|
+| **AIOS Consolidated** | Semua penjualan produk digital | [👑 Buka](AIOS-CONSOLIDATED-REPORT.md) |
+| **Global Digital Sales** | Penjualan 50+ negara | [🌍 Buka](../global-sales/) |
+| **Income Generator** | Daily income tracker | [💵 Buka](../income-generator/) |
+| **Finance** | Invoices & payments | [💳 Buka](../finance/) |
+| **MAHA Lakshmi** | 10 SBU Holdings | [🏢 Buka](../../maha-lakshmi/) |
 
 ---
 
