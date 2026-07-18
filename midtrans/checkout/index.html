@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - MAHA LAKSHMI</title>
+    
+    <!-- Midtrans Snap JS -->
+    <script src="https://app.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-xxx"></script>
+    
+    <!-- Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        
+        .header p {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .product-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn-pay {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn-pay:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-pay:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .btn-pay.loading {
+            position: relative;
+            color: transparent;
+        }
+        
+        .btn-pay.loading::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin: -10px 0 0 -10px;
+            border: 3px solid white;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .alert.error {
+            background: #fee;
+            color: #c00;
+            border: 1px solid #fcc;
+        }
+        
+        .alert.success {
+            background: #efe;
+            color: #060;
+            border: 1px solid #cfc;
+        }
+        
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .secure-badge img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-methods img {
+            height: 30px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🎛️ MAHA LAKSHMI</h1>
+                <p>Pembayaran Aman & Terpercaya</p>
+            </div>
+            
+            <div id="alert" class="alert"></div>
+            
+            <div class="product-info">
+                <div class="product-name" id="product-name">Digital Product</div>
+                <div class="product-price" id="product-price">Rp 0</div>
+            </div>
+            
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="customer_name">Nama Lengkap *</label>
+                    <input type="text" id="customer_name" name="customer_name" required placeholder="Masukkan nama lengkap">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customer_email">Email *</label>
+                    <input type="email" id="customer_email" name="customer_email" required placeholder="email@contoh.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customer_phone">No. WhatsApp *</label>
+                    <input type="tel" id="customer_phone" name="customer_phone" required placeholder="08xxxxxxxxxx">
+                </div>
+                
+                <button type="submit" id="pay-button" class="btn-pay">
+                    Bayar Sekarang
+                </button>
+            </form>
+            
+            <div class="secure-badge">
+                <span>🔒</span>
+                <span>Pembayaran aman dengan Midtrans</span>
+            </div>
+            
+            <div class="payment-methods">
+                <img src="https://cdn.midtrans.com/assets/images/providers/va/bca.png" alt="BCA VA" title="BCA Virtual Account">
+                <img src="https://cdn.midtrans.com/assets/images/providers/va/mandiri.png" alt="Mandiri VA" title="Mandiri Virtual Account">
+                <img src="https://cdn.midtrans.com/assets/images/providers/va/bni.png" alt="BNI VA" title="BNI Virtual Account">
+                <img src="https://cdn.midtrans.com/assets/images/providers/va/bri.png" alt="BRI VA" title="BRI Virtual Account">
+                <img src="https://cdn.midtrans.com/assets/images/providers/qris.png" alt="QRIS" title="QRIS">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get product info from URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('product') || 'Digital Product';
+        const productPrice = parseInt(urlParams.get('price')) || 100000;
+        const orderId = urlParams.get('order_id') || 'MLA-' + Date.now();
+        
+        // Display product info
+        document.getElementById('product-name').textContent = productName;
+        document.getElementById('product-price').textContent = 'Rp ' + productPrice.toLocaleString('id-ID');
+        
+        // Form submission
+        document.getElementById('checkout-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('pay-button');
+            const alert = document.getElementById('alert');
+            
+            // Get form data
+            const customerName = document.getElementById('customer_name').value;
+            const customerEmail = document.getElementById('customer_email').value;
+            const customerPhone = document.getElementById('customer_phone').value;
+            
+            // Validate
+            if (!customerName || !customerEmail || !customerPhone) {
+                alert.className = 'alert error';
+                alert.textContent = 'Mohon isi semua field yang wajib';
+                alert.style.display = 'block';
+                return;
+            }
+            
+            // Show loading
+            btn.disabled = true;
+            btn.classList.add('loading');
+            btn.textContent = 'Memproses...';
+            alert.style.display = 'none';
+            
+            try {
+                // Get snap token from server
+                const response = await fetch('../get-snap-token.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        order_id: orderId,
+                        amount: productPrice,
+                        customer_name: customerName,
+                        customer_email: customerEmail,
+                        customer_phone: customerPhone,
+                        product_name: productName
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (!data.success) {
+                    throw new Error(data.error || 'Gagal generate token');
+                }
+                
+                // Open Midtrans Snap
+                snap.pay(data.snap_token, {
+                    onSuccess: function(result) {
+                        alert.className = 'alert success';
+                        alert.textContent = '✅ Pembayaran berhasil! Terima kasih ' + customerName + '. Kami akan segera mengirim konfirmasi ke email Anda.';
+                        alert.style.display = 'block';
+                        
+                        // Reset button
+                        btn.disabled = false;
+                        btn.classList.remove('loading');
+                        btn.textContent = 'Selesai';
+                        
+                        console.log('Payment Success:', result);
+                        
+                        // Redirect after 3 seconds
+                        setTimeout(() => {
+                            window.location.href = 'success.html?order_id=' + orderId;
+                        }, 3000);
+                    },
+                    onPending: function(result) {
+                        alert.className = 'alert success';
+                        alert.textContent = '⏳ Pembayaran menunggu. Selesaikan pembayaran sesuai instruksi yang muncul.';
+                        alert.style.display = 'block';
+                        
+                        btn.disabled = false;
+                        btn.classList.remove('loading');
+                        btn.textContent = 'Bayar Sekarang';
+                        
+                        console.log('Payment Pending:', result);
+                    },
+                    onError: function(result) {
+                        alert.className = 'alert error';
+                        alert.textContent = '❌ Pembayaran gagal. Silakan coba lagi.';
+                        alert.style.display = 'block';
+                        
+                        btn.disabled = false;
+                        btn.classList.remove('loading');
+                        btn.textContent = 'Coba Lagi';
+                        
+                        console.log('Payment Error:', result);
+                    },
+                    onClose: function() {
+                        btn.disabled = false;
+                        btn.classList.remove('loading');
+                        btn.textContent = 'Bayar Sekarang';
+                        
+                        alert.className = 'alert error';
+                        alert.textContent = '⚠️ Pembayaran dibatalkan. Silakan klik "Bayar Sekarang" untuk mencoba lagi.';
+                        alert.style.display = 'block';
+                    }
+                });
+                
+            } catch (error) {
+                alert.className = 'alert error';
+                alert.textContent = 'Error: ' + error.message;
+                alert.style.display = 'block';
+                
+                btn.disabled = false;
+                btn.classList.remove('loading');
+                btn.textContent = 'Coba Lagi';
+                
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>

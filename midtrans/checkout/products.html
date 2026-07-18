@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Products - MAHA LAKSHMI</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f6fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .product-features li {
+            padding: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .product-features li::before {
+            content: "✅ ";
+        }
+        
+        .product-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .product-price .original {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        
+        .btn-buy {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        
+        .btn-buy:hover {
+            transform: scale(1.02);
+        }
+        
+        .footer {
+            background: #2d3436;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎛️ MAHA LAKSHMI</h1>
+        <p>Digital Products & AI Solutions</p>
+    </div>
+    
+    <div class="container">
+        <div class="products-grid">
+            
+            <!-- Product 1: AI Agent Templates -->
+            <div class="product-card">
+                <div class="product-image">🤖</div>
+                <div class="product-content">
+                    <span class="product-badge">TERLARIS</span>
+                    <h3 class="product-title">AI Agent Templates Bundle</h3>
+                    <p class="product-description">
+                        Paket lengkap 50+ template AI Agent untuk berbagai industri. 
+                        Siap pakai untuk startup dan bisnis digital.
+                    </p>
+                    <ul class="product-features">
+                        <li>50+ Agent Templates</li>
+                        <li>Complete Documentation</li>
+                        <li>Lifetime Updates</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <div class="product-price">
+                        Rp 2.500.000
+                        <span class="original">Rp 5.000.000</span>
+                    </div>
+                    <a href="checkout/index.html?product=AI%20Agent%20Templates&price=2500000" class="btn-buy">
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 2: SaaS Dashboard Template -->
+            <div class="product-card">
+                <div class="product-image">📊</div>
+                <div class="product-content">
+                    <span class="product-badge">NEW</span>
+                    <h3 class="product-title">SaaS Dashboard Template</h3>
+                    <p class="product-description">
+                        Template dashboard SaaS modern dengan fitur lengkap. 
+                        Responsive design, dark mode, dan analytics built-in.
+                    </p>
+                    <ul class="product-features">
+                        <li>Clean Dashboard UI</li>
+                        <li>Dark/Light Mode</li>
+                        <li>Responsive Design</li>
+                        <li>Chart.js Included</li>
+                    </ul>
+                    <div class="product-price">
+                        Rp 1.500.000
+                        <span class="original">Rp 3.000.000</span>
+                    </div>
+                    <a href="checkout/index.html?product=SaaS%20Dashboard%20Template&price=1500000" class="btn-buy">
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 3: Digital Marketing Kit -->
+            <div class="product-card">
+                <div class="product-image">📢</div>
+                <div class="product-content">
+                    <span class="product-badge">HOT</span>
+                    <h3 class="product-title">Digital Marketing Kit</h3>
+                    <p class="product-description">
+                        Paket lengkap untuk digital marketing: 100+ templates, 
+                        social media kit, email templates, dan checklist.
+                    </p>
+                    <ul class="product-features">
+                        <li>100+ Templates</li>
+                        <li>Social Media Kit</li>
+                        <li>Email Templates</li>
+                        <li>Marketing Checklist</li>
+                    </ul>
+                    <div class="product-price">
+                        Rp 999.000
+                        <span class="original">Rp 2.000.000</span>
+                    </div>
+                    <a href="checkout/index.html?product=Digital%20Marketing%20Kit&price=999000" class="btn-buy">
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 4: GAURANGA AI Course -->
+            <div class="product-card">
+                <div class="product-image">🎓</div>
+                <div class="product-content">
+                    <span class="product-badge">PREMIUM</span>
+                    <h3 class="product-title">GAURANGA AI Masterclass</h3>
+                    <p class="product-description">
+                        Kursus lengkap membangun bisnis digital dengan AI. 
+                        Dari dasar hingga advanced strategies.
+                    </p>
+                    <ul class="product-features">
+                        <li>20+ Video Lessons</li>
+                        <li>Case Studies</li>
+                        <li>Live Q&A Sessions</li>
+                        <li>Certificate</li>
+                    </ul>
+                    <div class="product-price">
+                        Rp 5.000.000
+                        <span class="original">Rp 10.000.000</span>
+                    </div>
+                    <a href="checkout/index.html?product=GAURANGA%20AI%20Masterclass&price=5000000" class="btn-buy">
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 5: Company Landing Page -->
+            <div class="product-card">
+                <div class="product-image">🚀</div>
+                <div class="product-content">
+                    <span class="product-badge">CUSTOM</span>
+                    <h3 class="product-title">Custom Landing Page</h3>
+                    <p class="product-description">
+                        Landing page custom untuk bisnis Anda. 
+                        Desain profesional, SEO optimized, dan mobile friendly.
+                    </p>
+                    <ul class="product-features">
+                        <li>Custom Design</li>
+                        <li>SEO Optimized</li>
+                        <li>Fast Loading</li>
+                        <li>Mobile Friendly</li>
+                    </ul>
+                    <div class="product-price">
+                        Rp 3.000.000
+                        <span class="original">Rp 6.000.000</span>
+                    </div>
+                    <a href="checkout/index.html?product=Custom%20Landing%20Page&price=3000000" class="btn-buy">
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 6: Consultation Package -->
+            <div class="product-card">
+                <div class="product-image">💼</div>
+                <div class="product-content">
+                    <span class="product-badge">EXPERT</span>
+                    <h3 class="product-title">Business Consultation</h3>
+                    <p class="product-description">
+                        Konsultasi bisnis 1-on-1 dengan expert. 
+                        Strategi pertumbuhan dan digital transformation.
+                    </p>
+                    <ul class="product-features">
+                        <li>60 min Session</li>
+                        <li>Expert Advice</li>
+                        <li>Action Plan</li>
+                        <li>Follow-up Support</li>
+                    </ul>
+                    <div class="product-price">
+                        Rp 500.000
+                        <span class="original">Rp 1.000.000</span>
+                    </div>
+                    <a href="checkout/index.html?product=Business%20Consultation%20(60%20min)&price=500000" class="btn-buy">
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>
+            💰 Dibuat oleh <strong>MAHA LAKSHMI HOLDINGS</strong><br>
+            👑 CEO: i Made Purna Ananda<br>
+            🏦 Bank: BCA 6485086645<br><br>
+            <a href="https://mahalaksmi.web.id">← Kembali ke Beranda</a>
+        </p>
+    </div>
+</body>
+</html>
