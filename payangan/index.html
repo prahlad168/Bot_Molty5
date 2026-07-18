@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Payangan Gianyar - Sistem Informasi Rumah Sakit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #2196F3; --primary-dark: #1976D2; --secondary: #4CAF50; --accent: #FFC107; --dark: #1a1a2e; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #0d1f3c 100%); min-height: 100vh; color: #fff; }
+        .navbar { background: rgba(26,26,46,0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero { padding: 150px 5% 80px; text-align: center; background: linear-gradient(135deg, rgba(33,150,243,0.15) 0%, rgba(76,175,80,0.15) 100%); }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero h1 span { background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 40px; }
+        .btn { padding: 15px 40px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(33,150,243,0.4); }
+        .services { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title p { color: rgba(255,255,255,0.7); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px 30px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s; }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .service-icon { font-size: 3.5rem; margin-bottom: 20px; }
+        .service-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+        .service-desc { color: rgba(255,255,255,0.7); }
+        .features { padding: 80px 5%; background: rgba(255,255,255,0.02); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .feature-card { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 25px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .feature-title { font-size: 0.9rem; font-weight: 600; }
+        .contact { padding: 80px 5%; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px; }
+        .contact-item { display: flex; align-items: center; gap: 15px; font-size: 1.2rem; }
+        .contact-icon { width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .footer { background: rgba(0,0,0,0.3); padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🏥 RS Payangan</div>
+        <div><a href="https://wa.me/6281337558787" class="btn btn-primary">💬 WhatsApp</a></div>
+    </nav>
+    <section class="hero">
+        <h1>Pelayanan Kesehatan <span>Terbaik</span></h1>
+        <p>Rumah Sakit Umum Daerah Payangan Gianyar - Sistem Informasi Manajemen Rumah Sakit modern untuk pelayanan prima kepada masyarakat.</p>
+        <a href="#services" class="btn btn-primary">🏥 Lihat Layanan</a>
+    </section>
+    <section class="features">
+        <div class="section-title"><h2>✨ Fasilitas Kami</h2></div>
+        <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon">🏨</div><h3 class="feature-title">IGD 24 Jam</h3></div>
+            <div class="feature-card"><div class="feature-icon">🔬</div><h3 class="feature-title">Laboratorium</h3></div>
+            <div class="feature-card"><div class="feature-icon">💊</div><h3 class="feature-title">Farmasi</h3></div>
+            <div class="feature-card"><div class="feature-icon">🚑</div><h3 class="feature-title">Ambulans</h3></div>
+            <div class="feature-card"><div class="feature-icon">🩺</div><h3 class="feature-title">Poliklinik</h3></div>
+            <div class="feature-card"><div class="feature-icon">🛏️</div><h3 class="feature-title">Rawat Inap</h3></div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="section-title"><h2>🏥 Layanan Unggulan</h2><p>Pelayanan kesehatan komprehensif</p></div>
+        <div class="services-grid">
+            <div class="service-card"><div class="service-icon">🩺</div><h3 class="service-title">Poliklinik Umum</h3><p class="service-desc">Konsultasi dokter umum, pemeriksaan kesehatan, treatment ringan</p></div>
+            <div class="service-card"><div class="service-icon">👶</div><h3 class="service-title">KIA & KB</h3><p class="service-desc">Pelayanan kesehatan ibu dan anak, program KB, konsultasi kandungan</p></div>
+            <div class="service-card"><div class="service-icon">🦷</div><h3 class="service-title">Gigi & Mulut</h3><p class="service-desc">Perawatan gigi, cabut gigi, scaling, penambalan</p></div>
+            <div class="service-card"><div class="service-icon">💉</div><h3 class="service-title">Bedah</h3><p class="service-desc">Operasi minor dan major, rawat jalan pasca operasi</p></div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>📞 Hubungi Kami</h2>
+        <div class="contact-info">
+            <div class="contact-item"><div class="contact-icon">📍</div><span>Payangan, Gianyar, Bali</span></div>
+            <div class="contact-item"><div class="contact-icon">💬</div><span>0813 3755 8787</span></div>
+            <div class="contact-item"><div class="contact-icon">🌐</div><span>payangan.mahalaksmi.web.id</span></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="logo">🏥 RS Payangan Gianyar</div>
+        <p>Sistem Informasi Rumah Sakit - Bagian dari MAHA LAKSHMI HOLDINGS</p>
+        <p style="margin-top: 20px; color: rgba(255,255,255,0.3);">© 2026 MAHA LAKSHMI HOLDINGS</p>
+    </footer>
+</body>
+</html>

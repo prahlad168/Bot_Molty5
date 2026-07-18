@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GianyarFood - Food Delivery & Restaurant Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #F44336; --primary-dark: #D32F2F; --secondary: #FF9800; --accent: #4CAF50; --dark: #1a1a2e; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #2e1a1a 100%); min-height: 100vh; color: #fff; }
+        .navbar { background: rgba(26,26,46,0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero { padding: 150px 5% 80px; text-align: center; background: linear-gradient(135deg, rgba(244,67,54,0.15) 0%, rgba(255,152,0,0.15) 100%); }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero h1 span { background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 40px; }
+        .btn { padding: 15px 40px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(244,67,54,0.4); }
+        .restaurants { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title p { color: rgba(255,255,255,0.7); }
+        .resto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .resto-card { background: rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s; }
+        .resto-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .resto-img { height: 180px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; }
+        .resto-badge { position: absolute; top: 15px; right: 15px; background: var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .resto-content { padding: 25px; }
+        .resto-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
+        .resto-cuisine { color: rgba(255,255,255,0.7); margin-bottom: 10px; font-size: 0.9rem; }
+        .resto-meta { display: flex; gap: 15px; margin-bottom: 15px; color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+        .btn-order { background: var(--primary); color: #fff; padding: 12px 25px; border-radius: 20px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s; }
+        .btn-order:hover { background: var(--primary-dark); }
+        .partner { padding: 80px 5%; background: rgba(255,255,255,0.02); text-align: center; }
+        .partner h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .partner p { color: rgba(255,255,255,0.7); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
+        .partner-card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+        .partner-icon { font-size: 3rem; margin-bottom: 15px; }
+        .partner-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+        .partner-desc { color: rgba(255,255,255,0.7); margin-bottom: 20px; }
+        .contact { padding: 80px 5%; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px; }
+        .contact-item { display: flex; align-items: center; gap: 15px; font-size: 1.2rem; }
+        .contact-icon { width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .footer { background: rgba(0,0,0,0.3); padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🍔 GianyarFood</div>
+        <div><a href="https://wa.me/6281337558787" class="btn btn-primary">💬 WhatsApp</a></div>
+    </nav>
+
+    <section class="hero">
+        <h1>Makanan <span>Enak</span> Diantar ke Rumah</h1>
+        <p>Platform food delivery Gianyar & Bali. Pesan makanan dari restoran favorit, antar cepat 30 menit!</p>
+        <a href="#restaurants" class="btn btn-primary">🍽️ Lihat Menu</a>
+    </section>
+
+    <section class="restaurants" id="restaurants">
+        <div class="section-title">
+            <h2>🔥 Rekomendasi Restaurant</h2>
+            <p>Pilihan makanan terbaik untuk Anda</p>
+        </div>
+        <div class="resto-grid">
+            <div class="resto-card">
+                <div class="resto-img">🍜<span class="resto-badge">Best Seller</span></div>
+                <div class="resto-content">
+                    <h3 class="resto-name">Warung Babi Guling Ibu Oka</h3>
+                    <p class="resto-cuisine">Tradisional Bali • 4.8★</p>
+                    <div class="resto-meta"><span>⏱️ 25 min</span><span>🚗 Gratis ongkir</span></div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20pesan%20Babi%20Guling%20Ibu%20Oka" class="btn-order">Pesan Sekarang</a>
+                </div>
+            </div>
+            <div class="resto-card">
+                <div class="resto-img">🥗</div>
+                <div class="resto-content">
+                    <h3 class="resto-name">Clear Café Ubud</h3>
+                    <p class="resto-cuisine">Healthy • Vegetarian • 4.7★</p>
+                    <div class="resto-meta"><span>⏱️ 30 min</span><span>🚗 Rp 10rb ongkir</span></div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20pesan%20dari%20Clear%20Cafe" class="btn-order">Pesan Sekarang</a>
+                </div>
+            </div>
+            <div class="resto-card">
+                <div class="resto-img">🍕</div>
+                <div class="resto-content">
+                    <h3 class="resto-name">Locavore to Go</h3>
+                    <p class="resto-cuisine">Fine Dining • Modern • 4.9★</p>
+                    <div class="resto-meta"><span>⏱️ 40 min</span><span>🚗 Rp 15rb ongkir</span></div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20pesan%20dari%20Locavore" class="btn-order">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partner">
+        <h2>🤝 Jadi Partner Kami</h2>
+        <p>Gabung sebagai restaurant partner atau driver delivery</p>
+        <div class="partner-grid">
+            <div class="partner-card">
+                <div class="partner-icon">🍽️</div>
+                <h3 class="partner-title">Restaurant Partner</h3>
+                <p class="partner-desc">Tingkatkan penjualan dengan bergabung di platform kami</p>
+                <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20jadi%20Restaurant%20Partner" class="btn btn-primary">Daftar Sekarang</a>
+            </div>
+            <div class="partner-card">
+                <div class="partner-icon">🚴</div>
+                <h3 class="partner-title">Driver Partner</h3>
+                <p class="partner-desc">Dapat penghasilan tambahan sebagai delivery driver</p>
+                <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20jadi%20Driver%20Partner" class="btn btn-primary">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>📞 Hubungi Kami</h2>
+        <p>Tim customer service siap membantu 24/7</p>
+        <div class="contact-info">
+            <div class="contact-item"><div class="contact-icon">💬</div><span>0813 3755 8787</span></div>
+            <div class="contact-item"><div class="contact-icon">🌐</div><span>makan.mahalaksmi.web.id</span></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">🍔 GianyarFood</div>
+        <p>Food Delivery Platform - Bagian dari MAHA LAKSHMI HOLDINGS</p>
+        <p style="margin-top: 20px; color: rgba(255,255,255,0.3);">© 2026 MAHA LAKSHMI HOLDINGS</p>
+    </footer>
+</body>
+</html>

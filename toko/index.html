@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GianyarMart - Online Store Produk Bali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #00C853;
+            --primary-dark: #00A844;
+            --secondary: #FF6D00;
+            --accent: #FFD600;
+            --dark: #1a1a2e;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d3320 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(26,26,46,0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero {
+            padding: 150px 5% 80px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0,200,83,0.15) 0%, rgba(255,109,0,0.15) 100%);
+        }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero h1 span { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 40px; }
+        .btn { padding: 15px 40px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,200,83,0.4); }
+        .products { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title p { color: rgba(255,255,255,0.7); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .product-card { background: rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s; }
+        .product-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .product-img { height: 200px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .product-content { padding: 25px; }
+        .product-badge { background: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px; }
+        .product-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+        .product-price { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; }
+        .product-price span { font-size: 0.9rem; color: rgba(255,255,255,0.5); text-decoration: line-through; margin-left: 10px; }
+        .btn-shop { background: var(--primary); color: #fff; padding: 12px 25px; border-radius: 20px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s; }
+        .btn-shop:hover { background: var(--primary-dark); }
+        .categories { padding: 80px 5%; background: rgba(255,255,255,0.02); }
+        .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .cat-card { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 30px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s; cursor: pointer; }
+        .cat-card:hover { border-color: var(--primary); background: rgba(0,200,83,0.1); }
+        .cat-icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .cat-name { font-weight: 600; }
+        .contact { padding: 80px 5%; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px; }
+        .contact-item { display: flex; align-items: center; gap: 15px; font-size: 1.2rem; }
+        .contact-icon { width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .footer { background: rgba(0,0,0,0.3); padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🛒 GianyarMart</div>
+        <div><a href="https://wa.me/6281337558787" class="btn btn-primary">💬 WhatsApp</a></div>
+    </nav>
+
+    <section class="hero">
+        <h1>Belanja Produk <span>Bali</span> Berkualitas</h1>
+        <p>Toko online terpercaya dengan produk khas Bali: fashion, crafts, makanan, dan souvenir. Pengiriman ke seluruh Indonesia!</p>
+        <a href="#products" class="btn btn-primary">🛍️ Lihat Produk</a>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="section-title">
+            <h2>📂 Kategori</h2>
+            <p>Temukan produk sesuai kebutuhan Anda</p>
+        </div>
+        <div class="cat-grid">
+            <div class="cat-card"><div class="cat-icon">👗</div><div class="cat-name">Fashion</div></div>
+            <div class="cat-card"><div class="cat-icon">🎨</div><div class="cat-name">Crafts</div></div>
+            <div class="cat-card"><div class="cat-icon">🍫</div><div class="cat-name">Food</div></div>
+            <div class="cat-card"><div class="cat-icon">🎁</div><div class="cat-name">Souvenir</div></div>
+            <div class="cat-card"><div class="cat-icon">💄</div><div class="cat-name">Beauty</div></div>
+            <div class="cat-card"><div class="cat-icon">🏠</div><div class="cat-name">Home</div></div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="section-title">
+            <h2>🔥 Produk Terlaris</h2>
+            <p>Pilihan terbaik dari toko kami</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img">👗</div>
+                <div class="product-content">
+                    <span class="product-badge">Best Seller</span>
+                    <h3 class="product-title">Dress Batik Premium</h3>
+                    <div class="product-price">Rp 450.000 <span>Rp 600.000</span></div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20dengan%20Dress%20Batik%20Premium" class="btn-shop">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">🎨</div>
+                <div class="product-content">
+                    <span class="product-badge">New</span>
+                    <h3 class="product-title">Lukisan Bali Original</h3>
+                    <div class="product-price">Rp 1.200.000 <span>Rp 1.500.000</span></div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20dengan%20Lukisan%20Bali" class="btn-shop">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">🍫</div>
+                <div class="product-content">
+                    <span class="product-badge">Promo</span>
+                    <h3 class="product-title">Chocolate Box Set</h3>
+                    <div class="product-price">Rp 250.000 <span>Rp 350.000</span></div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20dengan%20Chocolate%20Box" class="btn-shop">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">🎁</div>
+                <div class="product-content">
+                    <span class="product-badge">Hot</span>
+                    <h3 class="product-title">Souvenir Gift Set</h3>
+                    <div class="product-price">Rp 350.000 <span>Rp 450.000</span></div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20dengan%20Souvenir%20Gift%20Set" class="btn-shop">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>📞 Hubungi Kami</h2>
+        <p>Tim customer service siap membantu 24/7</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <span>0813 3755 8787</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <span>toko.mahalaksmi.web.id</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">🛒 GianyarMart</div>
+        <p>Online Store - Bagian dari MAHA LAKSHMI HOLDINGS</p>
+        <p style="margin-top: 20px; color: rgba(255,255,255,0.3);">© 2026 MAHA LAKSHMI HOLDINGS</p>
+    </footer>
+</body>
+</html>

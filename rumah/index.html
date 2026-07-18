@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GianyarProperty - Properti & Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #5E35B1; --primary-dark: #4527A0; --secondary: #00ACC1; --accent: #FFD54F; --dark: #1a1a2e; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #1a1033 100%); min-height: 100vh; color: #fff; }
+        .navbar { background: rgba(26,26,46,0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        .logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero { padding: 150px 5% 80px; text-align: center; background: linear-gradient(135deg, rgba(94,53,177,0.15) 0%, rgba(0,172,193,0.15) 100%); }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero h1 span { background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 40px; }
+        .btn { padding: 15px 40px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(94,53,177,0.4); }
+        .properties { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title p { color: rgba(255,255,255,0.7); }
+        .props-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .prop-card { background: rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s; }
+        .prop-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .prop-img { height: 220px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; }
+        .prop-badge { position: absolute; top: 15px; left: 15px; background: var(--accent); color: #1a1a2e; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .prop-content { padding: 25px; }
+        .prop-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; }
+        .prop-location { color: rgba(255,255,255,0.7); margin-bottom: 15px; display: flex; align-items: center; gap: 5px; }
+        .prop-features { display: flex; gap: 20px; margin-bottom: 15px; color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .prop-price { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 15px; }
+        .btn-detail { background: var(--primary); color: #fff; padding: 12px 25px; border-radius: 20px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s; }
+        .btn-detail:hover { background: var(--primary-dark); }
+        .services { padding: 80px 5%; background: rgba(255,255,255,0.02); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .service-card { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 30px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+        .service-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .service-title { font-size: 1.1rem; font-weight: 600; }
+        .contact { padding: 80px 5%; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px; }
+        .contact-item { display: flex; align-items: center; gap: 15px; font-size: 1.2rem; }
+        .contact-icon { width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .footer { background: rgba(0,0,0,0.3); padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .props-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🏠 GianyarProperty</div>
+        <div><a href="https://wa.me/6281337558787" class="btn btn-primary">💬 WhatsApp</a></div>
+    </nav>
+
+    <section class="hero">
+        <h1>Properti <span>Impian</span> di Bali</h1>
+        <p>Temukan rumah, villa, tanah, dan properti komersial terbaik di Gianyar dan seluruh Bali. Jual, beli, atau sewa - semua di satu platform!</p>
+        <a href="#properties" class="btn btn-primary">🏡 Lihat Properti</a>
+    </section>
+
+    <section class="properties" id="properties">
+        <div class="section-title">
+            <h2>🔥 Properti Unggulan</h2>
+            <p>Pilihan properti terbaik untuk Anda</p>
+        </div>
+        <div class="props-grid">
+            <div class="prop-card">
+                <div class="prop-img">🏡<span class="prop-badge">Featured</span></div>
+                <div class="prop-content">
+                    <h3 class="prop-title">Villa Modern di Ubud</h3>
+                    <p class="prop-location">📍 Ubud, Gianyar</p>
+                    <div class="prop-features"><span>🛏️ 4 Kamar</span><span>🚿 3 Kamar Mandi</span><span>📐 250 m²</span></div>
+                    <div class="prop-price">Rp 3.500.000.000</div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20dengan%20Villa%20di%20Ubud" class="btn-detail">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="prop-card">
+                <div class="prop-img">🏠<span class="prop-badge">New</span></div>
+                <div class="prop-content">
+                    <h3 class="prop-title">Rumah Cluster di Gianyar</h3>
+                    <p class="prop-location">📍 Gianyar Kota</p>
+                    <div class="prop-features"><span>🛏️ 3 Kamar</span><span>🚿 2 Kamar Mandi</span><span>📐 120 m²</span></div>
+                    <div class="prop-price">Rp 850.000.000</div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20dengan%20Rumah%20di%20Gianyar" class="btn-detail">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="prop-card">
+                <div class="prop-img">🌍<span class="prop-badge">Investment</span></div>
+                <div class="prop-content">
+                    <h3 class="prop-title">Tanah Siap Bangun di Payangan</h3>
+                    <p class="prop-location">📍 Payangan, Gianyar</p>
+                    <div class="prop-features"><span>📐 500 m²</span><span>💧 Air Ready</span><span>⚡ Listrik Ready</span></div>
+                    <div class="prop-price">Rp 450.000.000</div>
+                    <a href="https://wa.me/6281337558787?text=Halo,%20saya%20tertarik%20dengan%20Tanah%20di%20Payangan" class="btn-detail">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="section-title">
+            <h2>✨ Layanan Kami</h2>
+            <p>Solusi properti lengkap untuk Anda</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card"><div class="service-icon">🏘️</div><h3 class="service-title">Jual Properti</h3></div>
+            <div class="service-card"><div class="service-icon">🏠</div><h3 class="service-title">Beli Properti</h3></div>
+            <div class="service-card"><div class="service-icon">🔑</div><h3 class="service-title">Sewa Properti</h3></div>
+            <div class="service-card"><div class="service-icon">📋</div><h3 class="service-title">Appraisal</h3></div>
+            <div class="service-card"><div class="service-icon">📝</div><h3 class="service-title">Legalitas</h3></div>
+            <div class="service-card"><div class="service-icon">🏗️</div><h3 class="service-title">Property Mgmt</h3></div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>📞 Hubungi Kami</h2>
+        <p>Tim property agent kami siap membantu</p>
+        <div class="contact-info">
+            <div class="contact-item"><div class="contact-icon">💬</div><span>0813 3755 8787</span></div>
+            <div class="contact-item"><div class="contact-icon">🌐</div><span>rumah.mahalaksmi.web.id</span></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">🏠 GianyarProperty</div>
+        <p>Properti & Real Estate - Bagian dari MAHA LAKSHMI HOLDINGS</p>
+        <p style="margin-top: 20px; color: rgba(255,255,255,0.3);">© 2026 MAHA LAKSHMI HOLDINGS</p>
+    </footer>
+</body>
+</html>

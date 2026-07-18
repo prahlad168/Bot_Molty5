@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - MAHA LAKSHMI HOLDINGS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E85A24;
+            --secondary: #0048BA;
+            --accent: #00D4AA;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(26,26,46,0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero {
+            padding: 120px 5% 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 5% 80px;
+        }
+        
+        /* Company Selection */
+        .company-select {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .company-select h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .company-btn {
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .company-btn:hover {
+            border-color: var(--primary);
+            background: rgba(255,107,53,0.1);
+        }
+        .company-btn.active {
+            border-color: var(--primary);
+            background: rgba(255,107,53,0.2);
+        }
+        .company-btn .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        /* Payment Methods */
+        .payment-section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .payment-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .payment-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .payment-card:hover {
+            border-color: var(--accent);
+        }
+        .payment-card.selected {
+            border-color: var(--primary);
+            background: rgba(255,107,53,0.1);
+        }
+        .payment-card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .payment-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .payment-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .payment-desc {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+        
+        /* Bank Transfer Details */
+        .bank-details {
+            background: rgba(0,212,170,0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+            border: 1px solid rgba(0,212,170,0.3);
+        }
+        .bank-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .bank-logo {
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1a1a2e;
+        }
+        .bank-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        .bank-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        .bank-account {
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .account-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .account-row:last-child {
+            border-bottom: none;
+        }
+        .account-label {
+            color: rgba(255,255,255,0.6);
+        }
+        .account-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .copy-btn {
+            background: var(--primary);
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .copy-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* QRIS Section */
+        .qris-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qris-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .qris-box img {
+            width: 200px;
+            height: 200px;
+        }
+        .qris-note {
+            color: #1a1a2e;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        
+        /* Amount Input */
+        .amount-section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .amount-section h3 {
+            margin-bottom: 20px;
+        }
+        .amount-input-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .amount-input {
+            flex: 1;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 2px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .amount-input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .amount-presets {
+            display: flex;
+            gap: 10px;
+        }
+        .preset-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .preset-btn:hover, .preset-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        /* Submit Button */
+        .submit-section {
+            text-align: center;
+        }
+        .btn-submit {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            border: none;
+            padding: 20px 60px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,53,0.4);
+        }
+        
+        /* WhatsApp Button */
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(0,0,0,0.3);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 50px;
+        }
+        .footer p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--success);
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: none;
+            animation: slideIn 0.3s ease;
+            z-index: 2000;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* Company Info */
+        .company-info {
+            background: rgba(255,107,53,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,107,53,0.3);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .company-info .icon {
+            font-size: 2.5rem;
+        }
+        .company-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        .company-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .company-grid { grid-template-columns: repeat(2, 1fr); }
+            .payment-methods { grid-template-columns: 1fr; }
+            .amount-input-group { flex-direction: column; }
+            .amount-presets { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">💰 MAHA Payment</div>
+        <a href="https://wa.me/6281337558787" class="btn-submit" style="padding: 10px 25px; font-size: 1rem;">💬 Hubungi Kami</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Pembayaran <span>MAHA LAKSHMI</span></h1>
+        <p>Pilih perusahaan dan metode pembayaran yang Anda inginkan</p>
+    </section>
+
+    <div class="container">
+        <!-- Company Selection -->
+        <div class="company-select">
+            <h2>🏢 Pilih Perusahaan</h2>
+            <div class="company-grid">
+                <div class="company-btn active" data-company="holdings" data-icon="🏢" data-name="MAHA LAKSHMI HOLDINGS">
+                    <span class="icon">🏢</span>
+                    Holdings
+                </div>
+                <div class="company-btn" data-company="payangan" data-icon="🏥" data-name="RS Payangan Gianyar">
+                    <span class="icon">🏥</span>
+                    Payangan Hospital
+                </div>
+                <div class="company-btn" data-company="tech" data-icon="💻" data-name="Gianyar Tech Solutions">
+                    <span class="icon">💻</span>
+                    Gianyar Tech
+                </div>
+                <div class="company-btn" data-company="digital" data-icon="🎨" data-name="Bali Digital Agency">
+                    <span class="icon">🎨</span>
+                    Bali Digital
+                </div>
+                <div class="company-btn" data-company="toko" data-icon="🛒" data-name="Gianyar E-Commerce">
+                    <span class="icon">🛒</span>
+                    E-Commerce
+                </div>
+                <div class="company-btn" data-company="kursus" data-icon="📚" data-name="Bali EdTech">
+                    <span class="icon">📚</span>
+                    EdTech
+                </div>
+                <div class="company-btn" data-company="uang" data-icon="💰" data-name="Gianyar Finance">
+                    <span class="icon">💰</span>
+                    Finance
+                </div>
+                <div class="company-btn" data-company="kirim" data-icon="🚚" data-name="Bali Logistics">
+                    <span class="icon">🚚</span>
+                    Logistics
+                </div>
+                <div class="company-btn" data-company="travel" data-icon="✈️" data-name="Bali Travel Platform">
+                    <span class="icon">✈️</span>
+                    Travel
+                </div>
+                <div class="company-btn" data-company="rumah" data-icon="🏠" data-name="Gianyar Property">
+                    <span class="icon">🏠</span>
+                    Property
+                </div>
+            </div>
+        </div>
+
+        <!-- Selected Company Info -->
+        <div class="company-info" id="companyInfo">
+            <span class="icon">🏢</span>
+            <div>
+                <h3 id="selectedCompanyName">MAHA LAKSHMI HOLDINGS</h3>
+                <p id="selectedCompanyDesc">Payment untuk semua kebutuhan perusahaan</p>
+            </div>
+        </div>
+
+        <!-- Amount Input -->
+        <div class="amount-section">
+            <h3>💵 Masukkan Nominal</h3>
+            <div class="amount-input-group">
+                <input type="text" class="amount-input" id="amountInput" placeholder="0" value="">
+                <div class="amount-presets">
+                    <button class="preset-btn" onclick="setAmount(100000)">Rp 100K</button>
+                    <button class="preset-btn" onclick="setAmount(250000)">Rp 250K</button>
+                    <button class="preset-btn" onclick="setAmount(500000)">Rp 500K</button>
+                    <button class="preset-btn" onclick="setAmount(1000000)">Rp 1JT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Methods -->
+        <div class="payment-section">
+            <h2>💳 Metode Pembayaran</h2>
+            <div class="payment-methods">
+                <!-- BCA Transfer -->
+                <div class="payment-card selected" onclick="selectPayment('bca')">
+                    <div class="payment-card-header">
+                        <div class="payment-icon">🏦</div>
+                        <div>
+                            <div class="payment-title">Transfer Bank BCA</div>
+                            <div class="payment-desc">Transfer via mobile/internet banking</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- QRIS -->
+                <div class="payment-card" onclick="selectPayment('qris')">
+                    <div class="payment-card-header">
+                        <div class="payment-icon">📱</div>
+                        <div>
+                            <div class="payment-title">QRIS</div>
+                            <div class="payment-desc">Scan QR dengan aplikasi apapun</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VA BCA -->
+                <div class="payment-card" onclick="selectPayment('va')">
+                    <div class="payment-card-header">
+                        <div class="payment-icon">💳</div>
+                        <div>
+                            <div class="payment-title">Virtual Account BCA</div>
+                            <div class="payment-desc">Bayar dengan nomor VA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COD -->
+                <div class="payment-card" onclick="selectPayment('cod')">
+                    <div class="payment-card-header">
+                        <div class="payment-icon">🤝</div>
+                        <div>
+                            <div class="payment-title">COD / Tunai</div>
+                            <div class="payment-desc">Bayar langsung saat handover</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Details -->
+        <div class="payment-section" id="paymentDetails">
+            <!-- BCA Transfer -->
+            <div id="bcaDetails">
+                <h2>🏦 Transfer ke Rekening BCA</h2>
+                <div class="bank-details">
+                    <div class="bank-header">
+                        <div class="bank-logo">BCA</div>
+                        <div class="bank-info">
+                            <h3>Bank Central Asia (BCA)</h3>
+                            <p>Transfer sesuai nominal yang Anda bayarkan</p>
+                        </div>
+                    </div>
+                    <div class="bank-account">
+                        <div class="account-row">
+                            <span class="account-label">Nomor Rekening</span>
+                            <span class="account-value">
+                                <strong id="accountNumber">6485086645</strong>
+                                <button class="copy-btn" onclick="copyText('6485086645')">Copy</button>
+                            </span>
+                        </div>
+                        <div class="account-row">
+                            <span class="account-label">Nama Penerima</span>
+                            <span class="account-value">
+                                <strong id="accountName">I MADE PURNA ANANDA</strong>
+                                <button class="copy-btn" onclick="copyText('I MADE PURNA ANANDA')">Copy</button>
+                            </span>
+                        </div>
+                        <div class="account-row">
+                            <span class="account-label">Cabang</span>
+                            <span class="account-value">
+                                <strong>Gianyar, Bali</strong>
+                            </span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        ⚠️ Setelah transfer, harap konfirmasi via WhatsApp dengan menyertakan bukti transfer
+                    </p>
+                </div>
+            </div>
+
+            <!-- QRIS Details -->
+            <div id="qrisDetails" style="display: none;">
+                <h2>📱 Scan QRIS</h2>
+                <div class="qris-section">
+                    <div class="qris-box">
+                        <div style="width: 200px; height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #1a1a2e; font-size: 3rem;">📱</div>
+                        <p class="qris-note">Scan QRIS ini dengan aplikasi banking atau e-wallet Anda</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VA Details -->
+            <div id="vaDetails" style="display: none;">
+                <h2>💳 Virtual Account BCA</h2>
+                <div class="bank-details">
+                    <p style="margin-bottom: 20px;">Gunakan nomor Virtual Account berikut:</p>
+                    <div class="bank-account">
+                        <div class="account-row">
+                            <span class="account-label">Nomor VA</span>
+                            <span class="account-value">
+                                <strong id="vaNumber">8800 + ID Transaksi</strong>
+                                <button class="copy-btn" onclick="copyText('8800')">Copy</button>
+                            </span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        💡 Nomor VA akan diberikan setelah Anda konfirmasi via WhatsApp
+                    </p>
+                </div>
+            </div>
+
+            <!-- COD Details -->
+            <div id="codDetails" style="display: none;">
+                <h2>🤝 Pembayaran COD (Bayar di Tempat)</h2>
+                <div class="bank-details">
+                    <p style="margin-bottom: 15px;">Anda dapat membayar secara tunai atau via transfer saat barang/jasa diterima.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        📍 Penyerahan dilakukan sesuai kesepakatan dengan tim kami.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="submit-section">
+            <button class="btn-submit" onclick="sendWhatsApp()">
+                <span>💬</span>
+                Konfirmasi via WhatsApp
+            </button>
+            <br>
+            <button class="btn-whatsapp" onclick="directWhatsApp()">
+                <span>📱</span>
+                Hubungi Kami via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="logo" style="margin-bottom: 15px;">💰 MAHA LAKSHMI HOLDINGS</div>
+        <p>© 2026 MAHA LAKSHMI HOLDINGS - All Rights Reserved</p>
+        <p style="margin-top: 10px;">Bank BCA 6485086645 - I MADE PURNA ANANDA</p>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">Berhasil disalin!</div>
+
+    <script>
+        let selectedCompany = 'holdings';
+        let selectedPayment = 'bca';
+
+        const companies = {
+            holdings: { name: 'MAHA LAKSHMI HOLDINGS', desc: 'Payment untuk semua kebutuhan perusahaan', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            payangan: { name: 'RS Payangan Gianyar', desc: 'Pelayanan kesehatan rumah sakit', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            tech: { name: 'Gianyar Tech Solutions', desc: 'Software House & IT Services', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            digital: { name: 'Bali Digital Agency', desc: 'Digital Marketing Agency', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            toko: { name: 'Gianyar E-Commerce', desc: 'Online Store Produk Bali', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            kursus: { name: 'Bali EdTech', desc: 'Kursus Online & E-Learning', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            uang: { name: 'Gianyar Finance', desc: 'Solusi Keuangan Digital', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            kirim: { name: 'Bali Logistics', desc: 'Jasa Pengiriman & Kurir', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            travel: { name: 'Bali Travel Platform', desc: 'Tour & Travel Agent', account: '6485086645', name2: 'I MADE PURNA ANANDA' },
+            rumah: { name: 'Gianyar Property', desc: 'Properti & Real Estate', account: '6485086645', name2: 'I MADE PURNA ANANDA' }
+        };
+
+        function setAmount(amount) {
+            document.getElementById('amountInput').value = formatRupiah(amount);
+        }
+
+        function formatRupiah(number) {
+            return 'Rp ' + number.toLocaleString('id-ID');
+        }
+
+        function selectCompany(btn) {
+            document.querySelectorAll('.company-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedCompany = btn.dataset.company;
+            const company = companies[selectedCompany];
+            document.getElementById('selectedCompanyName').textContent = company.name;
+            document.getElementById('selectedCompanyDesc').textContent = company.desc;
+            document.getElementById('accountNumber').textContent = company.account;
+            document.getElementById('accountName').textContent = company.name2;
+        }
+
+        function selectPayment(method) {
+            selectedPayment = method;
+            document.querySelectorAll('.payment-card').forEach(c => c.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+            
+            document.getElementById('bcaDetails').style.display = 'none';
+            document.getElementById('qrisDetails').style.display = 'none';
+            document.getElementById('vaDetails').style.display = 'none';
+            document.getElementById('codDetails').style.display = 'none';
+            
+            document.getElementById(method + 'Details').style.display = 'block';
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text);
+            showNotification('Berhasil disalin!');
+        }
+
+        function showNotification(msg) {
+            const notif = document.getElementById('notification');
+            notif.textContent = msg;
+            notif.style.display = 'block';
+            setTimeout(() => notif.style.display = 'none', 2000);
+        }
+
+        function sendWhatsApp() {
+            const amount = document.getElementById('amountInput').value || 'Sesuai invoice';
+            const company = companies[selectedCompany].name;
+            const paymentMethods = {
+                bca: 'Transfer Bank BCA',
+                qris: 'QRIS',
+                va: 'Virtual Account BCA',
+                cod: 'COD / Bayar di Tempat'
+            };
+            
+            const message = `Halo, saya ingin konfirmasi pembayaran:
+
+🏢 Perusahaan: ${company}
+💵 Nominal: ${amount}
+💳 Metode: ${paymentMethods[selectedPayment]}
+📋 Bank: BCA 6485086645 (I MADE PURNA ANANDA)
+
+Mohon dicek dan diinformasikan langkah selanjutnya. Terima kasih!`;
+            
+            const waUrl = `https://wa.me/6281337558787?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        function directWhatsApp() {
+            const message = 'Halo, saya ingin bertanya tentang pembayaran MAHA LAKSHMI HOLDINGS';
+            const waUrl = `https://wa.me/6281337558787?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        // Company button click handler
+        document.querySelectorAll('.company-btn').forEach(btn => {
+            btn.addEventListener('click', () => selectCompany(btn));
+        });
+    </script>
+</body>
+</html>
