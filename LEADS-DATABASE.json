@@ -12,11 +12,12 @@
       "location": "Ubud, Bali",
       "potential": "high",
       "estimated_value": 5000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Luxury hotel - good for tour partnerships",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Four%20Seasons%20Sayan!%20👋%20Dari%20Bali%20Travel%20Platform.%20Partner%20dengan%20kami%20untuk%20tour%20eksklusif!%20Commission%2015%25!"
     },
     {
       "id": 2,
@@ -30,11 +31,12 @@
       "location": "Ubud, Bali",
       "potential": "high",
       "estimated_value": 5000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Luxury resort - potential partnership",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Viceroy%20Bali!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
     },
     {
       "id": 3,
@@ -48,11 +50,12 @@
       "location": "Jimbaran, Bali",
       "potential": "high",
       "estimated_value": 10000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Large resort - many tour guests",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20AYANA%20Resort!%20👋%20Partnership%20dengan%20commission%2015%25!"
     },
     {
       "id": 4,
@@ -66,11 +69,12 @@
       "location": "Kuta, Bali",
       "potential": "high",
       "estimated_value": 5000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Established tour agency",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bali%20Easy%20Go!%20👋%20Partnership%20tour%20Bali%20dengan%20commission%2015%25!"
     },
     {
       "id": 5,
@@ -84,11 +88,12 @@
       "location": "Sanur, Bali",
       "potential": "high",
       "estimated_value": 3000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Specializes in Nusa Penida tours",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Nusapenida.com!%20👋%20Partnership%20Nusa%20Penida%20dengan%20commission%2015%25!"
     },
     {
       "id": 6,
@@ -102,11 +107,12 @@
       "location": "Sanur, Bali",
       "potential": "medium",
       "estimated_value": 3000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Local tour operator",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Dewata%20Tour!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
     },
     {
       "id": 7,
@@ -120,11 +126,12 @@
       "location": "Kuta, Bali",
       "potential": "medium",
       "estimated_value": 2000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Established in Kuta",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bintang%20Bali!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
     },
     {
       "id": 8,
@@ -138,11 +145,12 @@
       "location": "Ubud, Bali",
       "potential": "high",
       "estimated_value": 4000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Adventure tours specialist",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Safari%20Bali!%20👋%20Partnership%20adventure%20tours%20dengan%20commission%2015%25!"
     },
     {
       "id": 9,
@@ -156,11 +164,12 @@
       "location": "Ubud, Gianyar",
       "potential": "high",
       "estimated_value": 5000000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Mid-range hotel - needs website",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Hotel%20Ubud%20Jaya!%20👋%20Gianyar%20Tech%20Solutions%20-%20Web%20Development%20Services!"
     },
     {
       "id": 10,
@@ -174,16 +183,17 @@
       "location": "Gianyar, Bali",
       "potential": "medium",
       "estimated_value": 1500000,
-      "status": "new",
+      "status": "contacted",
       "notes": "Local restaurant - needs social media",
-      "contacted_at": null,
+      "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
-      "last_followup": null
+      "last_followup": null,
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Warung%20Indonesia!%20👋%20Bali%20Digital%20Agency%20-%20Digital%20Marketing%20Services!"
     }
   ],
   "stats": {
     "total_leads": 10,
-    "contacted": 0,
+    "contacted": 10,
     "replied": 0,
     "qualified": 0,
     "proposal_sent": 0,
@@ -194,5 +204,6 @@
     "auto_refresh": 60,
     "timezone": "Asia/Makassar",
     "whatsapp_default": "6281337558787"
-  }
+  },
+  "outreach_executed_at": "2026-07-19T12:02:00+07:00"
 }

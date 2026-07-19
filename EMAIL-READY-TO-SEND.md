@@ -299,47 +299,49 @@ CEO, BALI TRAVEL PLATFORM
 ### THAILAND (5 leads)
 | # | Company | Email Sent | Opened | Response |
 |---|---------|------------|---------|----------|
-| 1 | Minor International | ❌ | - | - |
-| 2 | Central Group | ❌ | - | - |
-| 3 | PTT Oil | ❌ | - | - |
-| 4 | Bangkok Hospital | ❌ | - | - |
-| 5 | SCB Bank | ❌ | - | - |
+| 1 | Minor International | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 2 | Central Group | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 3 | PTT Oil | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 4 | Bangkok Hospital | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 5 | SCB Bank | ✅ 2026-07-19 | ⏳ | ⏳ |
 
 ### SINGAPORE (5 leads)
 | # | Company | Email Sent | Opened | Response |
 |---|---------|------------|---------|----------|
-| 1 | DBS Bank | ❌ | - | - |
-| 2 | Grab Holdings | ❌ | - | - |
-| 3 | Raffles Hotel | ❌ | - | - |
-| 4 | Singtel | ❌ | - | - |
-| 5 | Keppel Corp | ❌ | - | - |
+| 1 | DBS Bank | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 2 | Grab Holdings | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 3 | Raffles Hotel | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 4 | Singtel | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 5 | Keppel Corp | ✅ 2026-07-19 | ⏳ | ⏳ |
 
 ### MALAYSIA (5 leads)
 | # | Company | Email Sent | Opened | Response |
 |---|---------|------------|---------|----------|
-| 1 | Petronas | ❌ | - | - |
-| 2 | Maybank | ❌ | - | - |
-| 3 | AirAsia | ❌ | - | - |
-| 4 | Sunway Group | ❌ | - | - |
-| 5 | IHH Healthcare | ❌ | - | - |
+| 1 | Petronas | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 2 | Maybank | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 3 | AirAsia | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 4 | Sunway Group | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 5 | IHH Healthcare | ✅ 2026-07-19 | ⏳ | ⏳ |
 
 ### USA (5 leads)
 | # | Company | Email Sent | Opened | Response |
 |---|---------|------------|---------|----------|
-| 1 | Google | ❌ | - | - |
-| 2 | Microsoft | ❌ | - | - |
-| 3 | Amazon | ❌ | - | - |
-| 4 | Meta | ❌ | - | - |
-| 5 | Apple | ❌ | - | - |
+| 1 | Google | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 2 | Microsoft | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 3 | Amazon | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 4 | Meta | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 5 | Apple | ✅ 2026-07-19 | ⏳ | ⏳ |
 
 ### JAPAN (5 leads)
 | # | Company | Email Sent | Opened | Response |
 |---|---------|------------|---------|----------|
-| 1 | Toyota | ❌ | - | - |
-| 2 | Sony | ❌ | - | - |
-| 3 | SoftBank | ❌ | - | - |
-| 4 | Rakuten | ❌ | - | - |
-| 5 | NTT Data | ❌ | - | - |
+| 1 | Toyota | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 2 | Sony | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 3 | SoftBank | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 4 | Rakuten | ✅ 2026-07-19 | ⏳ | ⏳ |
+| 5 | NTT Data | ✅ 2026-07-19 | ⏳ | ⏳ |
+
+### 📅 EMAIL BLAST EXECUTED: 2026-07-19 12:02 WIB
 
 ---
 

@@ -277,16 +277,18 @@ Marketing Partner
 
 | # | Lead | Message Sent | Response | Follow-up | Deal |
 |---|------|--------------|----------|-----------|------|
-| 1 | Four Seasons Sayan | ❌ | - | - | - |
-| 2 | Viceroy Bali | ❌ | - | - | - |
-| 3 | AYANA Resort | ❌ | - | - | - |
-| 4 | Bali Easy Go | ❌ | - | - | - |
-| 5 | Nusapenida.com | ❌ | - | - | - |
-| 6 | Dewata Tour | ❌ | - | - | - |
-| 7 | Bintang Bali | ❌ | - | - | - |
-| 8 | Safari Bali | ❌ | - | - | - |
-| 9 | Hotel Ubud Jaya | ❌ | - | - | - |
-| 10 | Warung Indonesia | ❌ | - | - | - |
+| 1 | Four Seasons Sayan | ✅ 2026-07-19 | ⏳ | - | - |
+| 2 | Viceroy Bali | ✅ 2026-07-19 | ⏳ | - | - |
+| 3 | AYANA Resort | ✅ 2026-07-19 | ⏳ | - | - |
+| 4 | Bali Easy Go | ✅ 2026-07-19 | ⏳ | - | - |
+| 5 | Nusapenida.com | ✅ 2026-07-19 | ⏳ | - | - |
+| 6 | Dewata Tour | ✅ 2026-07-19 | ⏳ | - | - |
+| 7 | Bintang Bali | ✅ 2026-07-19 | ⏳ | - | - |
+| 8 | Safari Bali | ✅ 2026-07-19 | ⏳ | - | - |
+| 9 | Hotel Ubud Jaya | ✅ 2026-07-19 | ⏳ | - | - |
+| 10 | Warung Indonesia | ✅ 2026-07-19 | ⏳ | - | - |
+
+### 📅 LAST EXECUTED: 2026-07-19 12:02 WIB
 
 ---
 
