@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Pay - MAHA LAKSHMI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px;
+        }
+        .payment-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .logo { font-size: 48px; margin-bottom: 10px; }
+        .title { font-size: 24px; font-weight: 700; color: #333; margin-bottom: 5px; }
+        .subtitle { color: #666; margin-bottom: 30px; font-size: 14px; }
+        
+        .amount-display {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+        .amount-label { font-size: 14px; opacity: 0.9; }
+        .amount { font-size: 42px; font-weight: 800; }
+        
+        .quick-amounts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .quick-amount {
+            background: #f8f9fa;
+            border: 2px solid transparent;
+            padding: 15px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            transition: all 0.3s;
+        }
+        .quick-amount:hover { border-color: #667eea; }
+        .quick-amount.selected { border-color: #667eea; background: #f0f0ff; color: #667eea; }
+        
+        .input-group { margin-bottom: 20px; }
+        .input-group input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 18px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .input-group input:focus { outline: none; border-color: #667eea; }
+        
+        .payment-methods { margin-bottom: 25px; }
+        .method-label { font-weight: 600; color: #333; margin-bottom: 12px; text-align: left; }
+        
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .method-btn {
+            background: #f8f9fa;
+            border: 2px solid transparent;
+            padding: 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .method-btn:hover { border-color: #667eea; }
+        .method-btn.selected { border-color: #667eea; background: #f0f0ff; }
+        .method-icon { font-size: 28px; margin-bottom: 5px; }
+        .method-name { font-size: 12px; font-weight: 600; color: #333; }
+        
+        .pay-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .pay-btn:hover { transform: translateY(-2px); }
+        
+        .bank-info {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            text-align: left;
+        }
+        .bank-info h4 { color: #333; margin-bottom: 10px; font-size: 14px; }
+        .bank-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e0e0e0; }
+        .bank-row:last-child { border-bottom: none; }
+        .bank-label { color: #666; font-size: 13px; }
+        .bank-value { font-weight: 600; color: #333; font-size: 14px; }
+        
+        .footer { margin-top: 20px; color: #999; font-size: 12px; }
+        
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #25d366;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-card">
+        <div class="logo">💰</div>
+        <div class="title">MAHA LAKSHMI</div>
+        <div class="subtitle">Pilih jumlah & metode pembayaran</div>
+        
+        <div class="amount-display">
+            <div class="amount-label">Total Pembayaran</div>
+            <div class="amount" id="displayAmount">Rp 0</div>
+        </div>
+        
+        <div class="quick-amounts">
+            <button class="quick-amount" onclick="setAmount(100000)">Rp 100rb</button>
+            <button class="quick-amount" onclick="setAmount(250000)">Rp 250rb</button>
+            <button class="quick-amount selected" onclick="setAmount(500000)">Rp 500rb</button>
+            <button class="quick-amount" onclick="setAmount(750000)">Rp 750rb</button>
+            <button class="quick-amount" onclick="setAmount(1000000)">Rp 1jt</button>
+            <button class="quick-amount" onclick="setAmount(2500000)">Rp 2.5jt</button>
+        </div>
+        
+        <div class="input-group">
+            <input type="number" id="customAmount" placeholder="Atau masukkan jumlah lain" oninput="updateAmount()">
+        </div>
+        
+        <div class="payment-methods">
+            <div class="method-label">Metode Pembayaran</div>
+            <div class="method-grid">
+                <button class="method-btn selected" onclick="selectMethod(this, 'bca')">
+                    <div class="method-icon">🏦</div>
+                    <div class="method-name">Transfer BCA</div>
+                </button>
+                <button class="method-btn" onclick="selectMethod(this, 'mandiri')">
+                    <div class="method-icon">🏦</div>
+                    <div class="method-name">Transfer Mandiri</div>
+                </button>
+                <button class="method-btn" onclick="selectMethod(this, 'bni')">
+                    <div class="method-icon">🏦</div>
+                    <div class="method-name">Transfer BNI</div>
+                </button>
+                <button class="method-btn" onclick="selectMethod(this, 'bri')">
+                    <div class="method-icon">🏦</div>
+                    <div class="method-name">Transfer BRI</div>
+                </button>
+                <button class="method-btn" onclick="selectMethod(this, 'qris')">
+                    <div class="method-icon">📱</div>
+                    <div class="method-name">QRIS</div>
+                </button>
+                <button class="method-btn" onclick="selectMethod(this, 'ewallet')">
+                    <div class="method-icon">💚</div>
+                    <div class="method-name">GoPay/OVO/DANA</div>
+                </button>
+            </div>
+        </div>
+        
+        <button class="pay-btn" onclick="generatePayment()">🚀 Bayar Sekarang</button>
+        
+        <a href="https://wa.me/6281337558787?text=Halo,%20saya%20ingin%20tanya%20tentang%20pembayaran" class="whatsapp-btn">
+            💬 Tanya via WhatsApp
+        </a>
+        
+        <div class="bank-info" id="bankInfo">
+            <h4>🏦 Transfer ke:</h4>
+            <div class="bank-row">
+                <span class="bank-label">Bank</span>
+                <span class="bank-value">BCA</span>
+            </div>
+            <div class="bank-row">
+                <span class="bank-label">Nomor Rekening</span>
+                <span class="bank-value">[BANK_ACCOUNT]</span>
+            </div>
+            <div class="bank-row">
+                <span class="bank-label">Atas Nama</span>
+                <span class="bank-value">[CEO_NAME_REDACTED]</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            💰 Powered by MAHA LAKSHMI HOLDINGS<br>
+            © 2026 - Secure Payment
+        </div>
+    </div>
+    
+    <script>
+        let selectedAmount = 500000;
+        let selectedMethod = 'bca';
+        
+        function setAmount(amount) {
+            selectedAmount = amount;
+            document.getElementById('customAmount').value = amount;
+            updateDisplay();
+            
+            document.querySelectorAll('.quick-amount').forEach(btn => btn.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+        
+        function updateAmount() {
+            const val = parseInt(document.getElementById('customAmount').value) || 0;
+            selectedAmount = val;
+            updateDisplay();
+        }
+        
+        function updateDisplay() {
+            document.getElementById('displayAmount').textContent = 'Rp ' + selectedAmount.toLocaleString('id-ID');
+        }
+        
+        function selectMethod(btn, method) {
+            selectedMethod = method;
+            document.querySelectorAll('.method-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            
+            const bankNames = {
+                bca: 'BCA',
+                mandiri: 'Mandiri',
+                bni: 'BNI',
+                bri: 'BRI',
+                qris: 'QRIS (Semua Bank)',
+                ewallet: 'GoPay / OVO / DANA'
+            };
+            
+            document.querySelector('.bank-info h4').textContent = '🏦 Transfer ke: ' + bankNames[method];
+        }
+        
+        function generatePayment() {
+            if (selectedAmount < 10000) {
+                alert('Minimum pembayaran Rp 10.000');
+                return;
+            }
+            
+            const amountFormatted = 'Rp ' + selectedAmount.toLocaleString('id-ID');
+            const methodNames = {
+                bca: 'Transfer BCA',
+                mandiri: 'Transfer Mandiri',
+                bni: 'Transfer BNI',
+                bri: 'Transfer BRI',
+                qris: 'QRIS',
+                ewallet: 'GoPay/OVO/DANA'
+            };
+            
+            const message = `Halo, saya ingin konfirmasi pembayaran:
+
+💰 Jumlah: ${amountFormatted}
+💳 Metode: ${methodNames[selectedMethod]}
+🏢 MAHA LAKSHMI HOLDINGS
+
+Mohon informasikan langkah pembayaran selanjutnya. Terima kasih!`;
+            
+            const waUrl = `https://wa.me/6281337558787?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+        
+        // Initialize
+        updateDisplay();
+    </script>
+</body>
+</html>
