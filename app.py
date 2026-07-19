@@ -16,17 +16,20 @@ CORS(app)
 # In-memory storage (replace with database in production)
 orders_db = {}
 payments_db = {}
+# AI Digital Products
 products_db = {
-    "prod_1": {"id": "prod_1", "name": "Premium AI Agent", "price": 99.99, "type": "digital"},
-    "prod_2": {"id": "prod_2", "name": "Enterprise Solution", "price": 199.99, "type": "digital"},
-    "prod_3": {"id": "prod_3", "name": "Starter Package", "price": 49.99, "type": "digital"},
+    "prod_1": {"id": "prod_1", "name": "AI Agent Pro - Monthly", "price": 99.99, "type": "subscription"},
+    "prod_2": {"id": "prod_2", "name": "AI Agent Enterprise - Yearly", "price": 999.99, "type": "subscription"},
+    "prod_3": {"id": "prod_3", "name": "Custom AI Solution", "price": 499.99, "type": "service"},
+    "prod_4": {"id": "prod_4", "name": "AI Training Course", "price": 149.99, "type": "course"},
 }
+# UPDATE THESE WITH YOUR REAL WALLET ADDRESSES
 wallets_db = {
-    "TRC20": {"address": "TLa2D6vLBEi67CYRLdHpMrocsWmpdHEfPZ", "currency": "USDT", "network": "TRC20"},
-    "ERC20": {"address": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F", "currency": "USDT", "network": "ERC20"},
-    "BEP20": {"address": "0x8Ba1f109551bD432803012645Hac136E8761fCE8", "currency": "USDT", "network": "BEP20"},
-    "BTC": {"address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh", "currency": "BTC", "network": "BTC"},
-    "ETH": {"address": "0xdF3e18d64BC6A983f67334d0eB050617777CdC77", "currency": "ETH", "network": "ERC20"},
+    "TRC20": {"address": "YOUR_TRC20_WALLET", "currency": "USDT", "network": "TRC20"},
+    "ERC20": {"address": "YOUR_ERC20_WALLET", "currency": "USDT", "network": "ERC20"},
+    "BEP20": {"address": "YOUR_BEP20_WALLET", "currency": "USDT", "network": "BEP20"},
+    "BTC": {"address": "YOUR_BTC_WALLET", "currency": "BTC", "network": "BTC"},
+    "ETH": {"address": "YOUR_ETH_WALLET", "currency": "ETH", "network": "ERC20"},
 }
 
 # Statistics
