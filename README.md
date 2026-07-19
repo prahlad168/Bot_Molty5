@@ -1,10 +1,10 @@
-# 🏠 MAHA TUKANG
+# 🏢 MAHA LAKSHMI DIGITAL HOLDINGS
 
-## Platform Marketplace Jasa Tukang Berbasis AI Indonesia
+## 🎯 Visi: "Tidak ada perusahaan yang berjalan sendiri. Semua adalah SATU ECO-SYSTEM."
 
-**Website:** https://maha-tukang.vercel.app
-**CEO:** [CEO_NAME_REDACTED] ([CEO_ALIAS_REDACTED])
-**Bank:** BCA [BANK_ACCOUNT]
+**CEO:** i Made Purna Ananda (Pak Pur)
+**Target:** Rp 100.000.000/bulan (10 SBU × Rp 10.000.000)
+**Bank:** BCA 6485086645
 
 ---
 

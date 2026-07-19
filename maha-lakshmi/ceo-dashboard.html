@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHA LAKSHMI - CEO Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .pulse-green { animation: pulseGreen 2s infinite; }
+        @keyframes pulseGreen { 0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.7); } 50% { box-shadow: 0 0 0 10px rgba(34,197,94,0); } }
+        .counter { font-variant-numeric: tabular-nums; }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Header -->
+    <nav class="border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-2xl font-bold">🏢 MAHA LAKSHMI</h1>
+                    <p class="text-gray-400 text-sm">Digital Holdings Command Center</p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="text-right">
+                        <p class="text-xs text-gray-400">CEO</p>
+                        <p class="font-semibold">i Made Purna Ananda</p>
+                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center text-xl font-bold">
+                        P
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <!-- Revenue Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Total Revenue -->
+            <div class="glass rounded-2xl p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-gray-400 text-sm">Revenue Bulan Ini</p>
+                        <h2 class="text-3xl font-bold counter" id="totalRevenue">Rp 1.000.000</h2>
+                    </div>
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-wallet text-green-400 text-xl"></i>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-red-400 text-sm"><i class="fas fa-arrow-down"></i> 90%</span>
+                    <span class="text-gray-500 text-sm">dari target Rp 100.000.000</span>
+                </div>
+            </div>
+
+            <!-- Target -->
+            <div class="glass rounded-2xl p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-gray-400 text-sm">Target Bulan Ini</p>
+                        <h2 class="text-3xl font-bold counter">Rp 100.000.000</h2>
+                    </div>
+                    <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-bullseye text-amber-400 text-xl"></i>
+                    </div>
+                </div>
+                <div class="w-full bg-white/10 rounded-full h-2 mt-2">
+                    <div class="bg-amber-400 h-2 rounded-full" style="width: 1%"></div>
+                </div>
+                <p class="text-gray-500 text-sm mt-2">Achievement: 1%</p>
+            </div>
+
+            <!-- Pipeline -->
+            <div class="glass rounded-2xl p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-gray-400 text-sm">Pipeline</p>
+                        <h2 class="text-3xl font-bold counter">Rp 1.340.000.000</h2>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-chart-line text-blue-400 text-xl"></i>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm">60 leads siap dikonversi</p>
+            </div>
+
+            <!-- CEO Transfer -->
+            <div class="glass rounded-2xl p-6 border-2 border-green-500/30">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <p class="text-gray-400 text-sm">CEO Share (60%)</p>
+                        <h2 class="text-3xl font-bold counter text-green-400">Rp 600.000</h2>
+                    </div>
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center pulse-green">
+                        <i class="fas fa-money-bill text-green-400 text-xl"></i>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm">BCA 6485086645</p>
+            </div>
+        </div>
+
+        <!-- SBU Performance -->
+        <div class="glass rounded-2xl p-6 mb-8">
+            <h3 class="text-xl font-bold mb-6"><i class="fas fa-building mr-2"></i>10 SBU Performance</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- SBU Cards -->
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-green-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Bali Travel</span>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">10%</span>
+                    </div>
+                    <p class="text-xl font-bold text-green-400">Rp 1.000.000</p>
+                    <p class="text-xs text-gray-500">of Rp 10.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Gianyar Tech</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 10.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Bali Digital</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 10.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">E-Commerce</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 8.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Bali EdTech</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 10.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Gianyar Finance</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 10.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Bali Logistics</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 8.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Gianyar Property</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 10.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Gianyar Food</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 8.000.000</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 border-l-4 border-gray-500">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Payangan AI</span>
+                        <span class="text-xs bg-gray-500/20 text-gray-400 px-2 py-1 rounded">0%</span>
+                    </div>
+                    <p class="text-xl font-bold">Rp 0</p>
+                    <p class="text-xs text-gray-500">of Rp 10.000.000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions & Pipeline -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Quick Actions -->
+            <div class="glass rounded-2xl p-6">
+                <h3 class="text-xl font-bold mb-6"><i class="fas fa-bolt mr-2 text-amber-400"></i>Quick Actions</h3>
+                <div class="space-y-3">
+                    <a href="https://wa.me/6281337558787" target="_blank" class="flex items-center gap-4 p-4 bg-green-500/20 hover:bg-green-500/30 rounded-xl transition">
+                        <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">WhatsApp Outreach</p>
+                            <p class="text-sm text-gray-400">Contact 60 leads</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:business@mahalakshmi.id" class="flex items-center gap-4 p-4 bg-blue-500/20 hover:bg-blue-500/30 rounded-xl transition">
+                        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Email Global Leads</p>
+                            <p class="text-sm text-gray-400">Send to 50 companies</p>
+                        </div>
+                    </a>
+
+                    <a href="docs/sales/SALES-PLAYBOOK.md" class="flex items-center gap-4 p-4 bg-purple-500/20 hover:bg-purple-500/30 rounded-xl transition">
+                        <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-book-open text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Sales Playbook</p>
+                            <p class="text-sm text-gray-400">Scripts & templates</p>
+                        </div>
+                    </a>
+
+                    <a href="docs/reports/REVENUE-TRACKER.md" class="flex items-center gap-4 p-4 bg-amber-500/20 hover:bg-amber-500/30 rounded-xl transition">
+                        <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Revenue Tracker</p>
+                            <p class="text-sm text-gray-400">View detailed reports</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pipeline -->
+            <div class="glass rounded-2xl p-6">
+                <h3 class="text-xl font-bold mb-6"><i class="fas fa-funnel mr-2 text-blue-400"></i>Sales Pipeline</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center font-bold">60</div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Leads</p>
+                            <p class="text-sm text-gray-400">Total pipeline value: Rp 1.340.000.000</p>
+                        </div>
+                    </div>
+                    <div class="ml-5 border-l-2 border-dashed border-gray-600 h-8"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center font-bold">10</div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Contacted</p>
+                            <p class="text-sm text-gray-400">Awaiting response</p>
+                        </div>
+                    </div>
+                    <div class="ml-5 border-l-2 border-dashed border-gray-600 h-8"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center font-bold">0</div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Qualified</p>
+                            <p class="text-sm text-gray-400">Ready for proposal</p>
+                        </div>
+                    </div>
+                    <div class="ml-5 border-l-2 border-dashed border-gray-600 h-8"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center font-bold">0</div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Proposal Sent</p>
+                            <p class="text-sm text-gray-400">Awaiting decision</p>
+                        </div>
+                    </div>
+                    <div class="ml-5 border-l-2 border-dashed border-gray-600 h-8"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center font-bold">0</div>
+                        <div class="flex-1">
+                            <p class="font-semibold">Closed Won</p>
+                            <p class="text-sm text-green-400">Revenue generated!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Hot Leads -->
+        <div class="glass rounded-2xl p-6 mt-8">
+            <h3 class="text-xl font-bold mb-6"><i class="fas fa-fire mr-2 text-red-400"></i>🔥 Hot Leads Ready to Contact</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left text-gray-400 border-b border-white/10">
+                            <th class="pb-3">Company</th>
+                            <th class="pb-3">Type</th>
+                            <th class="pb-3">Value</th>
+                            <th class="pb-3">Status</th>
+                            <th class="pb-3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr>
+                            <td class="py-4">Four Seasons Resort Sayan</td>
+                            <td><span class="px-2 py-1 bg-amber-500/20 text-amber-400 rounded text-sm">Hotel</span></td>
+                            <td class="font-bold text-green-400">Rp 5.000.000</td>
+                            <td><span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Contacted</span></td>
+                            <td><a href="https://wa.me/6281337558787?text=Halo%20Four%20Seasons%20Sayan!" target="_blank" class="text-green-400 hover:text-green-300"><i class="fab fa-whatsapp"></i> Follow Up</a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">Viceroy Bali</td>
+                            <td><span class="px-2 py-1 bg-amber-500/20 text-amber-400 rounded text-sm">Hotel</span></td>
+                            <td class="font-bold text-green-400">Rp 5.000.000</td>
+                            <td><span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Contacted</span></td>
+                            <td><a href="https://wa.me/6281337558787?text=Halo%20Viceroy%20Bali!" target="_blank" class="text-green-400 hover:text-green-300"><i class="fab fa-whatsapp"></i> Follow Up</a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">AYANA Resort Bali</td>
+                            <td><span class="px-2 py-1 bg-amber-500/20 text-amber-400 rounded text-sm">Hotel</span></td>
+                            <td class="font-bold text-green-400">Rp 5.000.000</td>
+                            <td><span class="px-2 py-1 bg-gray-500/20 text-gray-400 rounded text-sm">New</span></td>
+                            <td><a href="https://wa.me/6281337558787" target="_blank" class="text-green-400 hover:text-green-300"><i class="fab fa-whatsapp"></i> Contact</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500">
+            <p>MAHA LAKSHMI Digital Holdings © 2026 | Target: Rp 100.000.000/bulan</p>
+            <p class="text-sm mt-2">🏦 BCA 6485086645 | i Made Purna Ananda</p>
+        </div>
+    </footer>
+</body>
+</html>
