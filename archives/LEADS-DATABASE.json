@@ -17,6 +17,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Four%20Seasons%20Sayan!%20👋%20Dari%20Bali%20Travel%20Platform.%20Partner%20dengan%20kami%20untuk%20tour%20eksklusif!%20Commission%2015%25!"
     },
     {
@@ -36,6 +39,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Viceroy%20Bali!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
     },
     {
@@ -55,6 +61,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20AYANA%20Resort!%20👋%20Partnership%20dengan%20commission%2015%25!"
     },
     {
@@ -74,6 +83,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bali%20Easy%20Go!%20👋%20Partnership%20tour%20Bali%20dengan%20commission%2015%25!"
     },
     {
@@ -93,6 +105,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Nusapenida.com!%20👋%20Partnership%20Nusa%20Penida%20dengan%20commission%2015%25!"
     },
     {
@@ -112,6 +127,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Dewata%20Tour!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
     },
     {
@@ -131,6 +149,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bintang%20Bali!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
     },
     {
@@ -150,6 +171,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Safari%20Bali!%20👋%20Partnership%20adventure%20tours%20dengan%20commission%2015%25!"
     },
     {
@@ -169,6 +193,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Hotel%20Ubud%20Jaya!%20👋%20Gianyar%20Tech%20Solutions%20-%20Web%20Development%20Services!"
     },
     {
@@ -188,6 +215,9 @@
       "contacted_at": "2026-07-19T12:02:00+07:00",
       "replied_at": null,
       "last_followup": null,
+      "next_followup": "2026-07-22",
+      "email_sent": true,
+      "whatsapp_sent": true,
       "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Warung%20Indonesia!%20👋%20Bali%20Digital%20Agency%20-%20Digital%20Marketing%20Services!"
     }
   ],
@@ -198,12 +228,17 @@
     "qualified": 0,
     "proposal_sent": 0,
     "closed_won": 0,
-    "total_value": 51000000
+    "total_value": 51000000,
+    "email_sent": 10,
+    "whatsapp_sent": 10,
+    "followup_count": 0
   },
   "settings": {
     "auto_refresh": 60,
     "timezone": "Asia/Makassar",
     "whatsapp_default": "6281337558787"
   },
-  "outreach_executed_at": "2026-07-19T12:02:00+07:00"
+  "outreach_executed_at": "2026-07-19T12:02:00+07:00",
+  "last_updated": "2026-07-20T03:33:51+00:00",
+  "updated_by": "AI Sales Agent"
 }
