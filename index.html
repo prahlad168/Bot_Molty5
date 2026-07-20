@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAHA LAKSHMI DIGITAL HOLDINGS</title>
+    <title>👑 MAHA LAKSHMI HOLDINGS - Real-Time Command Center</title>
+    <meta http-equiv="refresh" content="60">
+    <meta name="description" content="MAHA LAKSHMI DIGITAL HOLDINGS - Command Center untuk 10 SBU dengan target Rp 1 Miliar per bulan">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -11,16 +13,48 @@
         body { font-family: 'Inter', sans-serif; }
         .gradient-hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%); }
         .gradient-text { background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-gold { background: linear-gradient(135deg, #d97706, #f59e0b, #fbbf24); }
+        .gradient-green { background: linear-gradient(135deg, #059669, #10b981); }
+        .gradient-red { background: linear-gradient(135deg, #dc2626, #ef4444); }
         .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
+        .glass-dark { background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
         .card-hover { transition: all 0.3s ease; }
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
         .pulse-dot { animation: pulse 2s infinite; }
         @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .pulse-dot-fast { animation: pulse 1s infinite; }
         .float { animation: float 3s ease-in-out infinite; }
         @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .slide-in { animation: slideIn 0.5s ease forwards; }
+        .live-pulse { animation: livePulse 2s infinite; }
+        @keyframes livePulse { 0%,100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); } 50% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); } }
+        .progress-bar { transition: width 1s ease; }
+        .counter { font-variant-numeric: tabular-nums; }
     </style>
 </head>
 <body class="gradient-hero min-h-screen text-white">
+    <!-- Live Status Bar -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur border-b border-green-500/30">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center text-sm">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full pulse-dot-fast"></span>
+                    <span class="text-green-400 font-medium">LIVE</span>
+                </span>
+                <span class="text-gray-400">|</span>
+                <span class="text-gray-300">GAURANGA AI ACTIVE</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-400">Next Update: <span id="countdown" class="text-amber-400 font-bold">60</span>s</span>
+                <span class="text-gray-400">|</span>
+                <span id="realtime-clock" class="text-green-400 font-mono">--:--:--</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spacer for fixed header -->
+    <div class="h-8"></div>
     <!-- Floating Particles -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         <div class="absolute w-2 h-2 bg-amber-500/30 rounded-full top-1/4 left-1/4 float"></div>
@@ -34,173 +68,299 @@
             <div class="flex justify-between items-center">
                 <div>
                     <h1 class="text-3xl font-black tracking-tight">
-                        <span class="gradient-text">MAHA LAKSHMI</span>
+                        <span class="gradient-text">👑 MAHA LAKSHMI HOLDINGS</span>
                     </h1>
-                    <p class="text-gray-400 text-sm mt-1">Digital Holdings Command Center</p>
+                    <p class="text-gray-400 text-sm mt-1">🤖 GAURANGA AI Command Center | Real-Time Report Dashboard</p>
                 </div>
                 <div class="flex items-center gap-4">
-                    <span class="flex items-center gap-2 px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm">
-                        <span class="w-2 h-2 bg-green-400 rounded-full pulse-dot"></span>
-                        Live
-                    </span>
-                    <a href="https://github.com/prahlad168/MAHA-LAKSHMI-CORP" target="_blank" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition">
-                        <i class="fab fa-github"></i>
-                    </a>
+                    <div class="glass rounded-xl px-4 py-2">
+                        <p class="text-xs text-gray-400">CEO</p>
+                        <p class="font-bold text-sm">i Made Purna Ananda</p>
+                    </div>
+                    <div class="glass rounded-xl px-4 py-2 text-right">
+                        <p class="text-xs text-gray-400">Bank</p>
+                        <p class="font-bold text-sm text-amber-400">🏦 BCA 6485086645</p>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="relative z-10 py-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm font-medium mb-6">
-                🎯 Target: Rp 100.000.000/bulan
-            </div>
-            <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
-                "Tidak ada perusahaan yang<br>
-                <span class="gradient-text">berjalan sendiri.</span>"
-            </h2>
-            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                Semua adalah <strong class="text-white">SATU ECO-SYSTEM</strong> yang saling terhubung. 
-                10 SBU × Rp 10.000.000 = Rp 100.000.000/bulan
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="maha-lakshmi/ceo-dashboard.html" class="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-gray-900 font-bold rounded-xl hover:shadow-lg hover:shadow-amber-500/30 transition-all">
-                    <i class="fas fa-chart-line mr-2"></i> CEO Dashboard
-                </a>
-                <a href="https://wa.me/6281337558787" target="_blank" class="px-8 py-4 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Sales
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="relative z-10 py-12 px-6">
+    <section class="relative z-10 py-16 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass rounded-2xl p-6 text-center card-hover">
-                    <div class="text-4xl font-black gradient-text mb-2">Rp 1M</div>
+            <div class="text-center mb-8">
+                <div class="inline-block px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm font-medium mb-4">
+                    🎯 TARGET: Rp 1.000.000.000/BULAN
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                    <span class="gradient-text">Real-Time Report Dashboard</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    10 SBU × Rp 100.000.000 = Rp 1.000.000.000/bulan
+                </p>
+            </div>
+            
+            <!-- Main Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="glass rounded-2xl p-6 text-center border-2 border-green-500/50">
+                    <div class="text-3xl font-black text-green-400 mb-1 counter" id="total-revenue">Rp 0</div>
                     <p class="text-gray-400 text-sm">Revenue Bulan Ini</p>
                 </div>
-                <div class="glass rounded-2xl p-6 text-center card-hover">
-                    <div class="text-4xl font-black text-red-400 mb-2">1%</div>
+                <div class="glass rounded-2xl p-6 text-center border-2 border-amber-500/50">
+                    <div class="text-3xl font-black gradient-text mb-1 counter" id="vs-target">0%</div>
                     <p class="text-gray-400 text-sm">vs Target</p>
                 </div>
-                <div class="glass rounded-2xl p-6 text-center card-hover">
-                    <div class="text-4xl font-black text-blue-400 mb-2">60</div>
+                <div class="glass rounded-2xl p-6 text-center border-2 border-blue-500/50">
+                    <div class="text-3xl font-black text-blue-400 mb-1 counter" id="total-leads">0</div>
                     <p class="text-gray-400 text-sm">Leads Pipeline</p>
                 </div>
-                <div class="glass rounded-2xl p-6 text-center card-hover">
-                    <div class="text-4xl font-black text-green-400 mb-2">10</div>
+                <div class="glass rounded-2xl p-6 text-center border-2 border-purple-500/50">
+                    <div class="text-3xl font-black text-purple-400 mb-1">10</div>
                     <p class="text-gray-400 text-sm">Active SBU</p>
+                </div>
+            </div>
+            
+            <!-- Profit Distribution -->
+            <div class="glass rounded-2xl p-6 mb-8">
+                <h3 class="text-lg font-bold mb-4 text-center">💰 Profit Distribution (sesuai aturan MAHA Lakshmi)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center p-4 bg-green-500/10 rounded-xl border border-green-500/30">
+                        <div class="text-2xl font-black text-green-400">80%</div>
+                        <p class="text-sm text-gray-400 mt-1">Owner Share</p>
+                        <p class="text-xs text-green-300">→ BCA 6485086645</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-500/10 rounded-xl border border-blue-500/30">
+                        <div class="text-2xl font-black text-blue-400">25%</div>
+                        <p class="text-sm text-gray-400 mt-1">Reinvestment</p>
+                        <p class="text-xs text-blue-300">→ Company Reserve</p>
+                    </div>
+                    <div class="text-center p-4 bg-purple-500/10 rounded-xl border border-purple-500/30">
+                        <div class="text-2xl font-black text-purple-400">10%</div>
+                        <p class="text-sm text-gray-400 mt-1">Team Bonus</p>
+                        <p class="text-xs text-purple-300">→ Team Members</p>
+                    </div>
+                    <div class="text-center p-4 bg-amber-500/10 rounded-xl border border-amber-500/30">
+                        <div class="text-2xl font-black text-amber-400">5%</div>
+                        <p class="text-sm text-gray-400 mt-1">Charity</p>
+                        <p class="text-xs text-amber-300">→ CSR Account</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Quick Actions -->
-    <section class="relative z-10 py-16 px-6">
+    <section class="relative z-10 py-12 px-6">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl font-bold mb-8 text-center">⚡ Quick Actions</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="docs/reports/REVENUE-TRACKER.md" class="glass rounded-2xl p-6 card-hover group">
-                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-wallet text-2xl text-green-400"></i>
+            <h3 class="text-2xl font-bold mb-6 text-center">⚡ Quick Actions</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="progress/index.html" class="glass rounded-xl p-4 card-hover group text-center">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition">
+                        <i class="fas fa-chart-line text-xl text-green-400"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-2">Revenue Tracker</h4>
-                    <p class="text-gray-400 text-sm">Track progress harian, weekly & monthly revenue</p>
+                    <h4 class="font-bold text-sm">Revenue Tracker</h4>
+                    <p class="text-gray-500 text-xs mt-1">Progress harian</p>
                 </a>
 
-                <a href="docs/sales/SALES-PLAYBOOK.md" class="glass rounded-2xl p-6 card-hover group">
-                    <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-bullseye text-2xl text-blue-400"></i>
+                <a href="realtime-dashboard.html" class="glass rounded-xl p-4 card-hover group text-center border-2 border-red-500/30">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition">
+                        <i class="fas fa-broadcast text-xl text-red-400"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-2">Sales Playbook</h4>
-                    <p class="text-gray-400 text-sm">WhatsApp scripts, email templates, objection handling</p>
+                    <h4 class="font-bold text-sm">Live Dashboard</h4>
+                    <p class="text-gray-500 text-xs mt-1">Real-time sales</p>
                 </a>
 
-                <a href="docs/sales/LEADS-BALI-TRAVEL.md" class="glass rounded-2xl p-6 card-hover group">
-                    <div class="w-14 h-14 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-users text-2xl text-amber-400"></i>
+                <a href="docs/sales/SALES-PLAYBOOK.md" class="glass rounded-xl p-4 card-hover group text-center">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition">
+                        <i class="fas fa-book text-xl text-blue-400"></i>
                     </div>
-                    <h4 class="text-xl font-bold mb-2">Leads Database</h4>
-                    <p class="text-gray-400 text-sm">60 leads worth Rp 1.3B siap dikontak</p>
+                    <h4 class="font-bold text-sm">Sales Playbook</h4>
+                    <p class="text-gray-500 text-xs mt-1">Scripts & templates</p>
+                </a>
+
+                <a href="https://wa.me/6281337558787" target="_blank" class="glass rounded-xl p-4 card-hover group text-center border-2 border-green-500/30">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition">
+                        <i class="fab fa-whatsapp text-xl text-green-400"></i>
+                    </div>
+                    <h4 class="font-bold text-sm">WhatsApp Sales</h4>
+                    <p class="text-gray-500 text-xs mt-1">Start outreach</p>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 10 SBU Grid -->
-    <section class="relative z-10 py-16 px-6">
+    <!-- 10 SBU Grid - DETAIL -->
+    <section class="relative z-10 py-12 px-6">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl font-bold mb-8 text-center">🏢 10 Strategic Business Units</h3>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-01</div>
-                    <div class="font-bold text-sm">Gianyar Tech</div>
-                    <div class="text-xs text-green-400 mt-1">Software House</div>
+            <h3 class="text-2xl font-bold mb-6 text-center">🏢 10 Strategic Business Units</h3>
+            
+            <!-- SBU Header Row -->
+            <div class="grid grid-cols-5 gap-4 mb-4">
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-01</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-02</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-03</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-04</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-05</div>
+            </div>
+            
+            <!-- SBU Row 1 -->
+            <div class="grid grid-cols-5 gap-4 mb-8">
+                <!-- SBU-01 -->
+                <div class="glass rounded-xl p-4 card-hover border border-green-500/30">
+                    <div class="font-bold text-sm mb-1">🏥 Payangan AI</div>
+                    <div class="text-xs text-green-400 mb-2">AI Solutions</div>
+                    <div class="text-lg font-black text-green-400 counter" id="sbu-1-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-green-500 rounded-full progress-bar" id="sbu-1-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-02</div>
-                    <div class="font-bold text-sm">Bali Digital</div>
-                    <div class="text-xs text-green-400 mt-1">Digital Agency</div>
+                
+                <!-- SBU-02 -->
+                <div class="glass rounded-xl p-4 card-hover border border-blue-500/30">
+                    <div class="font-bold text-sm mb-1">💻 Gianyar Tech</div>
+                    <div class="text-xs text-blue-400 mb-2">Software House</div>
+                    <div class="text-lg font-black text-blue-400 counter" id="sbu-2-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-blue-500 rounded-full progress-bar" id="sbu-2-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-03</div>
-                    <div class="font-bold text-sm">E-Commerce</div>
-                    <div class="text-xs text-green-400 mt-1">Marketplace</div>
+                
+                <!-- SBU-03 -->
+                <div class="glass rounded-xl p-4 card-hover border border-purple-500/30">
+                    <div class="font-bold text-sm mb-1">🎯 Bali Digital</div>
+                    <div class="text-xs text-purple-400 mb-2">Digital Agency</div>
+                    <div class="text-lg font-black text-purple-400 counter" id="sbu-3-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-purple-500 rounded-full progress-bar" id="sbu-3-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-04</div>
-                    <div class="font-bold text-sm">Bali EdTech</div>
-                    <div class="text-xs text-green-400 mt-1">Education</div>
+                
+                <!-- SBU-04 -->
+                <div class="glass rounded-xl p-4 card-hover border border-amber-500/30">
+                    <div class="font-bold text-sm mb-1">🛒 Gianyar E-Commerce</div>
+                    <div class="text-xs text-amber-400 mb-2">Marketplace</div>
+                    <div class="text-lg font-black text-amber-400 counter" id="sbu-4-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-amber-500 rounded-full progress-bar" id="sbu-4-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-05</div>
-                    <div class="font-bold text-sm">Gianyar Finance</div>
-                    <div class="text-xs text-green-400 mt-1">Fintech</div>
+                
+                <!-- SBU-05 -->
+                <div class="glass rounded-xl p-4 card-hover border border-pink-500/30">
+                    <div class="font-bold text-sm mb-1">📚 Bali EdTech</div>
+                    <div class="text-xs text-pink-400 mb-2">Education</div>
+                    <div class="text-lg font-black text-pink-400 counter" id="sbu-5-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-pink-500 rounded-full progress-bar" id="sbu-5-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-06</div>
-                    <div class="font-bold text-sm">Bali Logistics</div>
-                    <div class="text-xs text-green-400 mt-1">Logistics</div>
+            </div>
+            
+            <!-- SBU Header Row 2 -->
+            <div class="grid grid-cols-5 gap-4 mb-4">
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-06</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-07</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-08</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-09</div>
+                <div class="text-center text-xs text-gray-500 font-medium">SBU-10</div>
+            </div>
+            
+            <!-- SBU Row 2 -->
+            <div class="grid grid-cols-5 gap-4">
+                <!-- SBU-06 -->
+                <div class="glass rounded-xl p-4 card-hover border border-cyan-500/30">
+                    <div class="font-bold text-sm mb-1">💰 Gianyar Finance</div>
+                    <div class="text-xs text-cyan-400 mb-2">Fintech</div>
+                    <div class="text-lg font-black text-cyan-400 counter" id="sbu-6-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-cyan-500 rounded-full progress-bar" id="sbu-6-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-07</div>
-                    <div class="font-bold text-sm">Gianyar Food</div>
-                    <div class="text-xs text-green-400 mt-1">Food Tech</div>
+                
+                <!-- SBU-07 -->
+                <div class="glass rounded-xl p-4 card-hover border border-orange-500/30">
+                    <div class="font-bold text-sm mb-1">🚚 Bali Logistics</div>
+                    <div class="text-xs text-orange-400 mb-2">Logistics</div>
+                    <div class="text-lg font-black text-orange-400 counter" id="sbu-7-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-orange-500 rounded-full progress-bar" id="sbu-7-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-amber-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-08</div>
-                    <div class="font-bold text-sm">Bali Travel</div>
-                    <div class="text-xs text-amber-400 mt-1">Travel Platform</div>
+                
+                <!-- SBU-08 -->
+                <div class="glass rounded-xl p-4 card-hover border border-red-500/30">
+                    <div class="font-bold text-sm mb-1">🍜 Gianyar Food</div>
+                    <div class="text-xs text-red-400 mb-2">Food Tech</div>
+                    <div class="text-lg font-black text-red-400 counter" id="sbu-8-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-red-500 rounded-full progress-bar" id="sbu-8-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-09</div>
-                    <div class="font-bold text-sm">Gianyar Property</div>
-                    <div class="text-xs text-green-400 mt-1">Property Tech</div>
+                
+                <!-- SBU-09 -->
+                <div class="glass rounded-xl p-4 card-hover border border-lime-500/30">
+                    <div class="font-bold text-sm mb-1">✈️ Bali Travel</div>
+                    <div class="text-xs text-lime-400 mb-2">Travel Platform ⭐</div>
+                    <div class="text-lg font-black text-lime-400 counter" id="sbu-9-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-lime-500 rounded-full progress-bar" id="sbu-9-bar" style="width: 0%"></div>
+                    </div>
                 </div>
-                <div class="glass rounded-xl p-4 card-hover border-l-4 border-green-500">
-                    <div class="text-xs text-gray-500 mb-1">SBU-10</div>
-                    <div class="font-bold text-sm">Payangan AI</div>
-                    <div class="text-xs text-green-400 mt-1">AI Solutions</div>
+                
+                <!-- SBU-10 -->
+                <div class="glass rounded-xl p-4 card-hover border border-indigo-500/30">
+                    <div class="font-bold text-sm mb-1">🏠 Gianyar Property</div>
+                    <div class="text-xs text-indigo-400 mb-2">Property Tech</div>
+                    <div class="text-lg font-black text-indigo-400 counter" id="sbu-10-revenue">Rp 0</div>
+                    <div class="text-xs text-gray-500 mt-1">Target: Rp 100M</div>
+                    <div class="w-full h-1.5 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-indigo-500 rounded-full progress-bar" id="sbu-10-bar" style="width: 0%"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="relative z-10 py-20 px-6">
-        <div class="max-w-4xl mx-auto text-center glass rounded-3xl p-12">
+    <!-- CTA & GAURANGA -->
+    <section class="relative z-10 py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center glass rounded-3xl p-8 border border-amber-500/30">
+            <div class="inline-block px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm font-bold mb-4">
+                🤖 GAURANGA AI ACTIVE
+            </div>
             <h3 class="text-3xl font-black mb-4">🚀 Mulai Sekarang!</h3>
-            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
-                60 leads menunggu. Rp 1.3B pipeline siap dikonversi. 
-                Waktu yang tepat untuk mulai outreach!
+            <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+                60 leads menunggu. Pipeline Rp 1.3B siap dikonversi.<br>
+                Setiap masalah ada solusinya. Mulai dari sekarang!
             </p>
+            
+            <!-- Profit Calculator -->
+            <div class="glass-dark rounded-xl p-6 mb-6 max-w-md mx-auto">
+                <h4 class="text-lg font-bold mb-4">💰 Kalkulator Profit</h4>
+                <div class="flex items-center justify-center gap-4 text-sm">
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-gray-400">Revenue</div>
+                        <div class="text-lg text-gray-500 mt-1">Input...</div>
+                    </div>
+                    <i class="fas fa-arrow-right text-amber-400"></i>
+                    <div class="text-center">
+                        <div class="text-2xl font-black text-green-400">80% Owner</div>
+                        <div class="text-lg text-green-300 mt-1">→ BCA</div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://wa.me/6281337558787?text=Halo%20Pak%20Pur!%20Saya%20siap%20mulai%20outreach!" target="_blank" class="px-8 py-4 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition">
+                <a href="https://wa.me/6281337558787?text=Halo%20Pak%20Pur!%20Saya%20siap%20mulai%20outreach!" target="_blank" class="px-8 py-4 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition live-pulse">
                     <i class="fab fa-whatsapp mr-2"></i> Mulai WhatsApp Outreach
                 </a>
                 <a href="docs/sales/SALES-PLAYBOOK.md" class="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition">
@@ -215,35 +375,199 @@
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="text-center md:text-left">
-                    <p class="font-bold">MAHA LAKSHMI DIGITAL HOLDINGS</p>
-                    <p class="text-gray-500 text-sm">CEO: i Made Purna Ananda</p>
+                    <p class="font-bold text-lg">👑 MAHA LAKSHMI HOLDINGS</p>
+                    <p class="text-gray-400 text-sm">CEO: i Made Purna Ananda</p>
+                    <p class="text-gray-500 text-xs mt-1">🤖 Powered by GAURANGA AI</p>
                 </div>
                 <div class="text-center md:text-right">
-                    <p class="text-gray-400 text-sm">🏦 BCA 6485086645</p>
-                    <p class="text-gray-500 text-xs mt-1">Target: Rp 100.000.000/bulan</p>
+                    <p class="text-amber-400 font-bold">🏦 BCA: 6485086645</p>
+                    <p class="text-gray-400 text-sm mt-1">Target: Rp 1.000.000.000/bulan</p>
+                    <p class="text-gray-500 text-xs mt-1">Version 4.0.0 | Updated: 2026-07-20</p>
                 </div>
+            </div>
+            <div class="text-center mt-6 pt-6 border-t border-white/10">
+                <p class="text-gray-500 text-sm">
+                    <i class="fab fa-github mr-1"></i> 
+                    <a href="https://github.com/prahlad168/MAHA-LAKSHMI-CORP" target="_blank" class="text-gray-400 hover:text-white">github.com/prahlad168/MAHA-LAKSHMI-CORP</a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Live Clock -->
+    <!-- Live Clock Widget -->
     <div class="fixed bottom-6 right-6 z-50">
-        <div class="glass rounded-xl px-4 py-3 text-center">
+        <div class="glass rounded-xl px-4 py-3 text-center border border-green-500/30">
             <div id="clock" class="text-2xl font-bold gradient-text">--:--:--</div>
             <div id="date" class="text-xs text-gray-400">Loading...</div>
         </div>
     </div>
 
     <script>
+        // ========================================
+        // MAHA LAKSHMI - REAL-TIME DASHBOARD
+        // ========================================
+        
+        // Data Configuration
+        const CONFIG = {
+            TARGET_MONTHLY: 1000000000, // Rp 1 Miliar per bulan
+            TARGET_PER_SBU: 100000000, // Rp 100 juta per SBU
+            PROFIT_OWNER: 0.80, // 80% to owner
+            PROFIT_REINVEST: 0.25, // 25% reinvestment
+            PROFIT_TEAM: 0.10, // 10% team bonus
+            PROFIT_CHARITY: 0.05, // 5% charity
+        };
+
+        // Initial data - bisa di-update dari API/database
+        let DATA = {
+            totalRevenue: 0,
+            leads: 60,
+            companies: [
+                { id: 1, name: 'Payangan AI', revenue: 0 },
+                { id: 2, name: 'Gianyar Tech', revenue: 0 },
+                { id: 3, name: 'Bali Digital', revenue: 0 },
+                { id: 4, name: 'Gianyar E-Commerce', revenue: 0 },
+                { id: 5, name: 'Bali EdTech', revenue: 0 },
+                { id: 6, name: 'Gianyar Finance', revenue: 0 },
+                { id: 7, name: 'Bali Logistics', revenue: 0 },
+                { id: 8, name: 'Gianyar Food', revenue: 0 },
+                { id: 9, name: 'Bali Travel', revenue: 0 },
+                { id: 10, name: 'Gianyar Property', revenue: 0 }
+            ]
+        };
+
+        // Format angka ke Rupiah
+        function formatRupiah(num) {
+            if (num >= 1000000000) {
+                return 'Rp ' + (num / 1000000000).toFixed(1) + 'B';
+            } else if (num >= 1000000) {
+                return 'Rp ' + (num / 1000000).toFixed(0) + 'M';
+            } else if (num >= 1000) {
+                return 'Rp ' + (num / 1000).toFixed(0) + 'K';
+            }
+            return 'Rp ' + num.toLocaleString('id-ID');
+        }
+
+        // Update jam
         function updateClock() {
             const now = new Date();
-            const time = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-            const date = now.toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+            const time = now.toLocaleTimeString('id-ID', { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            });
+            const date = now.toLocaleDateString('id-ID', { 
+                weekday: 'short', 
+                day: 'numeric', 
+                month: 'short', 
+                year: 'numeric' 
+            });
+            
             document.getElementById('clock').textContent = time;
             document.getElementById('date').textContent = date;
+            document.getElementById('realtime-clock').textContent = time;
         }
-        updateClock();
-        setInterval(updateClock, 1000);
+
+        // Update countdown
+        let countdown = 60;
+        function updateCountdown() {
+            countdown--;
+            if (countdown <= 0) {
+                countdown = 60;
+                fetchData(); // Refresh data saat countdown selesai
+            }
+            document.getElementById('countdown').textContent = countdown;
+        }
+
+        // Fetch data dari API (placeholder - bisa diganti dengan API real)
+        async function fetchData() {
+            // Di sini bisa fetch dari API real
+            // Untuk demo, kita pakai localStorage
+            const savedData = localStorage.getItem('maha_lakshmi_data');
+            if (savedData) {
+                try {
+                    DATA = JSON.parse(savedData);
+                } catch(e) {}
+            }
+            updateDashboard();
+        }
+
+        // Update dashboard dengan data terbaru
+        function updateDashboard() {
+            // Total Revenue
+            document.getElementById('total-revenue').textContent = formatRupiah(DATA.totalRevenue);
+            
+            // VS Target
+            const pctTarget = Math.min(100, (DATA.totalRevenue / CONFIG.TARGET_MONTHLY) * 100);
+            document.getElementById('vs-target').textContent = pctTarget.toFixed(1) + '%';
+            
+            // Leads
+            document.getElementById('total-leads').textContent = DATA.leads;
+            
+            // Update setiap SBU
+            DATA.companies.forEach((company, idx) => {
+                const sbuNum = idx + 1;
+                const revEl = document.getElementById(`sbu-${sbuNum}-revenue`);
+                const barEl = document.getElementById(`sbu-${sbuNum}-bar`);
+                
+                if (revEl) {
+                    revEl.textContent = formatRupiah(company.revenue);
+                }
+                if (barEl) {
+                    const pct = Math.min(100, (company.revenue / CONFIG.TARGET_PER_SBU) * 100);
+                    barEl.style.width = pct + '%';
+                }
+            });
+            
+            // Simpan ke localStorage
+            localStorage.setItem('maha_lakshmi_data', JSON.stringify(DATA));
+        }
+
+        // Fungsi untuk add revenue (bisa dipanggil dari console atau automation)
+        window.addRevenue = function(sbuId, amount) {
+            if (sbuId >= 1 && sbuId <= 10) {
+                DATA.companies[sbuId - 1].revenue += amount;
+                DATA.totalRevenue += amount;
+                updateDashboard();
+            }
+        };
+
+        // Fungsi untuk add leads
+        window.addLead = function(count = 1) {
+            DATA.leads += count;
+            updateDashboard();
+        };
+
+        // Fungsi untuk reset data
+        window.resetData = function() {
+            DATA.totalRevenue = 0;
+            DATA.leads = 60;
+            DATA.companies.forEach(c => c.revenue = 0);
+            localStorage.removeItem('maha_lakshmi_data');
+            updateDashboard();
+        };
+
+        // Initialize
+        function init() {
+            updateClock();
+            updateCountdown();
+            fetchData();
+            
+            // Update clock setiap detik
+            setInterval(updateClock, 1000);
+            
+            // Update countdown setiap detik
+            setInterval(updateCountdown, 1000);
+            
+            // Auto-refresh setiap 60 detik
+            setInterval(fetchData, 60000);
+        }
+
+        // Jalankan saat page load
+        document.addEventListener('DOMContentLoaded', init);
+
+        // Log untuk debugging
+        console.log('🤖 GAURANGA AI - MAHA LAKSHMI DASHBOARD');
+        console.log('Commands: addRevenue(sbuId, amount), addLead(count), resetData()');
     </script>
 </body>
 </html>
