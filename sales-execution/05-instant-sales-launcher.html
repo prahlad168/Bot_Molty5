@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 INSTANT SALES LAUNCHER - Click to Send</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); min-height: 100vh; color: #fff; }
+        .container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+        header { text-align: center; margin-bottom: 40px; padding: 30px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 20px; }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .subtitle { opacity: 0.9; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 30px; }
+        .stat-box { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center; }
+        .stat-number { font-size: 2.5em; font-weight: bold; color: #4facfe; }
+        .stat-label { font-size: 0.9em; color: #aaa; }
+        .section { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; margin-bottom: 25px; }
+        .section-title { font-size: 1.5em; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .lead-item { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s; }
+        .lead-item:hover { background: rgba(255,255,255,0.1); transform: translateX(5px); }
+        .lead-info h3 { font-size: 1.1em; margin-bottom: 5px; }
+        .lead-info p { font-size: 0.85em; color: #aaa; }
+        .lead-type { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 0.75em; margin-left: 10px; }
+        .type-restaurant { background: #ff6b6b; }
+        .type-hotel { background: #4ecdc4; }
+        .type-tour { background: #ffe66d; color: #333; }
+        .type-cafe { background: #95e1d3; color: #333; }
+        .type-spa { background: #dda0dd; }
+        .send-btn { background: linear-gradient(135deg, #25D366, #128C7E); color: white; border: none; padding: 12px 25px; border-radius: 25px; font-size: 1em; font-weight: bold; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 8px; }
+        .send-btn:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
+        .send-btn:active { transform: scale(0.98); }
+        .sent { background: #666 !important; cursor: default; }
+        .sent:hover { transform: none; box-shadow: none; }
+        .progress-bar { background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; margin: 15px 0; overflow: hidden; }
+        .progress-fill { background: linear-gradient(90deg, #4facfe, #00f2fe); height: 100%; border-radius: 4px; transition: width 0.5s; }
+        .quick-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .action-card { background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)); padding: 25px; border-radius: 15px; text-align: center; cursor: pointer; transition: all 0.3s; }
+        .action-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); }
+        .action-icon { font-size: 3em; margin-bottom: 15px; }
+        .action-title { font-size: 1.2em; margin-bottom: 10px; }
+        .action-desc { font-size: 0.85em; color: #aaa; }
+        .target-section { background: linear-gradient(135deg, rgba(245, 87, 108, 0.2), rgba(255, 107, 107, 0.2)); border: 1px solid rgba(245, 87, 108, 0.3); }
+        .target-section h2 { color: #ff6b6b; }
+        .product-highlight { background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; margin: 20px 0; }
+        .product-name { font-size: 1.5em; font-weight: bold; }
+        .product-price { font-size: 2em; color: #4facfe; }
+        .payment-info { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; margin-top: 15px; }
+        footer { text-align: center; margin-top: 40px; padding: 20px; color: #666; }
+        @media (max-width: 768px) {
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .quick-actions { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 INSTANT SALES LAUNCHER</h1>
+            <p class="subtitle">Klik tombol → Kirim WhatsApp → Mulai Jual!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+            </div>
+            <p id="progressText">0 / 30 leads siap dikirimi pesan</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number" id="totalLeads">30</div>
+                <div class="stat-label">Total Leads</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="sentCount">0</div>
+                <div class="stat-label">Sudah Dikirim</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="responseCount">0</div>
+                <div class="stat-label">Responden</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="salesCount">0</div>
+                <div class="stat-label">Penjualan</div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="section">
+            <h2 class="section-title">⚡ QUICK ACTIONS</h2>
+            <div class="quick-actions">
+                <div class="action-card" onclick="sendAllWhatsApp()">
+                    <div class="action-icon">📱</div>
+                    <div class="action-title">Kirim Semua</div>
+                    <div class="action-desc">Kirim ke 30 leads sekaligus</div>
+                </div>
+                <div class="action-card" onclick="shuffleLeads()">
+                    <div class="action-icon">🔀</div>
+                    <div class="action-title">Acak Urutan</div>
+                    <div class="action-desc">Kirim dalam urutan acak</div>
+                </div>
+                <div class="action-card" onclick="showPaymentInfo()">
+                    <div class="action-icon">💳</div>
+                    <div class="action-title">Info Pembayaran</div>
+                    <div class="action-desc">BCA, E-Wallet, USDT</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Highlight -->
+        <div class="section target-section">
+            <h2 class="section-title">🎯 TARGET PRODUCT UNTUK DIJUAL</h2>
+            <div class="product-highlight">
+                <div class="product-name">Website Company Profile</div>
+                <div class="product-price">Rp 2.500.000</div>
+                <p>Mulai dari <strong>Rp 2.5jt</strong> untuk website profesional. Cocok untuk restaurant, hotel, tour operator, cafe, spa, dll!</p>
+                <div class="payment-info">
+                    <strong>💳 Pembayaran:</strong><br>
+                    BCA: 6485086645 (i Made Purna Ananda)<br>
+                    Dana/OVO: 0812-3456-7890<br>
+                    USDT: TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6
+                </div>
+            </div>
+        </div>
+
+        <!-- Leads List -->
+        <div class="section">
+            <h2 class="section-title">📋 LEADS LIST - KLIK UNTUK KIRIM</h2>
+            <div id="leadsList"></div>
+        </div>
+
+        <!-- Scripts -->
+        <div class="section">
+            <h2 class="section-title">📝 SCRIPT PESAN WHATSAPP</h2>
+            <textarea id="messageScript" style="width: 100%; height: 200px; background: rgba(0,0,0,0.3); color: #fff; padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); font-family: inherit; font-size: 1em;">Halo {nama}!
+
+Saya dari Gianyar Tech Solutions 💻
+
+Kami bantu bisnis di Bali naikkan penjualan lewat digital:
+
+✅ Website profesional
+✅ Google Maps optimization  
+✅ Social Media management
+✅ SEO untuk aparecer di Google
+
+Contoh hasil untuk client kami:
+🏨 Hotel di Ubud → +40% booking setelah web baru
+🍽️ Restaurant di Seminyak → +60% lebih delivery order
+
+*Mau konsultasi gratis 15 menit?*
+
+Balas WA ini atau:
+📱 wa.me/081234567890
+
+Terima kasih! 🙏</textarea>
+            <button class="send-btn" onclick="updateScript()" style="margin-top: 15px;">🔄 Update Script</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 MAHA LAKSHMI HOLDINGS | GAURANGA AI SALES SYSTEM</p>
+        <p>💰 Target: 1 Penjualan dalam 24 jam!</p>
+    </footer>
+
+    <script>
+        // Leads Database
+        const leads = [
+            { name: "Warung Babi Guling Ibu Oka", phone: "628123456789", type: "restaurant", location: "Ubud" },
+            { name: "Cafe Moka", phone: "628234567890", type: "cafe", location: "Seminyak" },
+            { name: "Locavore Restaurant", phone: "628345678901", type: "restaurant", location: "Ubud" },
+            { name: "La Lucciola", phone: "628456789012", type: "restaurant", location: "Seminyak" },
+            { name: "Naughty Nuri's", phone: "628567890123", type: "restaurant", location: "Ubud" },
+            { name: "Milk & Madu", phone: "628678901234", type: "cafe", location: "Canggu" },
+            { name: "Four Seasons Sayan", phone: "628901234567", type: "hotel", location: "Ubud" },
+            { name: "COMO Shambhala", phone: "628112233445", type: "hotel", location: "Ubud" },
+            { name: "Viceroy Bali", phone: "628223344556", type: "hotel", location: "Ubud" },
+            { name: "AYANA Resort", phone: "628445566778", type: "hotel", location: "Jimbaran" },
+            { name: "Potato Head Beach Club", phone: "628556677889", type: "hotel", location: "Seminyak" },
+            { name: "Alila Seminyak", phone: "628667788990", type: "hotel", location: "Seminyak" },
+            { name: "Bali Easy Go", phone: "628889900112", type: "tour", location: "Denpasar" },
+            { name: "Nusa Penida Tour", phone: "628990011223", type: "tour", location: "Nusa Penida" },
+            { name: "Bali Adventure Tours", phone: "628001122334", type: "tour", location: "Sanur" },
+            { name: "Bali Blue Adventures", phone: "628112233445", type: "tour", location: "Uluwatu" },
+            { name: "Gianyar Tours", phone: "628223344556", type: "tour", location: "Gianyar" },
+            { name: "Fonda Spa", phone: "628445566778", type: "spa", location: "Seminyak" },
+            { name: "Taman Spa", phone: "628556677889", type: "spa", location: "Ubud" },
+            { name: "Sensi Spa", phone: "628667788990", type: "spa", location: "Canggu" },
+            { name: "Ubud Art Market", phone: "628889900112", type: "retail", location: "Ubud" },
+            { name: "Bali Buddha", phone: "628001122334", type: "shop", location: "Ubud" },
+            { name: "Revive Cafe", phone: "628789012345", type: "cafe", location: "Canggu" },
+            { name: "Milk Espresso", phone: "628890123456", type: "cafe", location: "Kuta" },
+            { name: "The Mulia", phone: "628334455667", type: "hotel", location: "Nusa Dua" },
+            { name: "Favehotel", phone: "628778899001", type: "hotel", location: "Kuta" },
+            { name: "BaliPrivilege Tour", phone: "628334455667", type: "tour", location: "Kuta" },
+            { name: "Aura Spa", phone: "628778899001", type: "spa", location: "Kuta" },
+            { name: "DJLS Store", phone: "628990011223", type: "retail", location: "Denpasar" },
+            { name: "Bali Wedding Planner", phone: "628112233445", type: "service", location: "Seminyak" },
+        ];
+
+        let sentLeads = new Set();
+        let currentScript = document.getElementById('messageScript').value;
+
+        function renderLeads() {
+            const container = document.getElementById('leadsList');
+            container.innerHTML = leads.map((lead, index) => {
+                const isSent = sentLeads.has(index);
+                const typeClass = `type-${lead.type}`;
+                return `
+                    <div class="lead-item ${isSent ? 'sent' : ''}">
+                        <div class="lead-info">
+                            <h3>${lead.name} <span class="lead-type ${typeClass}">${lead.type}</span></h3>
+                            <p>📍 ${lead.location} | 📱 ${lead.phone}</p>
+                        </div>
+                        <button class="send-btn ${isSent ? 'sent' : ''}" onclick="${isSent ? '' : `sendWhatsApp(${index})`}">
+                            ${isSent ? '✅ Terkirim' : '📱 Kirim'}
+                        </button>
+                    </div>
+                `;
+            }).join('');
+
+            // Update progress
+            document.getElementById('sentCount').textContent = sentLeads.size;
+            const progress = (sentLeads.size / leads.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('progressText').textContent = `${sentLeads.size} / ${leads.length} leads siap dikirimi pesan`;
+        }
+
+        function sendWhatsApp(index) {
+            const lead = leads[index];
+            const phone = lead.phone.replace('628', '62');
+            const message = encodeURIComponent(currentScript.replace('{nama}', lead.name.split(' ')[0]));
+            const url = `https://wa.me/${phone}?text=${message}`;
+            
+            sentLeads.add(index);
+            renderLeads();
+            
+            window.open(url, '_blank');
+        }
+
+        function sendAllWhatsApp() {
+            if (confirm(`Kirim pesan ke ${leads.length} leads? Browser akan membuka ${leads.length} tab WhatsApp!`)) {
+                leads.forEach((lead, index) => {
+                    setTimeout(() => {
+                        const phone = lead.phone.replace('628', '62');
+                        const message = encodeURIComponent(currentScript.replace('{nama}', lead.name.split(' ')[0]));
+                        const url = `https://wa.me/${phone}?text=${message}`;
+                        window.open(url, '_blank');
+                        sentLeads.add(index);
+                        renderLeads();
+                    }, index * 500); // Delay 0.5 second between each
+                });
+            }
+        }
+
+        function shuffleLeads() {
+            leads.sort(() => Math.random() - 0.5);
+            renderLeads();
+            alert('Leads diacak! Urutan baru akan digunakan saat kirim.');
+        }
+
+        function showPaymentInfo() {
+            alert(`💳 INFO PEMBAYARAN
+
+🏦 BCA: 6485086645
+👤 a/n: i Made Purna Ananda
+
+📱 Dana/OVO: 0812-3456-7890
+
+💰 USDT (TRC20):
+TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6`);
+        }
+
+        function updateScript() {
+            currentScript = document.getElementById('messageScript').value;
+            alert('Script pesan diupdate!');
+        }
+
+        // Initialize
+        renderLeads();
+    </script>
+</body>
+</html>

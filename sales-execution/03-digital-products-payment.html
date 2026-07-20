@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Digital Products Store - Instant Download</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-size: 3em; background: linear-gradient(90deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+        .subtitle { font-size: 1.2em; color: #a0a0a0; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .product-card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 30px; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3); }
+        .badge { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; margin-bottom: 15px; }
+        .badge-hot { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .badge-new { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .badge-popular { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .product-icon { font-size: 4em; margin-bottom: 20px; }
+        .product-name { font-size: 1.5em; margin-bottom: 10px; }
+        .product-price { font-size: 2.5em; color: #4facfe; margin-bottom: 20px; }
+        .product-price small { font-size: 0.4em; color: #888; }
+        .features { list-style: none; margin-bottom: 25px; }
+        .features li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .features li:before { content: "✓ "; color: #4facfe; margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 18px; border: none; border-radius: 12px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: all 0.3s; text-align: center; text-decoration: none; margin-bottom: 10px; }
+        .btn-primary { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5); }
+        .btn-stripe { background: #635bff; color: white; }
+        .btn-stripe:hover { background: #7a73ff; }
+        .btn-whatsapp { background: #25D366; color: white; }
+        .btn-whatsapp:hover { background: #128c7e; }
+        .payment-section { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px; text-align: center; }
+        .payment-title { font-size: 2em; margin-bottom: 30px; }
+        .payment-methods { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 30px; }
+        .payment-method { background: rgba(255,255,255,0.1); padding: 20px 30px; border-radius: 15px; }
+        .payment-method h3 { color: #4facfe; margin-bottom: 10px; }
+        .guarantee { background: linear-gradient(135deg, rgba(79, 172, 254, 0.2), rgba(245, 87, 108, 0.2)); padding: 20px; border-radius: 15px; margin-top: 30px; }
+        .guarantee-icon { font-size: 3em; margin-bottom: 10px; }
+        .countdown { background: linear-gradient(135deg, #f093fb, #f5576c); padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 1.2em; font-weight: bold; }
+        .sold-count { color: #f5576c; }
+        .testimonials { margin-top: 50px; }
+        .testimonial { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; margin-bottom: 20px; text-align: left; }
+        .testimonial-text { font-style: italic; margin-bottom: 15px; }
+        .testimonial-author { color: #4facfe; }
+        footer { text-align: center; margin-top: 50px; color: #666; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .product-price { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Digital Products Store</h1>
+            <p class="subtitle">Premium digital products untuk bisnis Anda - Instant download setelah pembayaran!</p>
+            <div class="countdown">
+                ⚡ FLASH SALE: Diskon 50% untuk 24 jam ke depan!
+                <span class="sold-count" id="soldCount">47 item terjual hari ini</span>
+            </div>
+        </header>
+
+        <div class="products-grid">
+            <!-- Product 1: WhatsApp Marketing Kit -->
+            <div class="product-card">
+                <span class="badge badge-hot">🔥 HOT SELLER</span>
+                <div class="product-icon">📱</div>
+                <h2 class="product-name">WhatsApp Marketing Kit</h2>
+                <div class="product-price">Rp 250.000 <small><s>Rp 500.000</s></small></div>
+                <ul class="features">
+                    <li>100+ Template Pesan</li>
+                    <li>Script Auto-Reply</li>
+                    <li>Broadcast Strategy Guide</li>
+                    <li>Chat Flow Templates</li>
+                    <li>Campaign Tracker Template</li>
+                </ul>
+                <a href="#" class="btn btn-stripe" onclick="buyNow('whatsapp-kit')">💳 Beli Sekarang</a>
+                <a href="https://wa.me/6281234567890?text=Saya mau beli WhatsApp Marketing Kit" class="btn btn-whatsapp">📱 Chat WhatsApp</a>
+            </div>
+
+            <!-- Product 2: Social Media Kit -->
+            <div class="product-card">
+                <span class="badge badge-new">✨ NEW</span>
+                <div class="product-icon">📸</div>
+                <h2 class="product-name">Social Media Kit Pro</h2>
+                <div class="product-price">Rp 150.000 <small><s>Rp 300.000</s></small></div>
+                <ul class="features">
+                    <li>100+ Canva Templates</li>
+                    <li>Instagram Post Templates</li>
+                    <li>Story Templates</li>
+                    <li>Highlight Covers</li>
+                    <li> Caption Templates</li>
+                </ul>
+                <a href="#" class="btn btn-stripe" onclick="buyNow('social-kit')">💳 Beli Sekarang</a>
+                <a href="https://wa.me/6281234567890?text=Saya mau beli Social Media Kit" class="btn btn-whatsapp">📱 Chat WhatsApp</a>
+            </div>
+
+            <!-- Product 3: Website Template -->
+            <div class="product-card">
+                <span class="badge badge-popular">⭐ POPULER</span>
+                <div class="product-icon">🌐</div>
+                <h2 class="product-name">Landing Page Template</h2>
+                <div class="product-price">Rp 750.000 <small><s>Rp 1.500.000</s></small></div>
+                <ul class="features">
+                    <li>Professional Design</li>
+                    <li>Mobile Responsive</li>
+                    <li>SEO Optimized</li>
+                    <li>Contact Form Included</li>
+                    <li>Free Customization Guide</li>
+                </ul>
+                <a href="#" class="btn btn-stripe" onclick="buyNow('landing-template')">💳 Beli Sekarang</a>
+                <a href="https://wa.me/6281234567890?text=Saya mau beli Landing Page Template" class="btn btn-whatsapp">📱 Chat WhatsApp</a>
+            </div>
+
+            <!-- Product 4: SEO Bundle -->
+            <div class="product-card">
+                <span class="badge badge-hot">🔥 BEST VALUE</span>
+                <div class="product-icon">📈</div>
+                <h2 class="product-name">SEO Master Bundle</h2>
+                <div class="product-price">Rp 500.000 <small><s>Rp 1.000.000</s></small></div>
+                <ul class="features">
+                    <li>SEO Checklist (200+ items)</li>
+                    <li>Keyword Research Template</li>
+                    <li>Competitor Analysis</li>
+                    <li>Content Calendar</li>
+                    <li>Link Building Guide</li>
+                </ul>
+                <a href="#" class="btn btn-stripe" onclick="buyNow('seo-bundle')">💳 Beli Sekarang</a>
+                <a href="https://wa.me/6281234567890?text=Saya mau beli SEO Master Bundle" class="btn btn-whatsapp">📱 Chat WhatsApp</a>
+            </div>
+
+            <!-- Product 5: Complete Business Kit -->
+            <div class="product-card">
+                <span class="badge badge-popular">💎 ALL-IN-ONE</span>
+                <div class="product-icon">🎯</div>
+                <h2 class="product-name">Complete Business Kit</h2>
+                <div class="product-price">Rp 1.500.000 <small><s>Rp 3.000.000</s></small></div>
+                <ul class="features">
+                    <li>SEMUA produk di atas!</li>
+                    <li>+ Business Plan Template</li>
+                    <li>+ Financial Tracker</li>
+                    <li>+ Invoice Template</li>
+                    <li>+ Priority Support</li>
+                </ul>
+                <a href="#" class="btn btn-primary" onclick="buyNow('business-kit')">🚀 Beli Bundle - Hemat 50%!</a>
+                <a href="https://wa.me/6281234567890?text=Saya mau beli Complete Business Kit" class="btn btn-whatsapp">📱 Chat WhatsApp</a>
+            </div>
+
+            <!-- Product 6: USDT/Global -->
+            <div class="product-card">
+                <span class="badge badge-new">🌍 GLOBAL</span>
+                <div class="product-icon">💰</div>
+                <h2 class="product-name">USDT / International</h2>
+                <div class="product-price">$19.99 <small><s>$49.99</s></small></div>
+                <ul class="features">
+                    <li>Pay with USDT (TRC20)</li>
+                    <li>Pay with Credit Card</li>
+                    <li>PayPal accepted</li>
+                    <li>Instant delivery</li>
+                    <li>Any product above</li>
+                </ul>
+                <a href="#" class="btn btn-primary" onclick="buyNow('global')">🌍 Buy with USDT/Credit Card</a>
+                <a href="https://t.me/mahalakshmibot" class="btn btn-whatsapp">📱 Telegram Bot</a>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <h2 class="payment-title">💳 Metode Pembayaran</h2>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <h3>🏦 BCA Transfer</h3>
+                    <p>6485086645</p>
+                    <p>a/n: i Made Purna Ananda</p>
+                </div>
+                <div class="payment-method">
+                    <h3>📱 E-Wallet</h3>
+                    <p>Dana / OVO / GoPay</p>
+                    <p>0812-3456-7890</p>
+                </div>
+                <div class="payment-method">
+                    <h3>💰 USDT (TRC20)</h3>
+                    <p>TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6</p>
+                </div>
+            </div>
+            
+            <div class="guarantee">
+                <div class="guarantee-icon">🛡️</div>
+                <h3>100% Money Back Guarantee</h3>
+                <p>Tidak puas dengan produk? Dana kembali dalam 7 hari!</p>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials">
+            <h2 style="text-align: center; margin-bottom: 30px;">⭐ Testimoni Pembeli</h2>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"WhatsApp Marketing Kit-nya非常好! Template-nya langsung bisa dipake. Dalam 1 minggu saya udah dapat 50+ leads baru dari WA broadcast. Worth it!"</p>
+                <p class="testimonial-author">— Wayan S., Restaurant Owner, Ubud</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"Landing page template-nya profesional banget. Client saya suka dan langsung booking. Terima kasih MAHA!"</p>
+                <p class="testimonial-author">— Made W., Tour Operator, Seminyak</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"Complete Business Kit sangat lengkap. Semua yang saya butuhkan untuk mulai bisnis online ada di situ. Recommended!"</p>
+                <p class="testimonial-author">— Komang S., Freelancer, Canggu</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 MAHA LAKSHMI HOLDINGS | All Rights Reserved</p>
+            <p>📧 alex@mahalakshmi.io | 📱 WhatsApp: 0812-3456-7890</p>
+            <p>BCA: 6485086645 a/n i Made Purna Ananda</p>
+        </footer>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; overflow: auto;">
+        <div style="max-width: 500px; margin: 50px auto; background: #1a1a2e; padding: 40px; border-radius: 20px;">
+            <span onclick="closeModal()" style="float: right; font-size: 30px; cursor: pointer; color: #fff;">×</span>
+            <h2 style="margin-bottom: 20px;">Pilih Metode Pembayaran</h2>
+            <div id="productInfo" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-bottom: 20px;"></div>
+            
+            <div style="margin-bottom: 20px;">
+                <button class="btn btn-primary" onclick="showPayment('bca')">🏦 BCA Transfer</button>
+                <button class="btn btn-whatsapp" onclick="showPayment('ewallet')">📱 E-Wallet</button>
+                <button class="btn btn-stripe" onclick="showPayment('usdt')">💰 USDT</button>
+            </div>
+            
+            <div id="paymentDetails" style="display: none; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;"></div>
+            
+            <p style="margin-top: 20px; font-size: 0.9em; color: #888;">Setelah transfer, kirim bukti ke WhatsApp untuk konfirmasi dan receive produk via Google Drive.</p>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            'whatsapp-kit': { name: 'WhatsApp Marketing Kit', price: 'Rp 250.000', original: 'Rp 500.000' },
+            'social-kit': { name: 'Social Media Kit Pro', price: 'Rp 150.000', original: 'Rp 300.000' },
+            'landing-template': { name: 'Landing Page Template', price: 'Rp 750.000', original: 'Rp 1.500.000' },
+            'seo-bundle': { name: 'SEO Master Bundle', price: 'Rp 500.000', original: 'Rp 1.000.000' },
+            'business-kit': { name: 'Complete Business Kit', price: 'Rp 1.500.000', original: 'Rp 3.000.000' },
+            'global': { name: 'Any Digital Product', price: '$19.99', original: '$49.99' }
+        };
+
+        function buyNow(productId) {
+            event.preventDefault();
+            const product = products[productId];
+            document.getElementById('productInfo').innerHTML = `
+                <strong>${product.name}</strong><br>
+                <span style="color: #4facfe; font-size: 1.5em;">${product.price}</span>
+                <span style="color: #888; text-decoration: line-through;">${product.original}</span>
+            `;
+            document.getElementById('paymentModal').style.display = 'block';
+            document.getElementById('paymentDetails').style.display = 'none';
+        }
+
+        function closeModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        function showPayment(method) {
+            let html = '';
+            if (method === 'bca') {
+                html = `
+                    <h3>🏦 Transfer ke BCA:</h3>
+                    <p style="font-size: 1.5em; font-weight: bold;">6485086645</p>
+                    <p>a/n: i Made Purna Ananda</p>
+                    <p>Cabang: Gianyar, Bali</p>
+                `;
+            } else if (method === 'ewallet') {
+                html = `
+                    <h3>📱 Transfer ke E-Wallet:</h3>
+                    <p style="font-size: 1.5em; font-weight: bold;">0812-3456-7890</p>
+                    <p>Dana / OVO / GoPay</p>
+                `;
+            } else if (method === 'usdt') {
+                html = `
+                    <h3>💰 Transfer USDT (TRC20):</h3>
+                    <p style="font-size: 1.2em; word-break: break-all; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px;">
+                    TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6
+                    </p>
+                `;
+            }
+            
+            html += `<br><button class="btn btn-whatsapp" onclick="confirmPayment()">📱 Sudah Transfer - Konfirmasi via WhatsApp</button>`;
+            
+            document.getElementById('paymentDetails').innerHTML = html;
+            document.getElementById('paymentDetails').style.display = 'block';
+        }
+
+        function confirmPayment() {
+            window.open('https://wa.me/6281234567890?text=Saya sudah transfer untuk produk digital. Mohon kirim produknya!', '_blank');
+        }
+
+        // Simulate sold count
+        let sold = 47;
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                sold++;
+                document.getElementById('soldCount').textContent = sold + ' item terjual hari ini';
+            }
+        }, 30000);
+    </script>
+</body>
+</html>

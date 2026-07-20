@@ -1,0 +1,667 @@
+{
+  "campaign_id": "email-campaign-20260720",
+  "started": "2026-07-20T03:35:06.640051",
+  "total_leads": 22,
+  "emails": [
+    {
+      "lead": {
+        "company": "TechStart Solutions",
+        "email": "contact@techstart.io",
+        "industry": "Technology",
+        "size": "11-50",
+        "country": "USA",
+        "website": "techstart.io"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about TechStart Solutions's digital growth",
+          "body": "Subject: Quick question about TechStart Solutions's digital growth\n\nHi TechStart,\n\nI noticed TechStart Solutions (techstart.io) is doing interesting work in Technology.\n\nWe help Technology companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Technology company in USA \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about TechStart Solutions",
+          "body": "Subject: Re: Quick question about TechStart Solutions\n\nHi TechStart,\n\nFollowing up on my previous email about helping TechStart Solutions grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Technology company in USA:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How TechStart Solutions can get 3x more leads",
+          "body": "Subject: How TechStart Solutions can get 3x more leads\n\nHi TechStart,\n\nI did some research on TechStart Solutions and have a quick idea:\n\nTechnology companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach TechStart Solutions's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "CloudNine Systems",
+        "email": "hello@cloudnine.tech",
+        "industry": "SaaS",
+        "size": "51-200",
+        "country": "UK",
+        "website": "cloudnine.tech"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about CloudNine Systems's digital growth",
+          "body": "Subject: Quick question about CloudNine Systems's digital growth\n\nHi CloudNine,\n\nI noticed CloudNine Systems (cloudnine.tech) is doing interesting work in SaaS.\n\nWe help SaaS companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- SaaS company in UK \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about CloudNine Systems",
+          "body": "Subject: Re: Quick question about CloudNine Systems\n\nHi CloudNine,\n\nFollowing up on my previous email about helping CloudNine Systems grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a SaaS company in UK:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How CloudNine Systems can get 3x more leads",
+          "body": "Subject: How CloudNine Systems can get 3x more leads\n\nHi CloudNine,\n\nI did some research on CloudNine Systems and have a quick idea:\n\nSaaS companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach CloudNine Systems's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "DataFlow Analytics",
+        "email": "sales@dataflow.ai",
+        "industry": "AI/ML",
+        "size": "11-50",
+        "country": "USA",
+        "website": "dataflow.ai"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about DataFlow Analytics's digital growth",
+          "body": "Subject: Quick question about DataFlow Analytics's digital growth\n\nHi DataFlow,\n\nI noticed DataFlow Analytics (dataflow.ai) is doing interesting work in AI/ML.\n\nWe help AI/ML companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- AI/ML company in USA \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about DataFlow Analytics",
+          "body": "Subject: Re: Quick question about DataFlow Analytics\n\nHi DataFlow,\n\nFollowing up on my previous email about helping DataFlow Analytics grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a AI/ML company in USA:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How DataFlow Analytics can get 3x more leads",
+          "body": "Subject: How DataFlow Analytics can get 3x more leads\n\nHi DataFlow,\n\nI did some research on DataFlow Analytics and have a quick idea:\n\nAI/ML companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach DataFlow Analytics's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "InnovateTech Lab",
+        "email": "info@innovatetech.co",
+        "industry": "Technology",
+        "size": "1-10",
+        "country": "Singapore",
+        "website": "innovatetech.co"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about InnovateTech Lab's digital growth",
+          "body": "Subject: Quick question about InnovateTech Lab's digital growth\n\nHi InnovateTech,\n\nI noticed InnovateTech Lab (innovatetech.co) is doing interesting work in Technology.\n\nWe help Technology companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Technology company in Singapore \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about InnovateTech Lab",
+          "body": "Subject: Re: Quick question about InnovateTech Lab\n\nHi InnovateTech,\n\nFollowing up on my previous email about helping InnovateTech Lab grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Technology company in Singapore:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How InnovateTech Lab can get 3x more leads",
+          "body": "Subject: How InnovateTech Lab can get 3x more leads\n\nHi InnovateTech,\n\nI did some research on InnovateTech Lab and have a quick idea:\n\nTechnology companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach InnovateTech Lab's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "MediCare Plus",
+        "email": "contact@medicareplus.com",
+        "industry": "Healthcare",
+        "size": "51-200",
+        "country": "Australia",
+        "website": "medicareplus.com"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about MediCare Plus's digital growth",
+          "body": "Subject: Quick question about MediCare Plus's digital growth\n\nHi MediCare,\n\nI noticed MediCare Plus (medicareplus.com) is doing interesting work in Healthcare.\n\nWe help Healthcare companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Healthcare company in Australia \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about MediCare Plus",
+          "body": "Subject: Re: Quick question about MediCare Plus\n\nHi MediCare,\n\nFollowing up on my previous email about helping MediCare Plus grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Healthcare company in Australia:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How MediCare Plus can get 3x more leads",
+          "body": "Subject: How MediCare Plus can get 3x more leads\n\nHi MediCare,\n\nI did some research on MediCare Plus and have a quick idea:\n\nHealthcare companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach MediCare Plus's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "HealthTech Solutions",
+        "email": "hello@healthtech.io",
+        "industry": "HealthTech",
+        "size": "11-50",
+        "country": "UK",
+        "website": "healthtech.io"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about HealthTech Solutions's digital growth",
+          "body": "Subject: Quick question about HealthTech Solutions's digital growth\n\nHi HealthTech,\n\nI noticed HealthTech Solutions (healthtech.io) is doing interesting work in HealthTech.\n\nWe help HealthTech companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- HealthTech company in UK \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about HealthTech Solutions",
+          "body": "Subject: Re: Quick question about HealthTech Solutions\n\nHi HealthTech,\n\nFollowing up on my previous email about helping HealthTech Solutions grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a HealthTech company in UK:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How HealthTech Solutions can get 3x more leads",
+          "body": "Subject: How HealthTech Solutions can get 3x more leads\n\nHi HealthTech,\n\nI did some research on HealthTech Solutions and have a quick idea:\n\nHealthTech companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach HealthTech Solutions's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "WellnessFirst Clinic",
+        "email": "info@wellnessfirst.sg",
+        "industry": "Healthcare",
+        "size": "11-50",
+        "country": "Singapore",
+        "website": "wellnessfirst.sg"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about WellnessFirst Clinic's digital growth",
+          "body": "Subject: Quick question about WellnessFirst Clinic's digital growth\n\nHi WellnessFirst,\n\nI noticed WellnessFirst Clinic (wellnessfirst.sg) is doing interesting work in Healthcare.\n\nWe help Healthcare companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Healthcare company in Singapore \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about WellnessFirst Clinic",
+          "body": "Subject: Re: Quick question about WellnessFirst Clinic\n\nHi WellnessFirst,\n\nFollowing up on my previous email about helping WellnessFirst Clinic grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Healthcare company in Singapore:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How WellnessFirst Clinic can get 3x more leads",
+          "body": "Subject: How WellnessFirst Clinic can get 3x more leads\n\nHi WellnessFirst,\n\nI did some research on WellnessFirst Clinic and have a quick idea:\n\nHealthcare companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach WellnessFirst Clinic's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "FinServe Corp",
+        "email": "contact@finserve.com",
+        "industry": "Finance",
+        "size": "51-200",
+        "country": "UK",
+        "website": "finserve.com"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about FinServe Corp's digital growth",
+          "body": "Subject: Quick question about FinServe Corp's digital growth\n\nHi FinServe,\n\nI noticed FinServe Corp (finserve.com) is doing interesting work in Finance.\n\nWe help Finance companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Finance company in UK \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about FinServe Corp",
+          "body": "Subject: Re: Quick question about FinServe Corp\n\nHi FinServe,\n\nFollowing up on my previous email about helping FinServe Corp grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Finance company in UK:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How FinServe Corp can get 3x more leads",
+          "body": "Subject: How FinServe Corp can get 3x more leads\n\nHi FinServe,\n\nI did some research on FinServe Corp and have a quick idea:\n\nFinance companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach FinServe Corp's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "MoneyWise App",
+        "email": "hello@moneywise.io",
+        "industry": "FinTech",
+        "size": "11-50",
+        "country": "USA",
+        "website": "moneywise.io"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about MoneyWise App's digital growth",
+          "body": "Subject: Quick question about MoneyWise App's digital growth\n\nHi MoneyWise,\n\nI noticed MoneyWise App (moneywise.io) is doing interesting work in FinTech.\n\nWe help FinTech companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- FinTech company in USA \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about MoneyWise App",
+          "body": "Subject: Re: Quick question about MoneyWise App\n\nHi MoneyWise,\n\nFollowing up on my previous email about helping MoneyWise App grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a FinTech company in USA:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How MoneyWise App can get 3x more leads",
+          "body": "Subject: How MoneyWise App can get 3x more leads\n\nHi MoneyWise,\n\nI did some research on MoneyWise App and have a quick idea:\n\nFinTech companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach MoneyWise App's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "TrustFinance Ltd",
+        "email": "info@trustfinance.au",
+        "industry": "Finance",
+        "size": "11-50",
+        "country": "Australia",
+        "website": "trustfinance.au"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about TrustFinance Ltd's digital growth",
+          "body": "Subject: Quick question about TrustFinance Ltd's digital growth\n\nHi TrustFinance,\n\nI noticed TrustFinance Ltd (trustfinance.au) is doing interesting work in Finance.\n\nWe help Finance companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Finance company in Australia \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about TrustFinance Ltd",
+          "body": "Subject: Re: Quick question about TrustFinance Ltd\n\nHi TrustFinance,\n\nFollowing up on my previous email about helping TrustFinance Ltd grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Finance company in Australia:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How TrustFinance Ltd can get 3x more leads",
+          "body": "Subject: How TrustFinance Ltd can get 3x more leads\n\nHi TrustFinance,\n\nI did some research on TrustFinance Ltd and have a quick idea:\n\nFinance companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach TrustFinance Ltd's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "LuxStay Hotels",
+        "email": "reservations@luxstayhotels.com",
+        "industry": "Hospitality",
+        "size": "51-200",
+        "country": "Thailand",
+        "website": "luxstayhotels.com"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about LuxStay Hotels's digital growth",
+          "body": "Subject: Quick question about LuxStay Hotels's digital growth\n\nHi LuxStay,\n\nI noticed LuxStay Hotels (luxstayhotels.com) is doing interesting work in Hospitality.\n\nWe help Hospitality companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Hospitality company in Thailand \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about LuxStay Hotels",
+          "body": "Subject: Re: Quick question about LuxStay Hotels\n\nHi LuxStay,\n\nFollowing up on my previous email about helping LuxStay Hotels grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Hospitality company in Thailand:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How LuxStay Hotels can get 3x more leads",
+          "body": "Subject: How LuxStay Hotels can get 3x more leads\n\nHi LuxStay,\n\nI did some research on LuxStay Hotels and have a quick idea:\n\nHospitality companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach LuxStay Hotels's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "TravelMate Asia",
+        "email": "hello@travelmate.asia",
+        "industry": "Tourism",
+        "size": "11-50",
+        "country": "Singapore",
+        "website": "travelmate.asia"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about TravelMate Asia's digital growth",
+          "body": "Subject: Quick question about TravelMate Asia's digital growth\n\nHi TravelMate,\n\nI noticed TravelMate Asia (travelmate.asia) is doing interesting work in Tourism.\n\nWe help Tourism companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Tourism company in Singapore \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about TravelMate Asia",
+          "body": "Subject: Re: Quick question about TravelMate Asia\n\nHi TravelMate,\n\nFollowing up on my previous email about helping TravelMate Asia grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Tourism company in Singapore:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How TravelMate Asia can get 3x more leads",
+          "body": "Subject: How TravelMate Asia can get 3x more leads\n\nHi TravelMate,\n\nI did some research on TravelMate Asia and have a quick idea:\n\nTourism companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach TravelMate Asia's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "Vista Resorts",
+        "email": "info@vistaresorts.com",
+        "industry": "Hospitality",
+        "size": "51-200",
+        "country": "Indonesia",
+        "website": "vistaresorts.com"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about Vista Resorts's digital growth",
+          "body": "Subject: Quick question about Vista Resorts's digital growth\n\nHi Vista,\n\nI noticed Vista Resorts (vistaresorts.com) is doing interesting work in Hospitality.\n\nWe help Hospitality companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Hospitality company in Indonesia \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about Vista Resorts",
+          "body": "Subject: Re: Quick question about Vista Resorts\n\nHi Vista,\n\nFollowing up on my previous email about helping Vista Resorts grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Hospitality company in Indonesia:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How Vista Resorts can get 3x more leads",
+          "body": "Subject: How Vista Resorts can get 3x more leads\n\nHi Vista,\n\nI did some research on Vista Resorts and have a quick idea:\n\nHospitality companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach Vista Resorts's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "ShopNow Platform",
+        "email": "contact@shopnow.io",
+        "industry": "E-Commerce",
+        "size": "11-50",
+        "country": "USA",
+        "website": "shopnow.io"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about ShopNow Platform's digital growth",
+          "body": "Subject: Quick question about ShopNow Platform's digital growth\n\nHi ShopNow,\n\nI noticed ShopNow Platform (shopnow.io) is doing interesting work in E-Commerce.\n\nWe help E-Commerce companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- E-Commerce company in USA \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about ShopNow Platform",
+          "body": "Subject: Re: Quick question about ShopNow Platform\n\nHi ShopNow,\n\nFollowing up on my previous email about helping ShopNow Platform grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a E-Commerce company in USA:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How ShopNow Platform can get 3x more leads",
+          "body": "Subject: How ShopNow Platform can get 3x more leads\n\nHi ShopNow,\n\nI did some research on ShopNow Platform and have a quick idea:\n\nE-Commerce companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach ShopNow Platform's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "RetailBoost",
+        "email": "hello@retailboost.co",
+        "industry": "RetailTech",
+        "size": "11-50",
+        "country": "UK",
+        "website": "retailboost.co"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about RetailBoost's digital growth",
+          "body": "Subject: Quick question about RetailBoost's digital growth\n\nHi RetailBoost,\n\nI noticed RetailBoost (retailboost.co) is doing interesting work in RetailTech.\n\nWe help RetailTech companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- RetailTech company in UK \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about RetailBoost",
+          "body": "Subject: Re: Quick question about RetailBoost\n\nHi RetailBoost,\n\nFollowing up on my previous email about helping RetailBoost grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a RetailTech company in UK:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How RetailBoost can get 3x more leads",
+          "body": "Subject: How RetailBoost can get 3x more leads\n\nHi RetailBoost,\n\nI did some research on RetailBoost and have a quick idea:\n\nRetailTech companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach RetailBoost's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "MarketFresh",
+        "email": "info@marketfresh.sg",
+        "industry": "E-Commerce",
+        "size": "11-50",
+        "country": "Singapore",
+        "website": "marketfresh.sg"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about MarketFresh's digital growth",
+          "body": "Subject: Quick question about MarketFresh's digital growth\n\nHi MarketFresh,\n\nI noticed MarketFresh (marketfresh.sg) is doing interesting work in E-Commerce.\n\nWe help E-Commerce companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- E-Commerce company in Singapore \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about MarketFresh",
+          "body": "Subject: Re: Quick question about MarketFresh\n\nHi MarketFresh,\n\nFollowing up on my previous email about helping MarketFresh grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a E-Commerce company in Singapore:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How MarketFresh can get 3x more leads",
+          "body": "Subject: How MarketFresh can get 3x more leads\n\nHi MarketFresh,\n\nI did some research on MarketFresh and have a quick idea:\n\nE-Commerce companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach MarketFresh's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "EduTech Academy",
+        "email": "contact@edutech.academy",
+        "industry": "EdTech",
+        "size": "11-50",
+        "country": "USA",
+        "website": "edutech.academy"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about EduTech Academy's digital growth",
+          "body": "Subject: Quick question about EduTech Academy's digital growth\n\nHi EduTech,\n\nI noticed EduTech Academy (edutech.academy) is doing interesting work in EdTech.\n\nWe help EdTech companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- EdTech company in USA \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about EduTech Academy",
+          "body": "Subject: Re: Quick question about EduTech Academy\n\nHi EduTech,\n\nFollowing up on my previous email about helping EduTech Academy grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a EdTech company in USA:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How EduTech Academy can get 3x more leads",
+          "body": "Subject: How EduTech Academy can get 3x more leads\n\nHi EduTech,\n\nI did some research on EduTech Academy and have a quick idea:\n\nEdTech companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach EduTech Academy's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "LearnHub Asia",
+        "email": "hello@learnhub.asia",
+        "industry": "EdTech",
+        "size": "11-50",
+        "country": "Singapore",
+        "website": "learnhub.asia"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about LearnHub Asia's digital growth",
+          "body": "Subject: Quick question about LearnHub Asia's digital growth\n\nHi LearnHub,\n\nI noticed LearnHub Asia (learnhub.asia) is doing interesting work in EdTech.\n\nWe help EdTech companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- EdTech company in Singapore \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about LearnHub Asia",
+          "body": "Subject: Re: Quick question about LearnHub Asia\n\nHi LearnHub,\n\nFollowing up on my previous email about helping LearnHub Asia grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a EdTech company in Singapore:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How LearnHub Asia can get 3x more leads",
+          "body": "Subject: How LearnHub Asia can get 3x more leads\n\nHi LearnHub,\n\nI did some research on LearnHub Asia and have a quick idea:\n\nEdTech companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach LearnHub Asia's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "SkillsFirst Institute",
+        "email": "info@skillsfirst.au",
+        "industry": "Education",
+        "size": "11-50",
+        "country": "Australia",
+        "website": "skillsfirst.au"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about SkillsFirst Institute's digital growth",
+          "body": "Subject: Quick question about SkillsFirst Institute's digital growth\n\nHi SkillsFirst,\n\nI noticed SkillsFirst Institute (skillsfirst.au) is doing interesting work in Education.\n\nWe help Education companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Education company in Australia \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about SkillsFirst Institute",
+          "body": "Subject: Re: Quick question about SkillsFirst Institute\n\nHi SkillsFirst,\n\nFollowing up on my previous email about helping SkillsFirst Institute grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Education company in Australia:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How SkillsFirst Institute can get 3x more leads",
+          "body": "Subject: How SkillsFirst Institute can get 3x more leads\n\nHi SkillsFirst,\n\nI did some research on SkillsFirst Institute and have a quick idea:\n\nEducation companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach SkillsFirst Institute's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "LegalEase Partners",
+        "email": "contact@legalease.law",
+        "industry": "LegalTech",
+        "size": "11-50",
+        "country": "UK",
+        "website": "legalease.law"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about LegalEase Partners's digital growth",
+          "body": "Subject: Quick question about LegalEase Partners's digital growth\n\nHi LegalEase,\n\nI noticed LegalEase Partners (legalease.law) is doing interesting work in LegalTech.\n\nWe help LegalTech companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- LegalTech company in UK \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about LegalEase Partners",
+          "body": "Subject: Re: Quick question about LegalEase Partners\n\nHi LegalEase,\n\nFollowing up on my previous email about helping LegalEase Partners grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a LegalTech company in UK:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How LegalEase Partners can get 3x more leads",
+          "body": "Subject: How LegalEase Partners can get 3x more leads\n\nHi LegalEase,\n\nI did some research on LegalEase Partners and have a quick idea:\n\nLegalTech companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach LegalEase Partners's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "ConsultPro Group",
+        "email": "hello@consultpro.co",
+        "industry": "Consulting",
+        "size": "51-200",
+        "country": "USA",
+        "website": "consultpro.co"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about ConsultPro Group's digital growth",
+          "body": "Subject: Quick question about ConsultPro Group's digital growth\n\nHi ConsultPro,\n\nI noticed ConsultPro Group (consultpro.co) is doing interesting work in Consulting.\n\nWe help Consulting companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- Consulting company in USA \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about ConsultPro Group",
+          "body": "Subject: Re: Quick question about ConsultPro Group\n\nHi ConsultPro,\n\nFollowing up on my previous email about helping ConsultPro Group grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a Consulting company in USA:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How ConsultPro Group can get 3x more leads",
+          "body": "Subject: How ConsultPro Group can get 3x more leads\n\nHi ConsultPro,\n\nI did some research on ConsultPro Group and have a quick idea:\n\nConsulting companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach ConsultPro Group's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    },
+    {
+      "lead": {
+        "company": "HR Solutions Asia",
+        "email": "info@hrsolutions.asia",
+        "industry": "HRTech",
+        "size": "11-50",
+        "country": "Singapore",
+        "website": "hrsolutions.asia"
+      },
+      "sequence": [
+        {
+          "day": 1,
+          "subject": "Quick question about HR Solutions Asia's digital growth",
+          "body": "Subject: Quick question about HR Solutions Asia's digital growth\n\nHi HR,\n\nI noticed HR Solutions Asia (hrsolutions.asia) is doing interesting work in HRTech.\n\nWe help HRTech companies like yours:\n\u2022 Increase leads by 40-60% within 90 days\n\u2022 Build professional websites that convert\n\u2022 Automate customer acquisition\n\nRecent results for similar companies:\n- HRTech company in Singapore \u2192 3x more qualified leads\n- Saved 20+ hours/week with marketing automation\n\nWould you be open to a quick 15-minute call this week?\n\nIf not, no worries - I'll follow up in a week.\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS\n\ud83d\udce7 alex@mahalakshmi.io\n\ud83c\udf10 mahalakshmi.io",
+          "status": "ready_to_send"
+        },
+        {
+          "day": 4,
+          "subject": "Re: Quick question about HR Solutions Asia",
+          "body": "Subject: Re: Quick question about HR Solutions Asia\n\nHi HR,\n\nFollowing up on my previous email about helping HR Solutions Asia grow.\n\nI know you're busy, so I'll keep this short:\n\n\ud83d\udd25 We helped a HRTech company in Singapore:\n   - 150% increase in website traffic\n   - 3x more demo requests\n   - 40% improvement in conversion rate\n\nWould a quick 15-min call this Thursday work?\n\nOr simply reply \"interested\" and I'll send over our case study.\n\nEither way, I'd love to connect.\n\nBest,\nAlex Johnson",
+          "status": "scheduled"
+        },
+        {
+          "day": 7,
+          "subject": "How HR Solutions Asia can get 3x more leads",
+          "body": "Subject: How HR Solutions Asia can get 3x more leads\n\nHi HR,\n\nI did some research on HR Solutions Asia and have a quick idea:\n\nHRTech companies we work with typically see:\n\ud83d\udcc8 40-60% increase in qualified leads\n\u23f1\ufe0f 50% reduction in customer acquisition time  \n\ud83d\udcb0 ROI positive within the first month\n\nIf you're open to it, I'd love to share exactly how we'd approach HR Solutions Asia's growth.\n\nQuick 15-min call this week?\n\nBest,\nAlex Johnson\nMAHA LAKSHMI HOLDINGS",
+          "status": "scheduled"
+        }
+      ]
+    }
+  ]
+}
