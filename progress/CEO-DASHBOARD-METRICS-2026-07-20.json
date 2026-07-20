@@ -1,0 +1,116 @@
+{
+  "date": "2026-07-20",
+  "generated_at": "2026-07-20T04:03:57Z",
+  "company": {
+    "name": "MAHA LAKSHMI Digital Holdings",
+    "ceo": "i Made Purna Ananda",
+    "bank": "BCA 6485086645",
+    "whatsapp": "wa.me/6281337558787",
+    "email": "admin@mahalaksmi.web.id"
+  },
+  "monthly_target": {
+    "total": 100000000,
+    "current_revenue": 0,
+    "progress_percentage": 0,
+    "remaining": 100000000
+  },
+  "sbu_targets": [
+    {"id": 1, "name": "Payangan AI Solutions", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 2, "name": "Gianyar Tech Solutions", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 3, "name": "Bali Digital Agency", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 4, "name": "Gianyar E-Commerce Hub", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 5, "name": "Bali EdTech Center", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 6, "name": "Gianyar Finance Tech", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 7, "name": "Bali Logistics Network", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 8, "name": "Gianyar Food Tech", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 9, "name": "Bali Travel Platform", "target": 10000000, "current": 0, "progress": 0},
+    {"id": 10, "name": "Gianyar Property Tech", "target": 10000000, "current": 0, "progress": 0}
+  ],
+  "leads_pipeline": {
+    "total_leads": 10,
+    "hot_leads": 6,
+    "warm_leads": 4,
+    "cold_leads": 0,
+    "total_pipeline_value": 43500000,
+    "average_lead_value": 4350000
+  },
+  "outreach_metrics": {
+    "emails_sent": 10,
+    "whatsapp_sent": 10,
+    "responses_received": 0,
+    "response_rate": 0,
+    "conversion_to_qualified": 0
+  },
+  "conversion_funnel": {
+    "leads": 10,
+    "contacted": 10,
+    "responded": 0,
+    "qualified": 0,
+    "proposal_sent": 0,
+    "negotiation": 0,
+    "closed_won": 0,
+    "closed_lost": 0
+  },
+  "top_leads": [
+    {"id": 3, "name": "AYANA Resort Bali", "value": 10000000, "category": "bali-travel", "priority": "HIGH"},
+    {"id": 1, "name": "Four Seasons Resort Sayan", "value": 5000000, "category": "bali-travel", "priority": "HIGH"},
+    {"id": 2, "name": "Viceroy Bali", "value": 5000000, "category": "bali-travel", "priority": "HIGH"},
+    {"id": 4, "name": "Bali Easy Go Tours", "value": 5000000, "category": "bali-travel", "priority": "HIGH"},
+    {"id": 9, "name": "Hotel Ubud Jaya", "value": 5000000, "category": "gianyar-tech", "priority": "HIGH"}
+  ],
+  "category_breakdown": {
+    "bali_travel": {
+      "leads": 8,
+      "pipeline_value": 37000000,
+      "high_priority": 5
+    },
+    "gianyar_tech": {
+      "leads": 2,
+      "pipeline_value": 6500000,
+      "high_priority": 1
+    }
+  },
+  "followup_schedule": {
+    "next_followup": "2026-07-23",
+    "day_3": "2026-07-23",
+    "day_7": "2026-07-27",
+    "day_14": "2026-08-03"
+  },
+  "daily_targets": {
+    "new_leads": 10,
+    "emails_sent": 10,
+    "whatsapp_sent": 10,
+    "discovery_calls": 0,
+    "proposals_sent": 0,
+    "deals_closed": 0
+  },
+  "weekly_targets": {
+    "new_leads": 50,
+    "emails_sent": 100,
+    "whatsapp_sent": 100,
+    "discovery_calls": 10,
+    "proposals_sent": 5,
+    "deals_closed": 2,
+    "revenue_target": 10000000
+  },
+  "action_items": [
+    {"priority": 1, "action": "Send WhatsApp to top 5 leads", "status": "pending"},
+    {"priority": 2, "action": "Send emails via SMTP to all leads", "status": "pending"},
+    {"priority": 3, "action": "Generate 40 more leads (4 per SBU)", "status": "pending"},
+    {"priority": 4, "action": "Schedule discovery calls with hot leads", "status": "pending"},
+    {"priority": 5, "action": "Send first proposal to qualified lead", "status": "pending"}
+  ],
+  "files_generated": [
+    {"file": "docs/sales/PERSONALIZED-OUTREACH-2026-07-20.md", "description": "10 personalized outreach messages"},
+    {"file": "docs/sales/SALES-PLAYBOOK.md", "description": "Daily sales playbook and report"},
+    {"file": "archives/LEADS-DATABASE.json", "description": "Updated leads database"},
+    {"file": "progress/CEO-DASHBOARD-METRICS-2026-07-20.json", "description": "CEO dashboard metrics"}
+  ],
+  "agent_status": {
+    "sales_agent": "ACTIVE",
+    "last_run": "2026-07-20T04:03:57Z",
+    "outreach_completed": true,
+    "database_updated": true,
+    "report_generated": true
+  }
+}

@@ -20,7 +20,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Four%20Seasons%20Sayan!%20👋%20Dari%20Bali%20Travel%20Platform.%20Partner%20dengan%20kami%20untuk%20tour%20eksklusif!%20Commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Four%20Seasons%20Sayan!%20\ud83d\udc4b%20Dari%20Bali%20Travel%20Platform.%20Partner%20dengan%20kami%20untuk%20tour%20eksklusif!%20Commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "high"
+      }
     },
     {
       "id": 2,
@@ -42,7 +50,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Viceroy%20Bali!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Viceroy%20Bali!%20\ud83d\udc4b%20Partnership%20tour%20dengan%20commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "high"
+      }
     },
     {
       "id": 3,
@@ -64,7 +80,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20AYANA%20Resort!%20👋%20Partnership%20dengan%20commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20AYANA%20Resort!%20\ud83d\udc4b%20Partnership%20dengan%20commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "high"
+      }
     },
     {
       "id": 4,
@@ -86,7 +110,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bali%20Easy%20Go!%20👋%20Partnership%20tour%20Bali%20dengan%20commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bali%20Easy%20Go!%20\ud83d\udc4b%20Partnership%20tour%20Bali%20dengan%20commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "high"
+      }
     },
     {
       "id": 5,
@@ -108,7 +140,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Nusapenida.com!%20👋%20Partnership%20Nusa%20Penida%20dengan%20commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Nusapenida.com!%20\ud83d\udc4b%20Partnership%20Nusa%20Penida%20dengan%20commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "high"
+      }
     },
     {
       "id": 6,
@@ -130,7 +170,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Dewata%20Tour!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Dewata%20Tour!%20\ud83d\udc4b%20Partnership%20tour%20dengan%20commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "medium"
+      }
     },
     {
       "id": 7,
@@ -152,7 +200,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bintang%20Bali!%20👋%20Partnership%20tour%20dengan%20commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Bintang%20Bali!%20\ud83d\udc4b%20Partnership%20tour%20dengan%20commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "medium"
+      }
     },
     {
       "id": 8,
@@ -174,7 +230,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Safari%20Bali!%20👋%20Partnership%20adventure%20tours%20dengan%20commission%2015%25!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Safari%20Bali!%20\ud83d\udc4b%20Partnership%20adventure%20tours%20dengan%20commission%2015%25!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "bali-travel",
+        "priority": "high"
+      }
     },
     {
       "id": 9,
@@ -196,7 +260,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Hotel%20Ubud%20Jaya!%20👋%20Gianyar%20Tech%20Solutions%20-%20Web%20Development%20Services!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Hotel%20Ubud%20Jaya!%20\ud83d\udc4b%20Gianyar%20Tech%20Solutions%20-%20Web%20Development%20Services!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "gianyar-tech",
+        "priority": "high"
+      }
     },
     {
       "id": 10,
@@ -218,7 +290,15 @@
       "replied_at": null,
       "last_followup": null,
       "next_followup": "2026-07-23T10:00:00+07:00",
-      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Warung%20Indonesia!%20👋%20Bali%20Digital%20Agency%20-%20Digital%20Marketing%20Services!"
+      "whatsapp_link": "https://wa.me/6281337558787?text=Halo%20Warung%20Indonesia!%20\ud83d\udc4b%20Bali%20Digital%20Agency%20-%20Digital%20Marketing%20Services!",
+      "personalized_outreach": {
+        "email_generated": true,
+        "whatsapp_generated": true,
+        "outreach_date": "2026-07-20",
+        "next_followup": "2026-07-23",
+        "category": "gianyar-tech",
+        "priority": "medium"
+      }
     }
   ],
   "stats": {
@@ -233,7 +313,8 @@
     "whatsapp_sent": 10,
     "pending_followup": 10,
     "high_priority": 6,
-    "medium_priority": 4
+    "medium_priority": 4,
+    "last_updated": "2026-07-20T04:07:12.850595"
   },
   "settings": {
     "auto_refresh": 60,
