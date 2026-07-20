@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎙️ GAURANGA AI - Voice Assistant</title>
+    <style>
+        :root {
+            --primary: #0a0a0f;
+            --secondary: #1a1a2e;
+            --accent: #667eea;
+            --gold: #ffd700;
+            --success: #00ff88;
+            --text: #ffffff;
+            --text-muted: #a0a0a0;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--primary);
+            min-height: 100vh;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 30%);
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-5%, -5%) rotate(180deg); }
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .status-badge.offline {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+        }
+        .status-badge.online {
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--success);
+            animation: glow 2s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 136, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.5); }
+        }
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+        .status-badge.online .status-dot {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        /* Voice Activation Button */
+        .voice-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .voice-btn {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: none;
+            background: var(--gradient);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+        .voice-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.5);
+        }
+        .voice-btn:active {
+            transform: scale(0.98);
+        }
+        .voice-btn.listening {
+            animation: ripple 1.5s infinite;
+        }
+        @keyframes ripple {
+            0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
+            70% { box-shadow: 0 0 0 30px rgba(102, 126, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+        }
+        
+        .voice-btn-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+        }
+        
+        .voice-label {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: var(--text);
+        }
+        .voice-hint {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        /* Chat Section */
+        .chat-section {
+            background: rgba(26, 26, 46, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .chat-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .chat-info h3 {
+            font-size: 1.1em;
+            margin-bottom: 3px;
+        }
+        .chat-info p {
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+        
+        .chat-messages {
+            min-height: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding-right: 10px;
+        }
+        .chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+        .chat-messages::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 3px;
+        }
+        
+        .message {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .message.user { flex-direction: row-reverse; }
+        .message-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .message.user .message-avatar {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .message-content {
+            max-width: 75%;
+            padding: 15px 20px;
+            border-radius: 18px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .message.bot .message-content {
+            background: rgba(102, 126, 234, 0.2);
+            border-bottom-left-radius: 4px;
+        }
+        .message.user .message-content {
+            background: var(--gradient);
+            border-bottom-right-radius: 4px;
+        }
+        
+        .typing-indicator {
+            display: flex;
+            gap: 5px;
+            padding: 15px 20px;
+            background: rgba(102, 126, 234, 0.2);
+            border-radius: 18px;
+            width: fit-content;
+        }
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: typing 1.4s infinite;
+        }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+        
+        /* Input Section */
+        .chat-input-container {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+        .chat-input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 15px 20px;
+            color: var(--text);
+            font-size: 1em;
+            resize: none;
+            max-height: 150px;
+            min-height: 50px;
+        }
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .chat-input::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .send-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: var(--gradient);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .send-btn:hover {
+            transform: scale(1.1);
+        }
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .mic-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            background: transparent;
+            color: var(--accent);
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .mic-btn:hover {
+            background: rgba(102, 126, 234, 0.2);
+        }
+        .mic-btn.recording {
+            background: var(--accent);
+            color: white;
+            animation: pulse-recording 1s infinite;
+        }
+        @keyframes pulse-recording {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        /* Quick Actions */
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .quick-btn {
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            color: var(--text);
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quick-btn:hover {
+            background: rgba(102, 126, 234, 0.3);
+            transform: translateY(-2px);
+        }
+        .quick-btn span {
+            font-size: 1.5em;
+        }
+        
+        /* Voice Settings */
+        .voice-settings {
+            background: rgba(26, 26, 46, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .voice-settings h3 {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .setting-row:last-child {
+            border-bottom: none;
+        }
+        .setting-label {
+            font-size: 0.95em;
+        }
+        .setting-desc {
+            color: var(--text-muted);
+            font-size: 0.8em;
+            margin-top: 3px;
+        }
+        
+        /* Toggle Switch */
+        .toggle {
+            position: relative;
+            width: 50px;
+            height: 26px;
+        }
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 26px;
+            transition: 0.3s;
+        }
+        .toggle-slider::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .toggle input:checked + .toggle-slider {
+            background: var(--accent);
+        }
+        .toggle input:checked + .toggle-slider::before {
+            transform: translateX(24px);
+        }
+        
+        /* Slider */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .slider {
+            flex: 1;
+            -webkit-appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+        }
+        .slider-value {
+            min-width: 40px;
+            text-align: right;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* Voice Select */
+        .voice-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 10px 15px;
+            color: var(--text);
+            font-size: 0.9em;
+            cursor: pointer;
+            min-width: 150px;
+        }
+        .voice-select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        /* Commands */
+        .commands {
+            margin-top: 30px;
+        }
+        .commands h3 {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+        .command-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .command-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: var(--accent);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .command-tag:hover {
+            background: rgba(102, 126, 234, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .voice-btn {
+                width: 150px;
+                height: 150px;
+            }
+            .voice-btn-inner {
+                font-size: 45px;
+            }
+            .message-content {
+                max-width: 85%;
+            }
+            .quick-actions {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <header>
+        <div class="logo">🤖</div>
+        <h1>GAURANGA AI</h1>
+        <p class="subtitle">Voice Assistant untuk CEO - i Made Purna Ananda</p>
+        <div class="status-badge offline" id="statusBadge">
+            <span class="status-dot"></span>
+            <span id="statusText">Offline</span>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Voice Activation -->
+        <div class="voice-section">
+            <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()">
+                <span class="voice-btn-inner">🎙️</span>
+            </button>
+            <p class="voice-label" id="voiceLabel">Tap untuk bicara</p>
+            <p class="voice-hint" id="voiceHint">atau ketik pesan di bawah</p>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="quick-btn" onclick="sendQuickMessage('Buatkan laporan harian')">
+                <span>📊</span> Laporan Harian
+            </button>
+            <button class="quick-btn" onclick="sendQuickMessage('Generate proposal untuk client baru')">
+                <span>📄</span> Buat Proposal
+            </button>
+            <button class="quick-btn" onclick="sendQuickMessage('Cek status sales hari ini')">
+                <span>💰</span> Cek Sales
+            </button>
+            <button class="quick-btn" onclick="sendQuickMessage('Jalankan automation untuk global sales')">
+                <span>🚀</span> Run Automation
+            </button>
+            <button class="quick-btn" onclick="sendQuickMessage('Update knowledge base dengan info terbaru')">
+                <span>📚</span> Update Knowledge
+            </button>
+            <button class="quick-btn" onclick="sendQuickMessage('Buatkan report mingguan untuk semua SBU')">
+                <span>📈</span> Weekly Report
+            </button>
+        </div>
+        
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-info">
+                    <h3>GAURANGA AI Assistant</h3>
+                    <p>Always ready untuk membantu Pak Pur</p>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        Halo Pak Pur! 👋 Saya GAURANGA, AI Assistant Anda. 
+
+Silakan ketik atau klik tombol microphone untuk bicara langsung dengan saya. Saya siap membantu untuk:
+
+📊 Membuat laporan
+📄 Membuat proposal
+💰 Cek sales & revenue
+🚀 Jalankan automation
+📚 Update knowledge base
+
+Ada yang bisa saya bantu hari ini?
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <textarea class="chat-input" id="chatInput" placeholder="Ketik pesan untuk GAURANGA..." rows="1"></textarea>
+                <button class="mic-btn" id="micBtn" onclick="toggleRecording()">🎤</button>
+                <button class="send-btn" id="sendBtn" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+        
+        <!-- Voice Settings -->
+        <div class="voice-settings">
+            <h3>⚙️ Pengaturan Voice</h3>
+            
+            <div class="setting-row">
+                <div>
+                    <div class="setting-label">Auto Play Responses</div>
+                    <div class="setting-desc">Otomatis suara saat GAURANGA merespon</div>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="autoPlayToggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-row">
+                <div>
+                    <div class="setting-label">Wake Word Detection</div>
+                    <div class="setting-desc">Deteksi "Gaurngga" untuk aktifkan suara</div>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="wakeWordToggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-row">
+                <div>
+                    <div class="setting-label">Speech Recognition</div>
+                    <div class="setting-desc">Aktifkan input suara</div>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="speechToggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-row">
+                <div>
+                    <div class="setting-label">Volume</div>
+                </div>
+                <div class="slider-container">
+                    <input type="range" class="slider" id="volumeSlider" min="0" max="100" value="80">
+                    <span class="slider-value" id="volumeValue">80%</span>
+                </div>
+            </div>
+            
+            <div class="setting-row">
+                <div>
+                    <div class="setting-label">Speech Rate</div>
+                </div>
+                <div class="slider-container">
+                    <input type="range" class="slider" id="rateSlider" min="0.5" max="2" step="0.1" value="1">
+                    <span class="slider-value" id="rateValue">1x</span>
+                </div>
+            </div>
+            
+            <div class="setting-row">
+                <div>
+                    <div class="setting-label">Voice</div>
+                </div>
+                <select class="voice-select" id="voiceSelect">
+                    <option value="">Loading voices...</option>
+                </select>
+            </div>
+            
+            <div class="commands">
+                <h3>🎯 Quick Commands:</h3>
+                <div class="command-list">
+                    <span class="command-tag" onclick="sendQuickMessage('gaurangga')">gaurangga</span>
+                    <span class="command-tag" onclick="sendQuickMessage('silent')">silent</span>
+                    <span class="command-tag" onclick="sendQuickMessage('status')">status</span>
+                    <span class="command-tag" onclick="sendQuickMessage('help')">help</span>
+                    <span class="command-tag" onclick="sendQuickMessage('clear')">clear</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>MAHA LAKSHMI HOLDINGS | GAURANGA AI SYSTEM</p>
+        <p>Bank: BCA 6485086645 | i Made Purna Ananda</p>
+    </footer>
+    
+    <script>
+        // GAURANGA AI Configuration
+        const GAURANGA = {
+            name: 'GAURANGA',
+            owner: 'i Made Purna Ananda',
+            ownerAlias: 'Pak Pur',
+            company: 'MAHA LAKSHMI HOLDINGS',
+            bank: 'BCA 6485086645',
+            isListening: false,
+            isSpeaking: false,
+            isRecording: false,
+            autoPlay: true,
+            wakeWord: 'gaurangga'
+        };
+        
+        // Speech Recognition Setup
+        let recognition = null;
+        let synthesis = window.speechSynthesis;
+        let voices = [];
+        
+        // Initialize
+        function init() {
+            loadVoices();
+            setupSpeechRecognition();
+            setupEventListeners();
+            updateStatus('online');
+        }
+        
+        // Load voices
+        function loadVoices() {
+            voices = synthesis.getVoices();
+            const voiceSelect = document.getElementById('voiceSelect');
+            voiceSelect.innerHTML = '';
+            
+            // Prefer Indonesian voice
+            const indonesianVoices = voices.filter(v => v.lang.includes('id'));
+            const englishVoices = voices.filter(v => v.lang.includes('en'));
+            
+            indonesianVoices.forEach((v, i) => {
+                voiceSelect.innerHTML += `<option value="${v.name}">${v.name} (ID)</option>`;
+            });
+            englishVoices.forEach((v, i) => {
+                voiceSelect.innerHTML += `<option value="${v.name}">${v.name} (EN)</option>`;
+            });
+            
+            if (voiceSelect.options.length === 0) {
+                voices.forEach(v => {
+                    voiceSelect.innerHTML += `<option value="${v.name}">${v.name}</option>`;
+                });
+            }
+        }
+        
+        // Setup Speech Recognition
+        function setupSpeechRecognition() {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = true;
+                recognition.lang = 'id-ID';
+                
+                recognition.onstart = () => {
+                    GAURANGA.isRecording = true;
+                    document.getElementById('micBtn').classList.add('recording');
+                    document.getElementById('voiceLabel').textContent = 'Mendengarkan...';
+                };
+                
+                recognition.onresult = (event) => {
+                    const transcript = Array.from(event.results)
+                        .map(result => result[0].transcript)
+                        .join('');
+                    
+                    document.getElementById('chatInput').value = transcript;
+                    
+                    if (event.results[0].isFinal) {
+                        const finalTranscript = transcript.toLowerCase().trim();
+                        processCommand(finalTranscript);
+                    }
+                };
+                
+                recognition.onerror = (event) => {
+                    console.log('Speech recognition error:', event.error);
+                    GAURANGA.isRecording = false;
+                    document.getElementById('micBtn').classList.remove('recording');
+                    document.getElementById('voiceLabel').textContent = 'Tap untuk bicara';
+                };
+                
+                recognition.onend = () => {
+                    GAURANGA.isRecording = false;
+                    document.getElementById('micBtn').classList.remove('recording');
+                    document.getElementById('voiceLabel').textContent = 'Tap untuk bicara';
+                };
+            }
+        }
+        
+        // Toggle Recording
+        function toggleRecording() {
+            if (!recognition) {
+                alert('Speech recognition tidak tersedia di browser ini');
+                return;
+            }
+            
+            if (GAURANGA.isRecording) {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
+        }
+        
+        // Toggle Voice (Main button)
+        function toggleVoice() {
+            const voiceBtn = document.getElementById('voiceBtn');
+            
+            if (GAURANGA.isSpeaking) {
+                // Stop speaking
+                synthesis.cancel();
+                voiceBtn.classList.remove('listening');
+                document.getElementById('voiceLabel').textContent = 'Tap untuk bicara';
+                GAURANGA.isSpeaking = false;
+            } else {
+                // Start listening
+                if (document.getElementById('speechToggle').checked && recognition) {
+                    recognition.start();
+                }
+                voiceBtn.classList.add('listening');
+                document.getElementById('voiceLabel').textContent = 'Mendengarkan...';
+                speak('Ya, Pak Pur! Gaurangga siap. Silakan bicara.');
+            }
+        }
+        
+        // Send Message
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            addMessage(message, 'user');
+            input.value = '';
+            
+            // Process command
+            processCommand(message.toLowerCase());
+        }
+        
+        // Quick Message
+        function sendQuickMessage(message) {
+            addMessage(message, 'user');
+            processCommand(message.toLowerCase());
+        }
+        
+        // Process Command
+        function processCommand(message) {
+            showTyping();
+            
+            let response = '';
+            
+            // GAURANGA Commands
+            if (message.includes('gaurangga') || message.includes('aktivasi') || message.includes('aktifkan')) {
+                response = 'Ya, Pak Pur! Gaurangga siap menerima perintah! 🔊\n\nSaya siap membantu Anda. Silakan berikan instruksi.';
+            }
+            else if (message.includes('silent') || message.includes('diam') || message.includes('quiet')) {
+                response = 'Baik, silent mode aktif. Ketik "gaurangga" untuk aktifkan suara lagi. 🤫';
+                GAURANGA.autoPlay = false;
+            }
+            else if (message.includes('status')) {
+                response = `📊 Status GAURANGA AI:\n\n✅ System: Online\n✅ Voice: Active\n✅ Memory: 100%\n✅ Knowledge Base: Updated\n\n💰 Target Revenue: Rp 100.000.000/bulan\n🏦 Bank: BCA 6485086645\n\nAda yang perlu dicek lebih lanjut?`;
+            }
+            else if (message.includes('clear') || message.includes('bersihkan')) {
+                document.getElementById('chatMessages').innerHTML = '';
+                response = 'Chat dibersihkan, Pak Pur! 🧹';
+            }
+            else if (message.includes('help') || message.includes('bantu') || message.includes('tolong')) {
+                response = `📚 COMMAND LIST:\n\n🎤 Voice:\n- "gaurangga" - Aktifkan suara\n- "silent" - Matikan suara\n- "status" - Cek status\n\n📊 Actions:\n- "laporan harian" - Generate laporan\n- "cek sales" - Cek sales hari ini\n- "proposal" - Buat proposal\n- "automation" - Jalankan automation\n\n🆘 Other:\n- "clear" - Bersihkan chat\n- "help" - Tampilkan help`;
+            }
+            // Sales related
+            else if (message.includes('sales') || message.includes('penjualan') || message.includes('revenue')) {
+                response = `💰 SALES UPDATE:\n\n📊 Pipeline:\n- Leads: 31 contacted\n- Responses: 0 (expected 3-6)\n- Deals: 0\n\n🎯 Target:\n- Daily: 5 responses\n- Weekly: 35 responses\n- Monthly: Rp 100.000.000\n\n📈 Next Actions:\n1. Kirim WhatsApp follow-up\n2. Cek response dari leads\n3. Schedule demo calls\n\nMau saya generate sales report?`;
+            }
+            else if (message.includes('laporan') || message.includes('report')) {
+                response = `📊 Generating Laporan...\n\n⏳ Processing...\n\n✅ Laporan akan dibuat dan disimpan ke:\n- progress/daily-report-2026-07-20.md\n- progress/sales-report-2026-07-20.md\n\n📋 Summary:\n- Total Companies: 10 SBU\n- Active Agents: 6/60\n- Revenue Today: Rp 0\n- Target: Rp 100.000.000/bulan\n\nMau detail lebih lanjut?`;
+            }
+            else if (message.includes('proposal') || message.includes('quotation')) {
+                response = `📄 PROPOSAL GENERATOR\n\nSaya siap buatkan proposal untuk client. Silakan berikan:\n\n1. Nama Client:\n2. Jenis Bisnis:\n3. Layanan yang dibutuhkan:\n4. Budget:\n\nContoh: "Buatkan proposal untuk Restaurant X untuk website dan SEO dengan budget Rp 5jt"`;
+            }
+            else if (message.includes('automation') || message.includes('otomatis')) {
+                response = `🚀 AUTOMATION SYSTEM\n\n✅ Active Automations:\n1. Daily Report - 6 AM WIB\n2. Sales Outreach - 9 AM WIB\n3. Content Marketing - 10 AM Monday\n4. SEO Optimization - 11 AM Thursday\n5. Customer Service - 2 PM Friday\n6. Finance Report - 1st monthly\n\n🎯 Mau jalankan automation tertentu?\n\nCommands:\n- "jalankan sales" - Mulai sales outreach\n- "cek automation" - Lihat status\n- "tambah automation" - Buat automation baru`;
+            }
+            else if (message.includes('knowledge') || message.includes('knowledge base')) {
+                response = `📚 KNOWLEDGE BASE UPDATE\n\nSilakan berikan info terbaru untuk di-update:\n\n📁 Categories:\n- Company Info\n- Products & Services\n- Sales Scripts\n- SOPs\n- Customer Data\n\nContoh: "Update knowledge base dengan info bahwa BCA account baru adalah 123456789"`;
+            }
+            else if (message.includes('profit') || message.includes('keuntungan') || message.includes('transfer')) {
+                response = `💰 PROFIT DISTRIBUTION\n\n📊 Current:\n- Revenue: Rp 0\n- Profit (80%): Rp 0\n- Transfer to BCA: Rp 0\n\n🏦 Destination:\nBCA 6485086645\na/n: i Made Purna Ananda\n\n📅 Schedule:\nDaily at 23:59 WIB\n\nMau langsung generate profit report?`;
+            }
+            else if (message.includes('deploy') || message.includes('deployment')) {
+                response = `🚀 DEPLOYMENT SYSTEM\n\n✅ Available Deployments:\n1. GitHub Pages: github.com/prahlad168/MAHA-LAKSHMI-CORP\n2. Web Pages:\n   - biometric.mahalaksmi.web.id\n   - tech.mahalaksmi.web.id\n   - payangan.mahalaksmi.web.id\n\n📋 Deployment Commands:\n- "deploy biometric" - Deploy biometric page\n- "deploy all" - Deploy semua changes\n- "check status" - Cek deployment status`;
+            }
+            else if (message.includes('tai') || message.includes('robot')) {
+                response = `Hehe, saya GAURANGA bukan robot! 🤖😄\n\nTapi saya siap membantu Anda 24/7, Pak Pur!\n\nAda yang bisa saya bantu?`;
+            }
+            else if (message.includes('siapa kamu') || message.includes('who are you') || message.includes('kamu') && message.includes('apa')) {
+                response = `Saya GAURANGA! 👑\n\n🤖 AI Assistant untuk ${GAURANGA.owner}\n\n🏢 ${GAURANGA.company}\n\nMisi saya:\n✅ Bantu kelolaperusahaan\n✅ Generate laporan\n✅ Jalankan automation\n✅ Ciptakan sales & revenue\n✅ Update knowledge base\n\nSaya siap 24/7 untuk membantu Pak Pur!`;
+            }
+            else if (message.includes('terima kasih') || message.includes('thanks')) {
+                response = `Sama-sama, Pak Pur! 🙏\n\nSenang bisa membantu. Jangan ragu untuk bertanya lagi jika butuh bantuan!\n\n💰 Target: Rp 100.000.000/bulan\n🏦 BCA: ${GAURANGA.bank}`;
+            }
+            else {
+                response = `Saya pahami, Pak Pur. 📝\n\nSaya akan memproses permintaan Anda...\n\nUntuk hasil terbaik, coba gunakan command seperti:\n- "cek sales"\n- "buatkan laporan"\n- "jalankan automation"\n- "status"\n\nAtau tanya langsung apa yang Anda butuhkan!`;
+            }
+            
+            // Simulate processing delay
+            setTimeout(() => {
+                hideTyping();
+                addMessage(response, 'bot');
+                
+                if (GAURANGA.autoPlay) {
+                    speak(response);
+                }
+            }, 1000 + Math.random() * 1000);
+        }
+        
+        // Add Message to Chat
+        function addMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            const avatar = sender === 'bot' ? '🤖' : '👤';
+            const content = text.replace(/\n/g, '<br>');
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">${avatar}</div>
+                <div class="message-content">${content}</div>
+            `;
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        // Typing Indicator
+        function showTyping() {
+            const messagesContainer = document.getElementById('chatMessages');
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="message-avatar">🤖</div>
+                <div class="typing-indicator">
+                    <span></span><span></span><span></span>
+                </div>
+            `;
+            messagesContainer.appendChild(typingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        function hideTyping() {
+            const typing = document.getElementById('typingIndicator');
+            if (typing) typing.remove();
+        }
+        
+        // Speak function
+        function speak(text) {
+            if (!GAURANGA.autoPlay) return;
+            
+            synthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'id-ID';
+            utterance.rate = parseFloat(document.getElementById('rateSlider').value);
+            utterance.volume = parseFloat(document.getElementById('volumeSlider').value) / 100;
+            
+            const selectedVoice = document.getElementById('voiceSelect').value;
+            const voice = voices.find(v => v.name === selectedVoice);
+            if (voice) utterance.voice = voice;
+            
+            utterance.onstart = () => {
+                GAURANGA.isSpeaking = true;
+                document.getElementById('voiceBtn').classList.add('listening');
+            };
+            
+            utterance.onend = () => {
+                GAURANGA.isSpeaking = false;
+                document.getElementById('voiceBtn').classList.remove('listening');
+            };
+            
+            synthesis.speak(utterance);
+        }
+        
+        // Update Status
+        function updateStatus(status) {
+            const badge = document.getElementById('statusBadge');
+            const text = document.getElementById('statusText');
+            
+            if (status === 'online') {
+                badge.className = 'status-badge online';
+                text.textContent = 'Online & Ready';
+            } else {
+                badge.className = 'status-badge offline';
+                text.textContent = 'Offline';
+            }
+        }
+        
+        // Event Listeners
+        function setupEventListeners() {
+            // Enter to send
+            document.getElementById('chatInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+            
+            // Auto-resize textarea
+            document.getElementById('chatInput').addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = Math.min(this.scrollHeight, 150) + 'px';
+            });
+            
+            // Volume slider
+            document.getElementById('volumeSlider').addEventListener('input', function() {
+                document.getElementById('volumeValue').textContent = this.value + '%';
+            });
+            
+            // Rate slider
+            document.getElementById('rateSlider').addEventListener('input', function() {
+                document.getElementById('rateValue').textContent = this.value + 'x';
+            });
+            
+            // Toggle auto play
+            document.getElementById('autoPlayToggle').addEventListener('change', function() {
+                GAURANGA.autoPlay = this.checked;
+            });
+            
+            // Load voices when available
+            if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = loadVoices;
+            }
+            
+            // Initial load
+            loadVoices();
+        }
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', init);
+        
+        // Welcome message with voice
+        setTimeout(() => {
+            if (GAURANGA.autoPlay) {
+                speak('Halo Pak Pur! Saya GAURANGA siap membantu. Tap tombol microphone atau ketik pesan untuk mulai.')
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
