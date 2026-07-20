@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Biometric Authentication - MAHA LAKSHMI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --gold: #ffd700;
+            --text: #ffffff;
+            --text-muted: #a0a0a0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+        }
+        .auth-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 440px;
+            width: 90%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        .logo { font-size: 64px; margin-bottom: 24px; }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--gold), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 32px; }
+        .biometric-btn {
+            background: linear-gradient(135deg, var(--accent), #ff6b6b);
+            border: none;
+            padding: 20px 40px;
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .biometric-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(233, 69, 96, 0.4);
+        }
+        .biometric-icon { font-size: 28px; }
+        .fallback-section {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .fallback-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: var(--text-muted);
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .fallback-btn:hover { background: rgba(255, 255, 255, 0.15); color: var(--text); }
+        .status {
+            margin-top: 24px;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            display: none;
+        }
+        .status.loading {
+            display: block;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: var(--gold);
+        }
+        .status.success {
+            display: block;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            color: #00ff88;
+        }
+        .status.error {
+            display: block;
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            color: var(--accent);
+        }
+        .pin-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .pin-modal.active { display: flex; }
+        .pin-box {
+            background: var(--primary);
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .pin-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            width: 100%;
+            margin: 24px 0;
+            letter-spacing: 8px;
+        }
+        .pin-input:focus { outline: none; border-color: var(--gold); }
+        .verify-btn {
+            background: var(--gold);
+            color: var(--primary);
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .verify-btn:hover { background: #ffed4a; }
+        .cancel-link { color: var(--text-muted); margin-top: 16px; cursor: pointer; font-size: 14px; }
+        .cancel-link:hover { color: var(--accent); }
+        .biometric-types {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .biometric-type {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .biometric-type span { font-size: 20px; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .pulse { animation: pulse 1.5s infinite; }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo">👑</div>
+        <h1>MAHA LAKSHMI</h1>
+        <p class="subtitle">Otorisasi Biometrik Diperlukan</p>
+        <div class="biometric-types">
+            <div class="biometric-type"><span>👆</span> Fingerprint</div>
+            <div class="biometric-type"><span>👤</span> Face ID</div>
+            <div class="biometric-type"><span>🔐</span> Windows Hello</div>
+        </div>
+        <button class="biometric-btn pulse" id="biometricBtn" onclick="authenticateBiometric()">
+            <span class="biometric-icon">🔐</span>
+            <span id="btnText">Daftarkan Biometrik</span>
+        </button>
+        <div class="status" id="status"></div>
+        <div class="fallback-section">
+            <p style="color: var(--text-muted); margin-bottom: 12px; font-size: 13px;">Tidak bisa menggunakan biometrik?</p>
+            <button class="fallback-btn" onclick="showPinModal()">🔑 Gunakan PIN / Password</button>
+        </div>
+    </div>
+    <div class="pin-modal" id="pinModal">
+        <div class="pin-box">
+            <h2 style="font-size: 20px; margin-bottom: 8px;">🔑 Masukkan PIN</h2>
+            <p style="color: var(--text-muted); font-size: 14px;">Masukkan PIN rahasia Anda</p>
+            <input type="password" class="pin-input" id="pinInput" maxlength="6" placeholder="● ● ● ● ● ●" autocomplete="off">
+            <button class="verify-btn" onclick="verifyPin()">Verifikasi</button>
+            <p class="cancel-link" onclick="hidePinModal()">Batal</p>
+        </div>
+    </div>
+    <script>
+        const SESSION_KEY = 'maha_lakshmi_session';
+        const PIN_HASH = 'maha_lakshmi_pin_hash';
+        const AUTH_KEY = 'maha_lakshmi_auth';
+
+        function checkAuth() {
+            const session = localStorage.getItem(SESSION_KEY);
+            if (session) {
+                const sessionData = JSON.parse(session);
+                if (Date.now() - sessionData.timestamp < 86400000) {
+                    window.location.href = 'index.html';
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function getDestination() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('redirect') || 'index.html';
+        }
+
+        function isBiometricSupported() {
+            return window.PublicKeyCredential !== undefined;
+        }
+
+        async function registerBiometric() {
+            if (!isBiometricSupported()) {
+                showStatus('error', '❌ Biometric tidak didukung browser ini');
+                return;
+            }
+            showStatus('loading', '⏳ Menyiapkan biometrik...');
+            try {
+                const challenge = new Uint8Array(32);
+                crypto.getRandomValues(challenge);
+                const credential = await navigator.credentials.create({
+                    publicKey: {
+                        challenge: challenge,
+                        rp: { name: "MAHA LAKSHMI HOLDINGS", id: window.location.hostname },
+                        user: { id: new Uint8Array([1, 2, 3, 4, 5]), name: "CEO Pak Pur", displayName: "i Made Purna Ananda" },
+                        pubKeyCredParams: [{ alg: -7, type: "public-key" }, { alg: -257, type: "public-key" }],
+                        authenticatorSelection: { authenticatorAttachment: "platform", userVerification: "required" },
+                        timeout: 60000,
+                        attestation: "none"
+                    }
+                });
+                if (credential) {
+                    localStorage.setItem(AUTH_KEY, credential.id);
+                    localStorage.setItem('biometric_registered', 'true');
+                    showStatus('success', '✅ Biometrik berhasil didaftarkan!');
+                    authenticateBiometric();
+                }
+            } catch (error) {
+                showStatus('error', '❌ Gagal: ' + error.message);
+            }
+        }
+
+        async function authenticateBiometric() {
+            const registered = localStorage.getItem('biometric_registered');
+            if (!registered) { registerBiometric(); return; }
+            if (!isBiometricSupported()) { showStatus('error', '❌ Biometric tidak didukung'); return; }
+            showStatus('loading', '⏳ Memindai biometrik...');
+            try {
+                const credentialId = localStorage.getItem(AUTH_KEY);
+                if (!credentialId) { showStatus('error', '❌ Biometrik belum terdaftar'); return; }
+                const challenge = new Uint8Array(32);
+                crypto.getRandomValues(challenge);
+                const assertion = await navigator.credentials.get({
+                    publicKey: {
+                        challenge: challenge,
+                        allowCredentials: [{ id: Uint8Array.from(atob(credentialId), c => c.charCodeAt(0)), type: "public-key" }],
+                        userVerification: "required",
+                        timeout: 60000
+                    }
+                });
+                if (assertion) {
+                    const session = { authenticated: true, timestamp: Date.now(), method: 'biometric' };
+                    localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+                    showStatus('success', '✅ Verifikasi berhasil! Mengalihkan...');
+                    setTimeout(() => { window.location.href = getDestination(); }, 1000);
+                }
+            } catch (error) {
+                if (error.name === 'NotAllowedError') showStatus('error', '❌ Verifikasi dibatalkan');
+                else showStatus('error', '❌ Gagal: ' + error.message);
+            }
+        }
+
+        function showPinModal() { document.getElementById('pinModal').classList.add('active'); document.getElementById('pinInput').focus(); }
+        function hidePinModal() { document.getElementById('pinModal').classList.remove('active'); document.getElementById('pinInput').value = ''; }
+
+        function verifyPin() {
+            const pin = document.getElementById('pinInput').value;
+            if (pin.length < 4) { showStatus('error', '❌ PIN minimal 4 digit'); return; }
+            showStatus('loading', '⏳ Memverifikasi PIN...');
+            const pinHash = btoa(pin + 'maha_lakshmi_salt');
+            const storedHash = localStorage.getItem(PIN_HASH);
+            if (!storedHash) { localStorage.setItem(PIN_HASH, pinHash); localStorage.setItem('biometric_registered', 'true'); }
+            if (pinHash === storedHash || !storedHash) {
+                const session = { authenticated: true, timestamp: Date.now(), method: 'pin' };
+                localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+                hidePinModal();
+                showStatus('success', '✅ Login berhasil! Mengalihkan...');
+                setTimeout(() => { window.location.href = getDestination(); }, 1000);
+            } else { showStatus('error', '❌ PIN salah'); }
+        }
+
+        function showStatus(type, message) {
+            const status = document.getElementById('status');
+            status.className = 'status ' + type;
+            status.textContent = message;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuth();
+            document.getElementById('pinInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') verifyPin(); });
+            const registered = localStorage.getItem('biometric_registered');
+            document.getElementById('btnText').textContent = registered ? 'Verifikasi Biometrik' : 'Daftarkan Biometrik';
+        });
+    </script>
+</body>
+</html>
