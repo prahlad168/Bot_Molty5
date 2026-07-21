@@ -1,10 +1,23 @@
 # 👑 MAHA AI AGENT FACTORY (MAF)
 ## "Don't Build Agents. Build a Factory That Creates Agents."
 
-**Version:** 2.0.0
-**Updated:** 2026-07-03
+**Version:** 2.1.0
+**Updated:** 2026-07-21
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+
+---
+
+## 💳 PAYMENT ACCOUNTS
+
+### ✅ BUSINESS (CUSTOMER PAYMENTS):
+| Method | Status | Details |
+|--------|--------|---------|
+| **USDT TRC20** | ✅ ACTIVE | `TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6` |
+
+### 👤 CEO PERSONAL (PROFIT ONLY):
+| Method | Status | Details |
+|--------|--------|---------|
+| **BCA** | ✅ | 6485086645 (60-80% profit share) |
 
 ---
 
@@ -470,8 +483,8 @@ https://payanganhospital.gianyarkab.go.id/maha-command-center/
 |--------|------|-------------|
 | Today's Revenue | 💰 | Total revenue today |
 | Today's Profit | 📈 | Net profit today |
-| Wallet | 👛 | Current wallet balance |
-| Bank | 🏦 | Bank account balance (BCA 6485086645) |
+| USDT Wallet | 👛 | TRC20: TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6 |
+| Bank | 🏦 | BCA 6485086645 (profit only) |
 | Cashflow | 💵 | Cash in/out flow |
 | Pending Approval | ⏳ | Items awaiting CEO decision |
 | Critical Alert | 🚨 | Critical issues |
@@ -585,10 +598,23 @@ https://payanganhospital.gianyarkab.go.id/maha-command-center/
 # 👑 MAHA LAKSHMI HOLDINGS
 ## AI Agent System - GAURANGA
 
-**Version:** 2.1.0
-**Updated:** 2026-07-04
+**Version:** 2.2.0
+**Updated:** 2026-07-21
 **CEO:** i Made Purna Ananda
-**Bank:** BCA 6485086645
+
+---
+
+## 💳 PAYMENT ACCOUNTS
+
+### ✅ BUSINESS (CUSTOMER PAYMENTS):
+| Method | Network | Wallet/Account |
+|--------|---------|----------------|
+| **USDT TRC20** | TRON | `TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6` |
+
+### 👤 CEO PERSONAL (PROFIT ONLY):
+| Method | Bank | Account |
+|--------|------|---------|
+| **BCA Transfer** | BCA | 6485086645 |
 
 ---
 
@@ -596,12 +622,12 @@ https://payanganhospital.gianyarkab.go.id/maha-command-center/
 
 ### Account Separation
 ```
-❌ BCA 6485086645 = PROFIT CEO ONLY
-✅ Semua operasional dari REVENUE usaha
+✅ USDT TRC20 = BUSINESS ACCOUNT (Customer Payments)
+❌ BCA 6485086645 = PROFIT CEO ONLY (80% dari revenue)
 
-Contoh Alokasi:
-Revenue Rp 100.000 =
-├── 80% → BCA 6485086645 (CEO Profit)
+Contoh Alokasi Revenue:
+Revenue masuk ke USDT wallet:
+├── 80% → Transfer ke BCA 6485086645 (CEO Profit)
 ├── 25% → Reinvestasi Pool
 └── 15% → Operasional Pool
 ```
@@ -609,10 +635,11 @@ Revenue Rp 100.000 =
 ### Daily Revenue Transfer
 ```
 SETIAP HARI JAM 23:59 WIB:
-1. Hitung total revenue harian
-2. Transfer 80% ke BCA 6485086645
-3. Simpan bukti transfer
-4. Kirim notifikasi ke CEO
+1. Hitung total USDT yang masuk
+2. Jual USDT di exchange (Pintu, Tokocrypto)
+3. Transfer 80% ke BCA 6485086645 (CEO Profit)
+4. Simpan bukti transfer
+5. Kirim notifikasi ke CEO via WhatsApp
 
 MOHON TRANSFER SETIAP HARI - JANGAN MENUNDA!
 ```

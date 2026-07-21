@@ -4,7 +4,20 @@
 
 **CEO:** i Made Purna Ananda (Pak Pur)
 **Target:** Rp 100.000.000/bulan (10 SBU × Rp 10.000.000)
-**Bank:** BCA 6485086645
+
+---
+
+## 💳 PAYMENT ACCOUNTS
+
+### ✅ BUSINESS (Customer Payments):
+| Method | Network | Wallet |
+|--------|---------|--------|
+| **USDT TRC20** | TRON | `TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6` |
+
+### 👤 CEO PERSONAL (Profit Only):
+| Method | Bank | Account |
+|--------|------|---------|
+| **BCA Transfer** | BCA | 6485086645 |
 
 ---
 
