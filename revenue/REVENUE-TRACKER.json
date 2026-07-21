@@ -1,0 +1,62 @@
+{
+  "tracker": {
+    "created": "2026-07-21",
+    "last_updated": "2026-07-21T10:00:00",
+    "version": "1.0.0",
+    "ceo": "i Made Purna Ananda",
+    "usdt_wallet": "TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6",
+    "bca_account": "6485086645",
+    "profit_distribution": {
+      "ceo_share": 80,
+      "reinvestment": 25,
+      "team_bonus": 10,
+      "csr": 5
+    }
+  },
+  "totals": {
+    "all_time": {
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0,
+      "total_reinvest": 0,
+      "total_team": 0,
+      "total_csr": 0
+    },
+    "this_month": {
+      "month": "2026-07",
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0
+    },
+    "this_week": {
+      "week_start": "2026-07-21",
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0
+    },
+    "today": {
+      "date": "2026-07-21",
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0
+    }
+  },
+  "transactions": [],
+  "pending_invoices": [],
+  "deals_pipeline": {
+    "negotiating": [],
+    "ready_to_invoice": [],
+    "invoiced": [],
+    "paid": []
+  },
+  "settings": {
+    "currency_rate_usd_to_idr": 16000,
+    "daily_transfer_time": "23:59",
+    "timezone": "Asia/Jakarta",
+    "notification_enabled": true
+  }
+}
