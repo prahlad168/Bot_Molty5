@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-07-21T01:01:43.717535Z",
+  "agent": "GAURANGA AI Sales Agent",
+  "ceo": "i Made Purna Ananda",
+  "bank": "BCA 6485086645",
+  "target": 100000000,
+  "target_currency": "IDR",
+  "period": "monthly",
+  
+  "daily_metrics": {
+    "date": "2026-07-21",
+    "leads_generated": 10,
+    "leads_contacted": 10,
+    "emails_sent": 20,
+    "whatsapp_sent": 20,
+    "replies_received": 0,
+    "meetings_scheduled": 0
+  },
+  
+  "pipeline_summary": {
+    "total_leads": 20,
+    "leads_by_status": {
+      "new": 10,
+      "contacted": 10,
+      "replied": 0,
+      "qualified": 0,
+      "proposal_sent": 0,
+      "closed_won": 0
+    },
+    "total_pipeline_value": 81000000,
+    "high_priority": 15,
+    "medium_priority": 5,
+    "low_priority": 0
+  },
+  
+  "leads_by_sbu": {
+    "bali_travel": {
+      "leads": 10,
+      "value": 44000000,
+      "contacted": 9,
+      "new": 1
+    },
+    "gianyar_tech": {
+      "leads": 2,
+      "value": 6500000,
+      "contacted": 1,
+      "new": 1
+    },
+    "bali_digital": {
+      "leads": 2,
+      "value": 4500000,
+      "contacted": 0,
+      "new": 2
+    },
+    "gianyar_ecommerce": {
+      "leads": 1,
+      "value": 5000000,
+      "contacted": 0,
+      "new": 1
+    },
+    "bali_edtech": {
+      "leads": 1,
+      "value": 3000000,
+      "contacted": 0,
+      "new": 1
+    },
+    "gianyar_finance": {
+      "leads": 1,
+      "value": 5000000,
+      "contacted": 0,
+      "new": 1
+    },
+    "bali_logistics": {
+      "leads": 1,
+      "value": 4000000,
+      "contacted": 0,
+      "new": 1
+    },
+    "gianyar_foodtech": {
+      "leads": 1,
+      "value": 3000000,
+      "contacted": 0,
+      "new": 1
+    },
+    "bali_property": {
+      "leads": 1,
+      "value": 10000000,
+      "contacted": 0,
+      "new": 1
+    }
+  },
+  
+  "conversion_funnel": {
+    "leads": 20,
+    "contacted": 10,
+    "replied": 0,
+    "qualified": 0,
+    "proposal": 0,
+    "closed": 0
+  },
+  
+  "revenue_metrics": {
+    "target_monthly": 100000000,
+    "current_revenue": 0,
+    "revenue_progress_percent": 0,
+    "pipeline_value": 81000000,
+    "expected_commission_15_percent": 12150000,
+    "days_remaining": 10,
+    "revenue_per_day_needed": 10000000
+  },
+  
+  "followup_schedule": {
+    "day_3": "2026-07-23",
+    "day_7": "2026-07-27",
+    "day_14": "2026-08-03"
+  },
+  
+  "top_leads": [
+    {
+      "id": 18,
+      "name": "Properti Gianyar",
+      "category": "gianyar-property",
+      "value": 10000000,
+      "status": "new",
+      "potential": "high"
+    },
+    {
+      "id": 3,
+      "name": "AYANA Resort Bali",
+      "category": "bali-travel",
+      "value": 10000000,
+      "status": "contacted",
+      "potential": "high"
+    },
+    {
+      "id": 17,
+      "name": "Villa Serenity Ubud",
+      "category": "bali-travel",
+      "value": 5000000,
+      "status": "new",
+      "potential": "high"
+    },
+    {
+      "id": 1,
+      "name": "Four Seasons Resort Sayan",
+      "category": "bali-travel",
+      "value": 5000000,
+      "status": "contacted",
+      "potential": "high"
+    },
+    {
+      "id": 2,
+      "name": "Viceroy Bali",
+      "category": "bali-travel",
+      "value": 5000000,
+      "status": "contacted",
+      "potential": "high"
+    }
+  ],
+  
+  "action_items": [
+    {
+      "priority": "high",
+      "task": "Contact new 10 leads",
+      "deadline": "2026-07-22",
+      "status": "pending"
+    },
+    {
+      "priority": "high",
+      "task": "Follow-up Day 3 for 10 contacted leads",
+      "deadline": "2026-07-23",
+      "status": "scheduled"
+    },
+    {
+      "priority": "medium",
+      "task": "Generate 30 more leads",
+      "deadline": "2026-07-24",
+      "status": "pending"
+    },
+    {
+      "priority": "high",
+      "task": "Get first reply from leads",
+      "deadline": "2026-07-23",
+      "status": "pending"
+    }
+  ],
+  
+  "profit_distribution": {
+    "owner_share_percent": 80,
+    "reinvestment_percent": 25,
+    "team_bonus_percent": 10,
+    "charity_percent": 5,
+    "owner_bank": "BCA 6485086645"
+  },
+  
+  "files_generated": [
+    "docs/sales/DAILY-SALES-REPORT-2026-07-21.md",
+    "docs/sales/NEW-LEADS-2026-07-21.md",
+    "docs/sales/PERSONALIZED-OUTREACH-2026-07-21.md",
+    "docs/sales/CEO-DASHBOARD-METRICS.json"
+  ],
+  
+  "next_update": "2026-07-22T09:00:00+07:00",
+  "status": "complete"
+}
