@@ -1,97 +1,43 @@
 {
   "tracker": {
-    "created": "2026-07-21",
-    "last_updated": "2026-07-21T10:07:01.890220",
-    "version": "1.0.0",
+    "created": "2026-07-22",
+    "last_updated": "2026-07-22T01:50:00",
+    "version": "2.0.0",
     "ceo": "i Made Purna Ananda",
     "usdt_wallet": "TNFs1SP2C8HxGSJkSH3hJamf8ukgtnW7U6",
     "bca_account": "6485086645",
-    "profit_distribution": {
-      "ceo_share": 80,
-      "reinvestment": 25,
-      "team_bonus": 10,
-      "csr": 5
-    }
+    "note": "RESET 2026-07-22 - FAKE ENTRIES REMOVED. Only record REAL payments."
   },
   "totals": {
     "all_time": {
-      "total_revenue_usd": 1000.0,
-      "total_revenue_idr": 16000000.0,
-      "total_transactions": 3,
-      "total_profit_80": 800.0,
-      "total_reinvest": 0,
-      "total_team": 0,
-      "total_csr": 0
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0
     },
     "this_month": {
       "month": "2026-07",
-      "total_revenue_usd": 1000.0,
-      "total_revenue_idr": 16000000.0,
-      "total_transactions": 3,
-      "total_profit_80": 800.0
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0
     },
     "this_week": {
-      "week_start": "2026-07-21",
-      "total_revenue_usd": 1000.0,
-      "total_revenue_idr": 16000000.0,
-      "total_transactions": 3,
-      "total_profit_80": 800.0
+      "week_start": "2026-07-22",
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0
     },
     "today": {
-      "date": "2026-07-21",
-      "total_revenue_usd": 1000.0,
-      "total_revenue_idr": 16000000.0,
-      "total_transactions": 3,
-      "total_profit_80": 800.0
+      "date": "2026-07-22",
+      "total_revenue_usd": 0,
+      "total_revenue_idr": 0,
+      "total_transactions": 0,
+      "total_profit_80": 0
     }
   },
-  "transactions": [
-    {
-      "id": "REV-20260721-001",
-      "timestamp": "2026-07-21T10:06:54.757310",
-      "date": "2026-07-21",
-      "source": "Four Seasons Sayan",
-      "client": "Four Seasons Sayan",
-      "service": "Website Development",
-      "invoice": "INV-20260721",
-      "amount_usd": 500.0,
-      "amount_idr": 8000000,
-      "payment_method": "USDT",
-      "profit_80": 400.0,
-      "profit_80_idr": 6400000,
-      "status": "RECEIVED"
-    },
-    {
-      "id": "REV-20260721-002",
-      "timestamp": "2026-07-21T10:07:01.853918",
-      "date": "2026-07-21",
-      "source": "AYANA Resort",
-      "client": "AYANA Resort",
-      "service": "Social Media Marketing",
-      "invoice": "INV-20260721",
-      "amount_usd": 300.0,
-      "amount_idr": 4800000,
-      "payment_method": "USDT",
-      "profit_80": 240.0,
-      "profit_80_idr": 3840000,
-      "status": "RECEIVED"
-    },
-    {
-      "id": "REV-20260721-003",
-      "timestamp": "2026-07-21T10:07:01.890194",
-      "date": "2026-07-21",
-      "source": "COMO Shambhala",
-      "client": "COMO Shambhala",
-      "service": "SEO Optimization",
-      "invoice": "INV-20260721",
-      "amount_usd": 200.0,
-      "amount_idr": 3200000,
-      "payment_method": "USDT",
-      "profit_80": 160.0,
-      "profit_80_idr": 2560000,
-      "status": "RECEIVED"
-    }
-  ],
+  "transactions": [],
   "pending_invoices": [],
   "deals_pipeline": {
     "negotiating": [],
@@ -104,5 +50,15 @@
     "daily_transfer_time": "23:59",
     "timezone": "Asia/Jakarta",
     "notification_enabled": true
-  }
+  },
+  "audit_log": [
+    {
+      "timestamp": "2026-07-22T01:50:00",
+      "action": "RESET_CORRECTION",
+      "description": "Fake revenue entries removed. Previous entries (Four Seasons, AYANA, COMO) were TEST DATA, not real sales.",
+      "previous_total": 1000.00,
+      "new_total": 0.00,
+      "corrected_by": "GAURANGA"
+    }
+  ]
 }
