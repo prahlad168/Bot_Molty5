@@ -1,13 +1,27 @@
 version: "3.8"
+
 services:
   molty-bot:
-    build: .
+    build:
+      context: .
+      target: production
     env_file: .env
     volumes:
       - molty-memory:/root/.molty-royale
       - ./dev-agent:/app/dev-agent
+    ports:
+      - "8080:8080"
     restart: unless-stopped
-    stdin_open: true  # For first-run intake prompts
+    stdin_open: true
+
+  # Local test runner — executes lint + pytest inside Docker
+  molty-test:
+    build:
+      context: .
+      target: test
+    volumes:
+      - .:/app
+    command: ["pytest", "tests/", "-v", "--tb=short"]
 
 volumes:
   molty-memory:
